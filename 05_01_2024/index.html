@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 5th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #01295f;
+			color: #ffb30f;
+			position: relative;
+		}
+
+		.wrapper>* {
+			position: absolute;
+		}
+
+		a,
+		b,
+		c,
+		d {
+			height: 110px;
+			width: 110px;
+			background: repeating-conic-gradient(#ffb30f 0 25%, #01295f 25% 50%);
+		}
+
+		a {
+			top: 10px;
+			left: 64px;
+			box-shadow: 0 55px;
+		}
+
+		b {
+			top: 280px;
+			left: 225px;
+		}
+
+		c,
+		d {
+			rotate: 90deg;
+		}
+
+		c {
+			top: 225px;
+			left: 64px;
+		}
+
+		d {
+			top: 65px;
+			left: 172px;
+			box-shadow: 80px 28px 0 -27px#01295f, 0 -54px, -55px 0, -55px -54px, 106px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<a></a><b></b>
+		<c></c>
+		<d></d>
+	</div>
+</body>
+
+</html>

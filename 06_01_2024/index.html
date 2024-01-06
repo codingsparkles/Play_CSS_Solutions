@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 6th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #75704e;
+			position: relative;
+		}
+
+		.wrapper>* {
+			position: absolute;
+		}
+
+		p {
+			background: #f4ebbe;
+			height: 242px;
+			width: 245px;
+			rotate: 45deg;
+			margin: 80px 70px;
+			position: relative;
+		}
+
+		a,c,d {
+			border-radius: 50%;
+		}
+
+		a,c {
+			position: absolute;	
+		}
+
+		a {
+			height: 150px;
+			width: 77px;
+			background: #75704e;					
+			rotate: -45deg;
+			margin: 45px 92px;
+		}
+
+		c {
+			background: #f4ebbe;
+			height: 95px;
+			width: 49px;
+			position: absolute;
+			margin: 27px 14px;
+		}
+
+		d {
+			height: 75px;
+			width: 75px;
+			top: 75px;
+			left: 77px;
+			background: #75704e;
+			color: #75704e;
+			box-shadow: -2px 178px, 170px 0, 177px 175px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<p>
+			<a>
+				<c></c>
+			</a>
+		</p>
+		<d></d>
+	</div>
+</body>
+
+</html>

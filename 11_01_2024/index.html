@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 11th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: radial-gradient(circle at 48.5% 31.5%, #091e05 60px, #ffda22 0 88px, #091e05 0);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.container {
+			position: absolute;
+			height: 90px;
+			width: 180px;
+			background: #091e05;
+			border: solid #ffda22;
+			border-width: 0 65px 65px;
+			border-radius: 0 0 150px 150px;
+			margin: 217px 55px 28px 45px;
+		}
+
+		.box {
+			height: 90px;
+			width: 100%;
+			position: absolute;
+			background: #091e05;
+			margin: 125px 0;
+		}
+
+		p {
+			height: 47px;
+			width: 47px;
+			position: absolute;
+			background: #ffda22;
+			rotate: 45deg;
+			margin: 25px 50px;
+			box-shadow: 175px -178px #ffda22;
+			animation: enhance 3s alternate infinite;
+		}
+
+		i {
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			background: #ffda22;
+			position: absolute;
+			margin: -57px 60px;
+			z-index: 1;
+			animation: enhance 5s alternate infinite;
+		}
+
+		@keyframes enhance {
+			to {
+				scale: 6
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<i></i>
+		</div>
+		<div class="box">
+			<p></p>
+		</div>
+	</div>
+</body>
+
+</html>

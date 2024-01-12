@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 12th Jan, 2024 (with animation)</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #f5ee9e;
+			position: relative;
+		}
+
+		.container {
+			position: absolute;
+			height: 300px;
+			width: 280px;
+			background: #ab3428;
+			margin: 54px 208px 35px 65px;
+			overflow: hidden;
+		}
+
+		p {
+			height: 200px;
+			width: 220px;
+			position: absolute;
+			border: 30px solid #f5ee9e;
+			rotate: 45deg;
+			top: 600px;
+			left: 10px;
+			box-shadow: 0 0 0 80px#ab3428, 0 0 0 110px#f5ee9e;
+			animation: move 3s linear infinite;
+		}
+
+		@keyframes move {
+			40%,70%{
+				top: 180px
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<p></p>
+		</div>
+	</div>
+</body>
+
+</html>

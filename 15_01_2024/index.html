@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 15th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: linear-gradient(#355070, #355070) center/150px 310px no-repeat #eaac8b;
+		}
+
+		p {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			background: #355070;
+			border: 15px solid #eaac8b;
+			position: fixed;
+			margin: 130px 135px;
+			animation: move 2s linear infinite;
+		}
+
+		[a] {
+			animation: move1 2s linear infinite;
+		}
+
+		[b] {
+			scale: .5;
+			animation: move3 2s linear infinite;
+		}
+
+		[c] {
+			scale: .5;
+			animation: move4 2s linear infinite;
+		}
+
+		@keyframes move {
+			30%, 80% {
+				margin: 130px 55px;
+			}
+		}
+
+		@keyframes move1 {
+			30%, 80% {
+				margin: 130px 215px;
+			}
+		}
+
+		@keyframes move3 {
+			30%, 80% {
+				margin: -20px 135px;
+			}
+		}
+
+		@keyframes move4 {
+			30%, 80% {
+				margin: 290px 135px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<p>
+		<p a>
+		<p b>
+		<p c>
+	</div>
+</body>
+
+</html>

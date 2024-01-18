@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 18th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #44344f;
+			margin: 0;
+			color: #632b30;
+		}
+
+		.container {
+			height: 150px;
+			background: #98a6d4;
+			margin: 25px 187px 212px 179px;
+			border-radius: 20px;
+			color: #98a6d4;
+			box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			animation: move 2s alternate infinite;
+		}
+
+		@keyframes move {
+			to {
+				box-shadow: 125px 0, -126px -5px, 63px 79px, -63px 82px, 0 192px, 125px 192px, -126px 192px;
+			}
+		}		
+	</style>
+	<div></div>
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+		</div>
+	</div>
+</body>
+
+</html>

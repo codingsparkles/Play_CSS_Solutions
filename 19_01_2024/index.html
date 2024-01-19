@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 19th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #000;
+			margin: 0;
+		}
+
+		.box {
+			height: 300px;
+			width: 278px;
+			background: repeating-linear-gradient(90deg, #fff07c 0 40px, #000 0 60px);
+			margin: 53px 65px 53px 53px;
+			clip-path: polygon(0%0%, 100%20%, 100%100%, 100%100%, 0%81%);
+			animation: shape1 3s alternate infinite;
+		}
+
+		p {
+			position: fixed;
+			height: 30px;
+			width: 30px;
+			background: #fff07c;
+			position: fixed;
+			margin: 157px 10px;
+			rotate: 45deg;
+			box-shadow: 280px -190px #fff07c;
+			animation: shape 1s alternate infinite;
+		}
+
+		@keyframes shape {
+			to {
+				border-radius: 50%;
+			}
+		}
+
+		@keyframes shape1 {
+
+			10%,
+			40% {
+				scale: -1;
+			}
+
+			60%,
+			100% {
+				scale: -1+1;
+			}
+		}
+	</style>
+	<div></div>
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<p></p>
+		<div class="box"></div>
+	</div>
+</body>
+
+</html>

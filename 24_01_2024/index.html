@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 24th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #32292f;
+			margin: 0;
+			position: relative;
+		}
+
+		.wrapper>* {
+			position: fixed;
+			background: #5762d5;
+			color: #5762d5;
+		}
+
+		.child1 {
+			height: 86px;
+			width: 95px;
+			margin: 140px 146px;
+			box-shadow: -15px 126px 0 -5px, -92px 126px 0 -5px, 130px 49px 0 -22px, 130px 7px 0 -22px, 130px -35px 0 -22px, 130px -75px 0 -22px;
+		}
+
+		p {
+			height: 33px;
+			width: 10px;
+			margin: 77px;
+			animation: anime3 1s linear infinite;
+		}
+
+		i {
+			height: 37px;
+			width: 38px;
+			rotate: 45deg;
+			margin: 22px 24px;
+			box-shadow: 400px 20px 0 4px;
+			animation: anime2 1s linear infinite;
+		}
+
+		c {
+			height: 80px;
+			width: 48px;
+			border-radius: 50%;
+			margin: 142px 28px;
+			animation: anime1 1s linear infinite;
+		}
+
+		d {
+			height: 42px;
+			width: 90px;
+			border-radius: 50%;
+			margin: 20px 247px;
+			animation: anime1 1s linear infinite;
+		}
+
+		@keyframes anime1 {
+
+			30%,
+			70% {
+				scale: 1.5;
+			}
+		}
+
+		@keyframes anime2 {
+
+			20%,
+			40% {
+				background: orange;
+				color: orange
+			}
+
+			60%,
+			80% {
+				background: limegreen;
+				color: limegreen
+			}
+		}
+
+		@keyframes anime3 {
+
+			30%,
+			70% {
+				width: 137px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child1"></div>
+		<p></p><i></i>
+		<c></c>
+		<d></d>
+	</div>
+</body>
+
+</html>

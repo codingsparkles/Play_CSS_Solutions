@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 28th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(orange, limegreen);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #bc4b51;
+			margin: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.parent {
+			background: #bc4b51;
+			height: 67%;
+			position: relative;
+			border: 67px solid #f4a259;
+			margin: 0 -67px;
+		}
+
+		.child {
+			position: absolute;
+			height: 270px;
+			width: 42px;
+			background: #f4a259;
+			left: 20px;
+			animation: anime1 1s alternate infinite;
+		}
+
+		p,
+		c,
+		d {
+			position: absolute;
+			height: 140px;
+			width: 140px;
+			border-radius: 50%;
+			top: 48px;
+			left: -50px;
+			background: #f4a259;
+		}
+
+		c {
+			background: #bc4b51;
+			top: 64px;
+			left: 50px;
+			-webkit-box-reflect: left 55px
+		}
+
+		d {
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: -100px;
+			left: -50px;
+			background: #bc4b51;
+			box-shadow: 400px 368px #bc4b51;
+			animation: anime2 1s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				left: 300px
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				border-radius: 0;
+				background: #dd82ee;
+				box-shadow: 400px 368px #dd82ee;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child">
+				<p></p>
+				<c></c>
+			</div>
+			<d></d>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 29th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #9d8189;
+			margin: 0;
+			position: relative;
+		}
+
+		.wrapper>* {
+			position: absolute;
+			color: #ffcad4;
+		}
+
+		.child {
+			border: solid;
+			border-top-color: #9d8189;
+			border-width: 0 30px 30px;
+			height: 30px;
+			width: 30px;
+			margin: 155px 150px;
+			animation: anime 1s alternate infinite;
+		}
+
+		p {
+			height: 115px;
+			width: 115px;
+			border: 30px solid;
+			margin: 40px 105px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		i {
+			height: 145px;
+			width: 50px;
+			border: solid;
+			border-width: 0 30px;
+			margin: 200px 137px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		a,
+		b,
+		c {
+			background: #ffcad4;
+		}
+
+		a {
+			height: 85px;
+			width: 30px;
+			margin: 40px 20px;
+			-webkit-box-reflect: right 283px;
+			animation: anime4 1s alternate infinite;
+		}
+
+		b,
+		c {
+			height: 25px;
+			width: 25px;
+			position: absolute;
+			margin: 32px 17px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		c {
+			margin: 58px 72px;
+		}
+
+		@keyframes anime {
+			to {
+				width: 283px;
+				margin: 155px 20px;
+			}
+		}
+
+		@keyframes anime1 {
+			to {
+				border-radius: 50%;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				width: 283px;
+				margin: 200px 20px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				border-radius: 50%;
+				rotate: 180deg;
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				margin: 10px 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child"></div>
+		<p>
+			<b></b>
+			<c></c>
+		</p>
+		<i></i>
+		<a></a>
+	</div>
+</body>
+
+</html>

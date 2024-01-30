@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 30th Jan, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #4a5859;
+			color: #f4d6cc;
+			margin: 0;
+			position: relative;
+		}
+
+		.wrapper>* {
+			position: absolute;
+		}
+
+		.child,
+		p {
+			height: 80px;
+			width: 100px;
+			border: solid;
+			border-width: 15px 15px 0 0;
+			rotate: 45deg;
+			animation: anime2 2s alternate infinite;			
+		}
+
+		p {
+			scale: -1;
+			margin: 205px 153px;
+		}
+
+		.child {
+			margin: 105px 112px;
+		}
+
+		c {
+			margin: 200px 100px;
+			height: 80px;
+			width: 80px;
+			background: #f4d6cc;
+			border-radius: 50%;
+			box-shadow: 82px 82px, 87px -87px, 0 -174px;
+			animation: anime1 3s alternate infinite;
+		}
+
+		d {
+			height: 15px;
+			width: 80px;
+			background: #f4d6cc;
+			margin: 150px 108px;
+			box-shadow: 150px 167px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			25% {
+				background: #f4d6cc;
+				box-shadow: 82px 82px, 87px -87px, 0 -174px red;
+			}
+
+			50% {
+				background: #f4d6cc;
+				box-shadow: 82px 82px, 87px -87px blue, 0 -174px;
+			}
+
+			75% {
+				background: yellow;
+				box-shadow: 82px 82px, 87px -87px, 0 -174px;
+			}
+
+			100% {
+				background: #f4d6cc;
+				box-shadow: 82px 82px green, 87px -87px, 0 -174px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				border-color: violet orange;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				background: lime;
+				color: lime;
+				border-radius: 50%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child"></div>
+		<p></p>
+		<c></c>
+		<d></d>
+	</div>
+</body>
+
+</html>

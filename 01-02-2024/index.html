@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 1st Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #706f6f;
+			margin: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		p {
+			height: 330px;
+			width: 100%;
+			position: absolute;
+			background: linear-gradient(90deg, #0000 0 135px, #706f6f 0 170px, #0000 0 182px, #706f6f 0 218px, #0000 0 230px, #706f6f 0 265px, #0000 0), linear-gradient(#0000 0 14px, #706f6f 0 50px, #0000 0 62px, #706f6f 0 100px, #0000 0 230px, #706f6f 0 267px, #0000 0 282px, #706f6f 0 317px, #0000 0);
+			background-color: #dbdbdb;
+			margin: 35px 0;
+			animation: anime 3s alternate infinite, anime2 3s alternate infinite;
+		}
+
+		@keyframes anime {
+			to {
+				scale: 0.15;
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime2 {
+			25% {
+				background-color: red;
+			}
+
+			50% {
+				background-color: yellow;
+			}
+
+			75% {
+				background-color: orange;
+			}
+
+			100% {
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<p></p>
+	</div>
+</body>
+
+</html>

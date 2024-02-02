@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 2nd Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #e0b0d5;
+			margin: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.wrapper,
+		main,
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			background: #fff;
+			height: 280px;
+			width: 180px;
+			gap: 10px;
+			padding: 2rem;
+			flex-direction: column;
+			animation: anime4 2s alternate infinite;
+		}
+
+		p {
+			justify-content: space-between;
+			width: 180px;
+		}
+
+		a,
+		i {
+			height: 35px;
+			width: 35px;
+			background: #e0b0d5;
+			animation: anime1 1s alternate infinite;
+		}
+
+		i {
+			width: 70px;
+			animation: anime1 1s alternate infinite, anime2 1s alternate infinite;
+		}
+
+		b {
+			height: 35px;
+			width: 25px;
+			background: #e0b0d5;
+			animation: anime1 1s alternate infinite;
+		}
+
+		c {
+			height: 160px;
+			width: 180px;
+			border: solid #e0b0d5;
+			border-width: 0 30px 30px 30px;
+			border-radius: 0 0 160px 160px;
+			box-sizing: border-box;
+			animation: anime3 3s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				border-radius: 50%;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				width: 35px;
+			}
+		}
+
+		@keyframes anime3 {
+
+			30%,
+			50% {
+				background: #0000;
+				scale: 1;
+			}
+
+			50%,
+			100% {
+				background: #0000;
+				scale: -1;
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				border-radius: 50%;
+				width: 250px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<p>
+				<a></a><i></i>
+			</p>
+			<b></b>
+			<c></c>
+		</main>
+	</div>
+</body>
+
+</html>

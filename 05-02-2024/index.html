@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 5th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #b191ff;
+			overflow: hidden;
+		}
+
+		main {
+			animation: anime 2s alternate infinite;
+			position: relative;
+		}
+
+		main>* {
+			color: #1e152a;
+			position: absolute;
+		}
+
+		.child {
+			border: solid;
+			border-width: 0 40px 40px 40px;
+			height: 170px;
+			width: 151px;
+			margin: 42px 75px;
+		}
+
+		p,
+		i {
+			background: #1e152a;
+			position: absolute;
+		}
+
+		p {
+			height: 359px;
+			width: 40px;
+			top: 25px;
+			left: 172px;
+		}
+
+		i {
+			height: 20px;
+			width: 160px;
+			top: 284px;
+			left: 112px;
+		}
+
+		@keyframes anime {
+
+			20%,
+			40% {
+				scale: 2;
+			}
+
+			40%,
+			50% {
+				scale: 1;
+			}
+
+			50%,
+			80% {
+				scale: .5;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="child"></div>
+			<p></p><i></i>
+		</main>
+	</div>
+</body>
+
+</html>

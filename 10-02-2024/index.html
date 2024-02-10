@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 10th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #a53f2b;
+			position: relative;
+		}
+
+		.wrapper,
+		.parent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent {
+			flex-direction: column;
+			width: 150px;
+			gap: 50px
+		}
+
+		.parent1 {
+			align-self: end;
+		}
+
+		.parent2 {
+			align-self: flex-start;
+			scale: -1;
+		}
+
+		a {
+			height: 50px;
+			width: 100%;
+			background: #ccc9a1;
+		}
+
+		.child {
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			background: #a53f2b;
+			gap:20px;
+		}
+
+		c,d,e {
+			width: 50px;
+			height: 100%;
+			background: #ccc9a1;
+		}
+
+		c {
+			width: 20px;
+			background: #a53f2b;
+		}
+
+		d {			
+			border-radius: 50%;
+		}
+
+		i {
+			height: 100px;
+			width: 100%;
+			background: conic-gradient(at 35% 0%, transparent 0 155deg, #ccc9a1 135deg 208deg, transparent 0);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent parent1">
+			<a></a>
+			<div class="child">
+				<c></c>
+				<d></d>
+				<e></e>
+			</div>
+			<i></i>
+		</div>
+		<div class="parent parent2">
+			<a></a>
+			<div class="child">
+				<c></c>
+				<d></d>
+				<e></e>
+			</div>
+			<i></i>
+		</div>
+	</div>
+</body>
+
+</html>

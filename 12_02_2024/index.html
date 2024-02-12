@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 12th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(skyblue, rgb(0, 255, 157));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #1F2041;
+			position: relative;
+		}
+
+		.wrapper,
+		.container,
+		.parent,
+		.child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			background: linear-gradient(#ffc857 60px, #1F2041 0 280px, #ffc857 0);
+			height: 345px;
+			width: 275px;
+		}
+
+		.parent {
+			height: 300px;
+			width: 200px;
+			background: #1F2041;
+			flex-direction: column;
+			gap: 20px
+		}
+
+		.child {
+			height: 70px;
+			width: 70px;
+			background: #ffc857;
+		}
+
+		.child span {
+			height: 50px;
+			width: 50px;
+			background: #1F2041;
+		}
+
+		.child2 span {
+			rotate: 45deg;
+		}
+
+		.child3 span {
+			border-radius: 50%;
+		}
+
+		.child1 {
+			animation: anime1 1s alternate infinite;
+		}
+
+		.child2 {
+			animation: anime3 1s alternate infinite;
+		}
+
+		.child3 {
+			animation: anime2 1s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			40% {
+				align-self: flex-start;
+			}
+
+			40%,
+			60% {
+				align-self: center;
+			}
+
+			66%,
+			100% {
+				align-self: flex-end;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			40% {
+				align-self: flex-end;
+			}
+
+			40%,
+			60% {
+				align-self: center;
+			}
+
+			66%,
+			100% {
+				align-self: flex-start;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="parent">
+				<div class="child child1">
+					<span></span>
+				</div>
+				<div class="child child2">
+					<span></span>
+				</div>
+				<div class="child child3">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

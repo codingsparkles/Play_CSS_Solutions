@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 13th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(rgb(222, 235, 135), rgb(255, 0, 140));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #4B3F72;
+			position: relative;
+		}
+
+		.circle {
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			position: absolute;
+			top: 205px;
+			left: 58px;
+			color: #EED2CC;
+			-webkit-box-reflect: right 45px;
+			animation: anime 2s alternate infinite;
+		}
+		@keyframes anime {
+			20%{
+				box-shadow: 45px 45px;
+			}
+			40%{
+				box-shadow: 45px 45px, -35px -35px;
+			}
+			60%{
+				box-shadow: 45px 45px, -35px -35px, 0 -140px#4B3F72;
+			}
+			80%{
+				box-shadow: 45px 45px, -35px -35px, 0 -140px#4B3F72, 45px -95px;
+			}
+			100%{
+				box-shadow: 45px 45px, -35px -35px, 0 -140px#4B3F72, 45px -95px, -35px -175px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle">
+		</div>
+	</div>
+</body>
+
+</html>

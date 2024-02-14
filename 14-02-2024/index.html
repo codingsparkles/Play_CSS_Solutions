@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 14th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(rgb(222, 235, 135), rgb(255, 0, 140));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: linear-gradient(#E8998D, #E8998D)center/100% 20px no-repeat #A1683A;
+			position: relative;
+		}
+
+		.box {
+			position: absolute;
+			height: 175px;
+			width: 40px;
+			background: #E8998D;
+			color: #E8998D;
+			border-radius: 40px;
+			margin: 100px 173px;
+			box-shadow: 55px -28px, 108px 45px, 162px 0, -109px 0, -54px 45px, -164px 25px;
+			animation: anime 1s alternate infinite;
+		}
+
+		@keyframes anime {
+			100% {
+				box-shadow: 55px 28px, 108px -45px, 162px 60px, -109px -60px, -54px 85px, -164px 45px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box">
+		</div>
+	</div>
+</body>
+
+</html>

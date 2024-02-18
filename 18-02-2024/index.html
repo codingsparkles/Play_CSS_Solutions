@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 18th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(rgb(226, 231, 249), rgb(253, 161, 164));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #a54657;
+			display: grid;
+			place-items: center;
+		}
+
+		.parent {
+			height: 320px;
+			width: 320px;
+			background: repeating-conic-gradient(#a54657 0%25%, #f26157 25%50%);
+			background-size: 214px 214px;
+		}
+
+		.diamond {
+			height: 65px;
+			width: 65px;
+			background: #a54657;
+			color: #a54657;
+			rotate: 45deg;
+			margin: 22px;
+			box-shadow: 150px 150px, 150px 0px, 300px 0px, 150px -150px;
+			animation: anime1 1s alternate infinite;
+		}
+
+		.circle {
+			height: 50px;
+			width: 50px;
+			background: #f26157;
+			color: #f26157;
+			border-radius: 50%;
+			margin: 50px 30px;
+			box-shadow: 105px 105px, 105px -105px, 215px 0;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				border-radius: 50%;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				border-radius: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="diamond"></div>
+			<div class="circle"></div>
+		</div>
+	</div>
+</body>
+
+</html>

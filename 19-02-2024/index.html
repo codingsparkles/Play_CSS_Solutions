@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 19th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(rgb(226, 231, 249), rgb(253, 161, 164));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			display: grid;
+			place-items: center;
+			background: #07090f;
+			overflow: hidden;
+		}
+
+		.parent {
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(#98473e, #98473e)center/100% 20px no-repeat #07090f;
+			animation: anime1 3s alternate infinite, anime2 3s alternate infinite;
+		}
+
+		.child {
+			height: 120px;
+			width: 60px;
+			border-radius: 50%;
+			background: #98473e;
+			color: #98473e;
+			margin: 45px 50px;
+			box-shadow: 225px -10px, 112px -25px;
+			-webkit-box-reflect: below 70px;
+		}
+
+		p {
+			border: solid #98473e;
+			border-width: 22px 0;
+			height: 35px;
+			width: 120px;
+			margin: -50px 132px
+		}
+
+		@keyframes anime1 {
+			to {
+				scale: .5;
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				background: linear-gradient(#98473e, #98473e)center/20px 20px no-repeat #07090f;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child"></div>
+			<p></p>
+		</div>
+	</div>
+</body>
+
+</html>

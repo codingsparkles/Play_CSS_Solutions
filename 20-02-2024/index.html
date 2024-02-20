@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 20th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(rgb(226, 231, 249), rgb(253, 161, 164));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			display: grid;
+			place-items: center;
+			background: #3b2c35;
+			display: grid;
+			place-items: center;
+		}
+
+		.child {
+			height: 190px;
+			width: 190px;
+			border-radius: 50%;
+			background: #3b2c35;
+			color: #f4743b;
+			position: relative;
+			animation: anime1 2s alternate infinite;
+		}
+
+		i {
+			height: 40px;
+			width: 40px;
+			background: #f4743b;
+			position: absolute;
+			rotate: 45deg;
+			margin: 42px 35px;
+			box-shadow: 55px -55px;
+			animation: anime2 2s alternate infinite, anime3 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			33% {
+				box-shadow: 0 65px 0 15px;
+			}
+
+			66% {
+				box-shadow: 0 65px 0 15px, -55px -60px 0 15px;
+			}
+
+			100% {
+				box-shadow: 0 65px 0 15px, -55px -60px 0 15px, 50px -60px 0 15px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				border-radius: 50%;
+			}
+		}
+
+		@keyframes anime3 {
+			33% {
+				background: lightblue;
+				box-shadow: 55px -55px lightblue;
+			}
+
+			66% {
+				background: lightpink;
+				box-shadow: 55px -55px lightpink;
+			}
+
+			100% {
+				background: lightcoral;
+				box-shadow: 55px -55px lightcoral;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child">
+			<i></i>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 21st Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(rgb(155, 176, 249), rgb(233, 161, 253));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #3c6e71;
+			position: relative;
+		}
+
+		.wrapper * {
+			background: #beee62;
+			color: #beee62;
+			position: absolute;
+		}
+
+		.child {
+			height: 35px;
+			width: 85px;
+			border-radius: 50%;
+			top: 110px;
+			left: 132px;
+			box-shadow: 55px 145px;
+			animation: anime1 1s alternate infinite;
+		}
+
+		p {
+			height: 53px;
+			width: 200px;
+			top: 15px;
+			left: 100px;
+			border-radius: 53px;
+			box-shadow: 0 142px, 0 286px;
+			animation: anime3 1s alternate infinite;
+		}
+
+		[a] {
+			rotate: 90deg;
+			top: 230px;
+			left: 28px;
+			width: 195px;
+			box-shadow: -144px -148px;
+			animation: anime2 1s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				width: 35px;
+				left: 190px;
+				box-shadow: 0 145px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				width: 53px;
+				left: 110px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				width: 53px;
+				left: 180px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child"></div>
+		<p>
+		<p a></p>
+	</div>
+</body>
+
+</html>

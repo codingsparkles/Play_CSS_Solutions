@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 22nd Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(rgb(154, 219, 163), rgb(233, 161, 253));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #49516f;
+			display: grid;
+			place-items: center;
+		}
+
+		.child {
+			background: #8ea4d2;
+			height: 87%;
+			width: 87%;
+			clip-path: polygon(0% 32%, 8% 32%, 22% 0%, 32% 22%, 55% 22%, 62% 8%, 70% 22%, 79% 22%, 75% 32%, 100% 32%, 80% 77%, 70% 60%, 65% 60%, 52% 100%, 35% 52%, 25% 52%, 16% 72%, 7% 52%, 0% 52%, 5% 42%);
+			animation: anime1 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				scale: -1;
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child"></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 23rd Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(rgb(217, 237, 220), rgb(161, 251, 253));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #496f5d;
+			color: #d6fff6;
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.child {
+			border: solid;
+			border-width: 55px;
+			height: 200px;
+			width: 255px;
+			margin: 45px 18px
+		}
+
+		p {
+			height: 30px;
+			width: 55px;
+			top: 26px;
+			left: 18px;
+			background: #496f5d;
+			color: #496f5d;
+			box-shadow: 0 285px, 310px 0, 310px 285px;
+		}
+
+		i,
+		c {
+			background: #d6fff6;
+		}
+
+		i {
+			height: 50px;
+			width: 50px;
+			border-radius: 15px;
+			margin: 20px 25px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		c {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			33% {
+				box-shadow: 155px 0, 155px 0, 155px 0;
+			}
+
+			66% {
+				box-shadow: 155px 0, 155px 110px, 155px 110px;
+			}
+
+			100% {
+				box-shadow: 155px 0, 155px 110px, 0 110px;
+			}
+		}
+
+		@keyframes anime2 {
+			0% {
+				margin: 80px 0;
+			}
+
+			50% {
+				margin: 80px 110px;
+			}
+
+			100% {
+				margin: 80px 187px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="child">
+			<i></i>
+			<c></c>
+		</div>
+		<p></p>
+	</div>
+</body>
+
+</html>

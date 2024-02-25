@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 25th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(rgb(217, 237, 220), rgb(161, 251, 253));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #58355e;
+			padding: 15px;
+		}
+
+		.wrapper,
+		.parent,
+		.parent4,
+		.parent3,
+		.child2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.wrapper {
+			flex-direction: column;
+		}
+
+		.wrapper * {
+			background: #ec0b43;
+		}
+
+		.parent {
+			background: #0000;
+			justify-content: space-between;
+			animation: anime1 2s alternate infinite;
+			width: 40%;
+		}
+
+		.child {
+			background: #ec0b43;
+			height: 75px;
+			width: 82px;
+			top: 35px;
+			left: 22px;
+		}
+
+		.parent2 {
+			height: 50px;
+			width: 190px;
+		}
+
+		.parent4,
+		.parent3,
+		.child2 {
+			background: #0000;
+		}
+
+		.parent3 {
+			height: 120px;
+		}
+
+		.parent4 {
+			height: 40px;
+			width: 190px;
+			border: solid #ec0b43;
+			border-width: 30px 0;
+			top: 275px;
+		}
+
+		.diamond {
+			height: 50px;
+			width: 50px;
+			rotate: 45deg;
+			top: 195px;
+		}
+
+		.parent3 .diamond {
+			animation: anime2 3s linear infinite;
+		}
+
+		.child2 {
+			justify-content: space-between;
+			height: 100%;
+			width: 55%;
+			animation: anime1 1s alternate infinite;
+		}
+
+		.child2 .diamond {
+			background: #ec0b43;
+			height: 27px;
+			width: 27px;
+		}
+
+		@keyframes anime1 {
+			to {
+				width: 88%;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child"></div>
+			<div class="child"></div>
+		</div>
+		<div class="parent2"></div>
+		<div class="parent3">
+			<div class="diamond"></div>
+		</div>
+		<div class="parent4">
+			<div class="child2">
+				<div class="diamond"></div>
+				<div class="diamond"></div>
+				<div class="diamond"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

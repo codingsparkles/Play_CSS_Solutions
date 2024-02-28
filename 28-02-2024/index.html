@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 28th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#ffeed6, #875053);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #875053;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.parent {
+			position: relative;
+			border: solid;
+			border-width: 120px 135px;
+			border-color: #ffeed6 #875053;
+			margin-right: 140px;
+			height: 110px;
+			top: 0;
+		}
+
+		.child {
+			position: absolute;
+			height: 110px;
+			width: 40px;
+			border-radius: 50%;
+			background: #ffeed6;
+			left: -20px;
+		}
+
+		.parent1 {
+			animation: anime 2s alternate infinite;
+		}
+
+		.parent2 {
+			top: -300px;
+			left: 130px;
+			border-color: #ffeed6 #0000;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.circle {
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			background: #ffeed6;
+			top: 180px;
+			left: 180px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime2 {
+			33% {
+				scale: .5;
+			}
+
+			66% {
+				scale: 1.5;
+			}
+
+			100% {
+				scale: 2;
+			}
+		}
+
+		@keyframes anime1 {
+			to {
+				top: -350px;
+			}
+		}
+
+		@keyframes anime {
+			to {
+				top: 50px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent parent1">
+			<div class="child"></div>
+		</div>
+		<div class="parent parent2">
+			<div class="child"></div>
+		</div>
+		<div class="circle"></div>
+	</div>
+</body>
+
+</html>

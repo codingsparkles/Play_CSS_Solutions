@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 29th Feb, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#df3b57, #d8a47f);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #df3b57;
+			position: relative;
+			padding: 25px 20px;
+			box-sizing: border-box;
+		}
+
+		.parent {
+			height: 105px;
+			width: 78px;
+			background: #d8a47f;
+			color: #d8a47f;
+			border-radius: 20px;
+			box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			animation: anime1 3s alternate infinite;
+		}
+
+		.child {
+			height: 70px;
+			width: 50px;
+			background: #df3b57;
+			color: #df3b57;
+			border-radius: 20px;
+			margin: 16px 14px;
+			position: absolute;
+			box-shadow: 0 0, 0 0, 0 0;
+			animation: anime2 3s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			10% {
+				box-shadow: 143px 0, 143px 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			}
+
+			20% {
+				box-shadow: 143px 0, 285px 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			}
+
+			30% {
+				box-shadow: 143px 0, 285px 0, 72px 115px, 72px 115px, 0 0, 0 0, 0 0;
+			}
+
+			40% {
+				box-shadow: 143px 0, 285px 0, 72px 115px, 214px 115px, 0 0, 0 0, 0 0;
+			}
+
+			50% {
+				box-shadow: 143px 0, 285px 0, 72px 115px, 214px 115px, 0 230px, 0 230px, 0 230px;
+			}
+
+			60% {
+				box-shadow: 143px 0, 285px 0, 72px 115px, 214px 115px, 0 230px, 143px 230px, 143px 230px;
+			}
+
+			70%,
+			100% {
+				box-shadow: 143px 0, 285px 0, 72px 115px, 214px 115px, 0 230px, 143px 230px, 285px 230px;
+			}
+		}
+
+		@keyframes anime2 {
+			40% {
+				box-shadow: 0 0, 286px 0, 0 0;
+			}
+
+			50%,
+			70% {
+				box-shadow: 72px 117px, 286px 0, 0 0;
+			}
+
+			85%,
+			100% {
+				box-shadow: 72px 117px, 286px 0, 286px 232px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child"></div>
+		</div>
+	</div>
+</body>
+
+</html>

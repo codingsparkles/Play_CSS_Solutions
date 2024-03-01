@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 1st March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#0f7173, #ee4b6a);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #0f7173;
+			position: relative;
+		}
+
+		.square {
+			background: #ee4b6a;
+			color: #ee4b6a;
+			position: absolute;
+			box-shadow: 0 0, 0 0;
+		}
+
+		.square1 {
+			height: 65px;
+			width: 65px;
+			top: 170px;
+			left: 166px;
+			animation: anime1 5s alternate infinite;
+		}
+
+		.square2,
+		.square3 {
+			height: 80px;
+			width: 80px;
+			rotate: 45deg;
+			top: 20px;
+			left: 20px;
+		}
+
+		.square2 {
+			animation: anime2 2s alternate infinite, anime3 2s alternate infinite;
+		}
+
+		.square3 {
+			top: 300px;
+			left: 215px;
+			animation: anime2 2s alternate infinite, anime4 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				box-shadow: -97px 135px, 138px -138px;
+				rotate: 180deg
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				box-shadow: 30px -30px, 60px -60px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				left: 200px;
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				left: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="square square1"></div>
+		<div class="square square2"></div>
+		<div class="square square3"></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 5th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#e3d0d8, #827081);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #827081;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+		}
+
+		.parent {
+			height: 100%;
+			width: 180px;
+			background: #827081;
+			border: solid #e3d0d8;
+			border-width: 0 30px;
+			position: relative;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.child {
+			height: 130px;
+			width: 210px;
+			background: #827081;
+			border-radius: 50%;
+			margin-top: 25px;
+			position: relative;
+		}
+
+
+		.child1 {
+			box-shadow: 0 90px #e3d0d8, 0 -55px #e3d0d8;
+			animation: anime3 1s alternate infinite;
+		}
+
+		.child2 {
+			margin-top: 40px;
+			box-shadow: 0 100px #e3d0d8;
+			animation: anime3 1s alternate infinite;
+		}
+
+		.ellipsis {
+			height: 65px;
+			width: 120px;
+			border-radius: 50%;
+			background: #e3d0d8;
+			top: 30px;
+			position: absolute;
+		}
+
+		.child1 .ellipsis {
+			left: 70px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.child2 .ellipsis {
+			left: 25px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				left: 25px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				left: 70px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				margin-top: -50px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1">
+				<div class="ellipsis"></div>
+			</div>
+			<div class="child child2">
+				<div class="ellipsis"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

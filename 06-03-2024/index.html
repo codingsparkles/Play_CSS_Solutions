@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 6th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#587291, #ffb30f);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #587291;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 30px;
+			width: 160px;
+			animation: anime1 2s alternate infinite;
+			margin-top: -5px;
+		}
+
+		.box {
+			background: #ffb30f;
+			height: 65px;
+			width: 65px;
+		}
+
+		.parent .box:nth-child(odd) {
+			rotate: 45deg;
+		}
+
+		.parent .triangle {
+			height: 60px;
+			clip-path: polygon(100% 50%, 0 0, 0 100%);
+		}
+
+		.parent2 {
+			scale: -1;
+		}
+
+		.parent3 {
+			height: 150px;
+			width: 275px;
+			background: #ffb30f;
+			clip-path: polygon(38%75%, 49%0%, 60%75%, 100% 75%, 100%100%, 0%100%, 0%75%);
+			margin-top: -225px;
+			animation: anime2 1s alternate infinite;
+
+		}
+
+		.box.parent4 {
+			color: #ffb30f;
+			margin-top: -135px;
+			margin-left: -155px;
+			box-shadow: 145px 0, 72px -30px, 75px 45px 0 -13px, 75px 80px 0 -13px;
+			animation: anime3 3s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				width: 330px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				clip-path: polygon(38%75%, 49%50%, 60%75%, 100% 75%, 100%100%, 0%100%, 0%75%);
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				border-radius: 50%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="parent parent1">
+				<div class="box"></div>
+				<div class="box triangle"></div>
+				<div class="box"></div>
+			</div>
+			<div class="parent parent2">
+				<div class="box"></div>
+				<div class="box triangle"></div>
+				<div class="box"></div>
+			</div>
+		</div>
+		<div class="parent3">
+		</div>
+		<div class="box parent4">
+		</div>
+	</div>
+</body>
+
+</html>

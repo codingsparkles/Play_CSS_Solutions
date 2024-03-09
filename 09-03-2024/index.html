@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 9th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#374a67, #9e7b9b);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #fee9e1;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.wrapper * {
+			position: absolute;
+			background: #b09e99;
+		}
+
+		.triangle {
+			height: 200px;
+			width: 200px;
+			background: linear-gradient(-126deg, #fee9e1 0 52px, #b09e99 52px 75px, #fee9e1 75px 95px, #b09e99 95px 118px, #fee9e1 0);
+			-webkit-box-reflect: right;
+		}
+
+		.triangle1 {
+			top: -150px;
+			animation: anime 2s alternate infinite;
+		}
+
+		.triangle.triangle2 {
+			scale: 1 -1;
+			bottom: -150px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.diamond {
+			height: 85px;
+			width: 85px;
+			top: 160px;
+			left: 20px;
+			rotate: 45deg;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.circle {
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			top: 140px;
+			left: 235px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			40%,
+			80% {
+				top: 0;
+			}
+		}
+
+		@keyframes anime1 {
+
+			40%,
+			80% {
+				bottom: 0;
+			}
+		}
+
+		@keyframes anime2 {
+
+			10%,
+			50% {
+				left: 70px;
+				rotate: 360deg;
+			}
+
+			50%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+
+		@keyframes anime3 {
+
+			40%,
+			80% {
+				scale: .5;
+				left: 280px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="triangle triangle1"></div>
+		<div class="triangle triangle2"></div>
+		<div class="diamond"></div>
+		<div class="circle"></div>
+	</div>
+</body>
+
+</html>

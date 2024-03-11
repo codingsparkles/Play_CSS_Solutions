@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 11th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#eaf0ce, #443850);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #443850;
+			position: relative;
+		}
+
+		p {
+			position: absolute;
+			height: 90px;
+			width: 90px;
+			border-radius: 50%;
+			background: #eaf0ce;
+			top: 170px;
+			left: 75px;
+			animation: anime 1s alternate infinite;
+		}
+
+		[a] {
+			scale: -1;
+			top: 110px;
+			left: 235px;
+		}
+
+		@keyframes anime {
+
+			0%,
+			60% {
+				box-shadow: 0 0 0 35px #443850, 0 30px 0 45px #eaf0ce;
+				rotate: 360deg;
+			}
+
+			60%,
+			100% {
+				box-shadow: 0 0 0 25px #443850, 0 -30px 0 45px #eaf0ce;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<p>
+		<p a></p>
+	</div>
+</body>
+
+</html>

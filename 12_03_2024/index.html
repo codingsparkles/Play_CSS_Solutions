@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 12th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#21897e, #69d1c5);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #21897e;
+			padding: 1.5rem;
+			position: relative;
+			box-sizing: border-box;
+		}
+
+		.wrapper * {
+			background: #69d1c5;
+			position: absolute;
+		}
+
+		.ellipsis {
+			height: 160px;
+			width: 125px;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			animation: circle 1s alternate infinite;
+		}
+
+		.ellipsis2 {
+			left: 242px;
+			top: 210px;
+			animation: circle 1s alternate infinite, ellipsis 1s alternate infinite;
+		}
+
+		.rectangle {
+			height: 85px;
+			width: 35px;
+			background: #21897e;
+			animation: rectangle 2s alternate infinite;
+		}
+
+		.square {
+			height: 60px;
+			width: 60px;
+			animation: square 1s alternate infinite;
+		}
+
+		.square1 {
+			top: 40px;
+			left: 275px;			
+		}
+
+		.square3 {
+			top: 300px;
+			left: 65px;
+		}
+
+		.square2 {
+			height: 45px;
+			width: 45px;
+			top: 175px;
+			left: 175px;
+			animation: rotate 1s normal infinite;
+		}
+
+		@keyframes rotate {
+			100%{
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes square {
+			to {
+				top: 175px;
+				left: 175px;
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes circle {
+			to {
+				height: 125px;
+			}
+		}
+
+		@keyframes ellipsis {
+			to {
+				top: 240px;
+			}
+		}
+
+		@keyframes rectangle {
+			0%, 40%{
+				height: 85px;
+				width: 35px;
+			}
+			40%, 60%{
+				height: 35px;
+			}
+			60%, 100%{
+				height: 35px;
+				width: 85px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="ellipsis ellipsis1">
+			<div class="rectangle"></div>
+		</div>
+		<div class="ellipsis ellipsis2">
+			<div class="rectangle"></div>
+		</div>
+		<div class="square square1"></div>
+		<div class="square square2"></div>
+		<div class="square square3"></div>
+	</div>
+</body>
+
+</html>

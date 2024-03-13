@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 13th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#d8dad3, #4a4a48);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #d8dad3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+			background: #4a4a48;
+		}
+
+		.box {
+			height: 30px;
+			width: 30px;
+			rotate: 90deg;
+		}
+
+		.box:not(.box1) {
+			animation: anime1 2s alternate infinite;
+		}
+
+		.box1 {
+			width: 280px;
+		}
+
+		.box2 {
+			top: 30px;
+		}
+
+		.box3 {
+			top: 340px;
+		}
+
+		.triangle {
+			height: 65px;
+			width: 70px;
+			top: 150px;
+			left: 170px;
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		}
+
+		.triangle1 {
+			animation: anime2 2s alternate-reverse infinite;
+		}
+
+		.triangle2 {
+			scale: -1;
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			40% {
+				width: 30px;
+				rotate: 0deg;
+			}
+
+			50%,
+			100% {
+				width: 250px;
+				rotate: 0deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			40%,
+			100% {
+				top: 90px;
+				left: 92px;
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime3 {
+
+			40%,
+			100% {
+				top: 250px;
+				left: 237px;
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="box box3"></div>
+		<div class="box box4"></div>
+		<div class="triangle triangle1"></div>
+		<div class="triangle triangle2"></div>
+	</div>
+</body>
+
+</html>

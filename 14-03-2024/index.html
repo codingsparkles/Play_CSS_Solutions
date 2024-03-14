@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 14th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#e5cdc8, #c455a8);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #e5cdc8;
+			position: relative;
+		}
+
+		.parent {
+			top: 70px;
+			left: 32px;
+			width: 335px;
+			height: 54px;
+			background: #c455a8;
+			position: absolute;
+			border-radius: 20px 20px 0 0;
+			display: flex;
+			gap: 20px;
+			animation: anime 5s alternate infinite;
+		}
+
+		.child {
+			background: inherit;
+			width: 50px;
+			height: 120px;
+			margin-top: 40px;
+			border-radius: 0 0 20px 20px;
+		}
+
+		.child1 {
+			animation: anime1 1s alternate infinite;
+		}
+
+		.child2 {
+			height: 190px;
+			animation: anime2 1s infinite alternate;
+		}
+
+		.child3 {
+			height: 160px;
+			animation: anime3 1s infinite alternate;
+		}
+
+		.child4 {
+			height: 220px;
+			animation: anime4 1s infinite alternate;
+		}
+
+		.child5 {
+			height: 90px;
+			animation: anime5 1s infinite alternate;
+		}
+
+		.child6 {
+			height: 180px;
+			animation: anime6 1s infinite alternate;
+		}
+
+		@keyframes anime {
+			100% {
+				left: 150px;
+				width: 100px;
+				top: 150px;
+			}
+		}
+
+		@keyframes anime1 {
+			to {
+				height: 150px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				height: 100px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				height: 190px;
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				height: 150px;
+			}
+		}
+
+		@keyframes anime5 {
+			to {
+				height: 130px;
+			}
+		}
+
+		@keyframes anime6 {
+			to {
+				height: 110px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1"></div>
+			<div class="child child2"></div>
+			<div class="child child3"></div>
+			<div class="child child4"></div>
+			<div class="child child5"></div>
+			<div class="child child6"></div>
+		</div>
+	</div>
+</body>
+
+</html>

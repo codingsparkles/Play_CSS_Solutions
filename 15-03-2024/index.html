@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 15th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#478978, #84dcc6);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #478978;
+			display: grid;
+			place-items: center;
+		}
+
+		.circle {
+			background: #84dcc6;
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			position: relative;
+			margin-top: -240px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.semi-circle {
+			position: absolute;
+			width: 120px;
+			height: 280px;
+			background: linear-gradient(#0000 80%, #84dcc6 20%);
+			border-radius: 150px;
+			rotate: 0deg;
+		}
+
+		.semi-circle1 {
+			margin-top: -240px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.semi-circle2 {
+			margin-top: -100px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		.semi-circle3 {
+			margin-top: 40px;
+			animation: anime4 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			25% {
+				margin-top: -150px
+			}
+
+			50%,
+			100% {
+				margin-top: 55px
+			}
+		}
+
+		@keyframes anime2 {
+			25% {
+				margin-top: -150px;
+				rotate: 90deg;
+			}
+
+			50% {
+				margin-top: 40px;
+				rotate: 180deg;
+			}
+
+			75%,
+			100% {
+				margin-top: 40px;
+				rotate: 270deg;
+			}
+		}
+
+		@keyframes anime3 {
+			25% {
+				margin-top: -100px;
+				rotate: 0deg;
+			}
+
+			50% {
+				margin-top: 40px;
+				rotate: 90deg;
+			}
+
+			75%,
+			100% {
+				margin-top: 40px;
+				rotate: 180deg;
+			}
+		}
+
+		@keyframes anime4 {
+			25% {
+				margin-top: 40px;
+				rotate: 0deg;
+			}
+
+			50% {
+				margin-top: 40px;
+				rotate: 0deg;
+			}
+
+			75%,
+			100% {
+				rotate: 90deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle"></div>
+		<div class="semi-circle semi-circle1"></div>
+		<div class="semi-circle semi-circle2"></div>
+		<div class="semi-circle semi-circle3"></div>
+	</div>
+</body>
+
+</html>

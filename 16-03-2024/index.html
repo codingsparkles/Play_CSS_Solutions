@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 16th March, 2024</title>
+	<style>
+		:root {
+			--bgColor: #d6edff;
+			--borderColor: #8b95c9;
+		}
+
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(var(--bgColor), var(--borderColor));
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: linear-gradient(var(--borderColor), var(--borderColor)) center/25px 100% no-repeat var(--bgColor);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.box {
+			background: var(--bgColor);
+			border: solid var(--borderColor);
+		}
+
+		.box1 {
+			height: 220px;
+			width: 100px;
+			border-width: 10px 20px;
+			animation: anime1 1s linear infinite;
+		}
+
+		.box2 {
+			height: 140px;
+			width: 150px;
+			border-width: 15px 30px;
+			animation: anime2 1s alternate infinite;
+		}
+
+		.box3 {
+			height: 60px;
+			width: 200px;
+			border-width: 10px 30px;
+			background: linear-gradient(var(--borderColor), var(--borderColor)) center/100% 15px no-repeat var(--bgColor);
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			30%,
+			100% {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			30%,
+			100% {
+				rotate: -180deg;
+			}
+		}
+
+		@keyframes anime3 {
+
+			30%,
+			100% {
+				rotate: 180deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="box box3"></div>
+	</div>
+</body>
+
+</html>

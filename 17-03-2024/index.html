@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 17th March, 2024</title>
+	<style>
+		:root {
+			--color1: #331832;
+			--color2: #f1ecce;
+		}
+
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#478978, #84dcc6);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: var(--color1);
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.box {
+			background: var(--color2);
+			bottom: 0;
+			left: 120px;
+			height: 220px;
+			width: 160px;
+		}
+
+		.circle {
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			background: var(--color2);
+			top: 135px;
+			left: 150px;
+			border: 10px solid var(--color1)
+		}
+
+		.circle1 {
+			color: var(--color2);
+			box-shadow: 0 -80px 0 -25px, 0 -140px 0 -32px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.circle2 {
+			top: 245px;
+			left: 85px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.circle3 {
+			top: 245px;
+			left: 235px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			33% {
+				rotate: -45deg;
+			}
+
+			33%,
+			66% {
+				rotate: 0deg;
+			}
+
+			66%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			30% {
+				top: 135px;
+				left: 150px;
+			}
+
+			30%,
+			60% {
+				top: 245px;
+				left: 85px;
+			}
+
+			60%,
+			100% {
+				top: 300px;
+				left: 150px;
+			}
+		}
+
+		@keyframes anime3 {
+
+			0%,
+			30% {
+				top: 135px;
+				left: 150px;
+			}
+
+			30%,
+			60% {
+				top: 245px;
+				left: 235px;
+			}
+
+			60%,
+			100% {
+				top: 300px;
+				left: 150px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box"></div>
+		<div class="circle circle1"></div>
+		<div class="circle circle2"></div>
+		<div class="circle circle3"></div>
+	</div>
+</body>
+
+</html>

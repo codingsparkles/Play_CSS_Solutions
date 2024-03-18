@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 18th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#0091ad, #fff4e4);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #0091ad;
+			position: relative;
+		}
+
+		.wrapper,
+		.wrapper *,
+		.parent2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent {
+			height: 160px;
+			width: 160px;
+			background: #fff4e4;
+			color: #0091ad;
+			box-shadow: 0 -52px, 0 52px, 52px 0, -52px 0, 0 0 0 50px#fff4e4;
+			animation: anime1 5s linear infinite;
+		}
+
+		.parent2,
+		.child {
+			position: absolute;
+			background: #fff4e4;
+			border-radius: 20px;
+		}
+
+		.child1,
+		.child3 {
+			background: #0091ad;
+		}
+
+		.parent2 {
+			animation: anime2 2s alternate infinite;
+			height: 75px;
+			width: 75px;
+		}
+
+		.child1 {
+			height: 75px;
+			width: 75px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		.child2 {
+			height: 75px;
+			width: 75px;
+			animation: anime4 2s alternate infinite;
+		}
+
+		.child3 {
+			height: 75px;
+			width: 75px;
+			animation: anime5 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			40% {
+				rotate: 45deg;
+			}
+
+			40%,
+			80% {
+				rotate: 360deg;
+			}
+
+			80%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				height: 160px;
+				width: 160px;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				height: 135px;
+				width: 135px;
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				height: 110px;
+				width: 110px;
+			}
+		}
+
+		@keyframes anime5 {
+			to {
+				border-radius: 25px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent"></div>
+		<div class="parent2">
+			<div class="child child1">
+				<div class="child child2">
+					<div class="child child3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

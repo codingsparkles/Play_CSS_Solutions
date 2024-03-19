@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 19th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#616163, #ffbfa0);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #616163;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.wrapper * {
+			background: #ffbfa0;
+			position: absolute;
+		}
+
+		.parent {
+			height: 195px;
+			width: 150px;
+			border-radius: 0 0 150px 150px;
+			left: 125px;
+			position: relative;
+			top: 0;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.child {
+			position: absolute;
+			background: #ffbfa0;
+			border: 10px solid #616163;
+			border-radius: 0 0 150px 150px;
+			top: -20px;
+		}
+
+		.child1 {
+			height: 185px;
+			width: 110px;
+			left: 10px;
+		}
+
+		.child2 {
+			height: 160px;
+			width: 70px;
+			left: 30px;
+		}
+
+		.box1 {
+			height: 230px;
+			width: 32px;
+			border-radius: 40px;
+			top: 190px;
+			left: 184px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.diamond {
+			height: 50px;
+			width: 50px;
+			top: 280px;
+			left: 115px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		.diamond2 {
+			left: 235px;
+		}
+
+		@keyframes anime1 {
+			to {
+				top: -150px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				top: 350px;
+			}
+		}
+
+		@keyframes anime3 {
+
+			0%,
+			20% {
+				rotate: 45deg;
+			}
+
+			20%,
+			80% {
+				rotate: 360deg;
+			}
+
+			80%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1">
+			</div>
+			<div class="child child2"></div>
+		</div>
+		<div class="box box1"></div>
+		<div class="diamond diamond1"></div>
+		<div class="diamond diamond2"></div>
+	</div>
+</body>
+
+</html>

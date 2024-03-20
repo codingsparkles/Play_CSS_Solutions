@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 20th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			background: radial-gradient(#da4167, #f0eff4);
+		}
+
+		body,.wrapper{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #da4167;
+		}
+
+		.triangle {
+			height: 310px;
+			width: 345px;
+			background: linear-gradient(10deg, #f0eff4 0 45px, #0000 45px 65px, #f0eff4 65px 85px, #0000 85px 107px, #f0eff4 107px 130px, #0000 130px 150px, #f0eff4 150px 172px, #0000 172px 192px, #f0eff4 192px 212px, #0000 212px 232px, #f0eff4 233px 255px, #0000 255px 275px, #f0eff4 0);
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+			animation: anime 5s linear infinite;
+			background-position: 345;
+		}
+
+		@keyframes anime {
+			0%, 40%{
+				transform: scaleX(-1)
+			}
+			40%,
+			100% {
+				background-position: -345px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="triangle">
+		</div>
+	</div>
+</body>
+
+</html>

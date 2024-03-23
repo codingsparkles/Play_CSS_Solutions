@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 23rd March, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 97vh;
+            background: radial-gradient(#26547c, #fff, #ef476f);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper,
+        .child {
+            background: #26547c;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            align-items: center;
+        }
+
+        .child {
+            height: 165px;
+            width: 120px;
+            background: #ef476f;
+            box-shadow: 0 -20px#ef476f, 0 0 0 20px #26547c, 0 0 0 35px #ef476f;
+            border-radius: 0 0 150px 150px;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .child2 {
+            scale: -1;
+            margin-top: 70px;
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: #26547c;
+            align-self: end;
+            margin: 15px 10px;
+        }
+
+        .parent2 {
+            position: absolute;
+            border: solid;
+            border-width: 30px 50px;
+            border-color: #0000 #ef476f;
+            width: 120px;
+            animation: anime3 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                rotate: 180deg;
+                height: 125px;
+            }
+        }
+
+        @keyframes anime3 {
+            to {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='parent'>
+            <div class='child child1'>
+                <div class="circle"></div>
+            </div>
+            <div class='child child2'>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="parent2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 24th March, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 97vh;
+            background: radial-gradient(#fcfcfc, #ef476f);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            padding: 20px;
+        }
+
+        .wrapper {
+            background: #fcfcfc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .wrapper * {
+            position: absolute;
+            border: solid;
+        }
+
+        .triangle {
+            width: 200px;
+            border-width: 100px 50px;
+            border-color: #fcfcfc #ef476f;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .triangle2 {
+            rotate: 90deg;
+            border-color: #0000 #ef476f;
+        }
+
+        .square {
+            height: 200px;
+            width: 200px;
+            border: 20px solid #ef476f;
+            box-shadow: 0 0 0 10px #fcfcfc, 0 0 0 20px #ef476f;
+            rotate: 45deg;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            40%,
+            100% {
+                border-width: 200px 100px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            40%,
+            100% {
+                height: 0;
+                width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='triangle triangle1'>
+        </div>
+        <div class="triangle triangle2"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

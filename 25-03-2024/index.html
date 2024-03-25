@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 25th March, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 97vh;
+            background: radial-gradient(#ef798a, #663d77);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ef798a;
+        }
+
+        .circle,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 40px solid;
+            border-color: #ef798a #663d77;
+            rotate: -45deg;
+            animation: anime1 3s alternate infinite;
+        }
+
+        .inner-circle {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: #663d77;
+            box-shadow: 0 0 0 10px #ef798a, 0 0 0 20px #663d77;
+            animation: anime2 3s alternate infinite;
+        }
+
+        @keyframes anime1 {
+            to {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            40% {
+                margin-top: -5px;
+                margin-left: -80px;
+            }
+
+            40%,
+            60% {
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            60%,
+            100% {
+                margin-top: 5px;
+                margin-left: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="inner-circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

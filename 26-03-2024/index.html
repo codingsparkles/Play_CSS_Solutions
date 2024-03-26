@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 26th March, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 97vh;
+            background: radial-gradient(#335149, #f3fda6);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #335149;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 40px;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+
+        .child {
+            height: 140px;
+            width: 140px;
+            background: linear-gradient(45deg, #335149 20%, #f3fda6 0 80%, #335149 0);
+            animation: anime 2s alternate infinite;
+        }
+
+        .child2,
+        .child3 {
+            scale: -1+1;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .child4 {
+            scale: -1-1;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                scale: -1+1;
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                scale: -1-1;
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='child child1'>
+        </div>
+        <div class='child child2'>
+        </div>
+        <div class='child child3'>
+        </div>
+        <div class='child child4'>
+        </div>
+    </div>
+</body>
+
+</html>

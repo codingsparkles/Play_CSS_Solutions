@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 27th March, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            min-height: 97vh;
+            background: radial-gradient(#414b55, #f1ceae);
+        }
+
+        body,
+        .circle3 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #335149;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper * {
+            background: #f1ceae;
+            position: absolute;
+        }
+
+        .square {
+            height: 120px;
+            width: 120px;
+            border-radius: 20px;
+            margin: -20px;
+            animation: anime 3s alternate infinite;
+        }
+
+        .square2 {
+            bottom: 0;
+            right: 0;
+        }
+
+        .circle {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            margin: -50px;
+        }
+
+        .circle1 {
+            left: 380px;
+            animation: anime1 3s alternate infinite;
+        }
+
+        .circle2 {
+            top: 380px;
+            animation: anime2 3s alternate infinite;
+        }
+
+        .circle3 {
+            height: 80px;
+            width: 80px;
+            top: 210px;
+            left: 210px;
+        }
+
+        .oval {
+            height: 50px;
+            width: 25px;
+            border-radius: 50%;
+            background: #335149;
+            animation: anime3 1s linear infinite;
+        }
+
+        @keyframes anime {
+
+            40%,
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime1 {
+
+            40%,
+            100% {
+                top: 110px;
+                left: 270px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            40%,
+            100% {
+                top: 270px;
+                left: 110px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            40%,
+            100% {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='square square1'>
+        </div>
+        <div class='square square2'>
+        </div>
+        <div class='circle circle1'>
+        </div>
+        <div class='circle circle2'>
+        </div>
+        <div class='circle circle3'>
+            <div class="oval"></div>
+        </div>
+    </div>
+</body>
+
+</html>

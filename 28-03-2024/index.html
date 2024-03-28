@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 28th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#c1c1c1, #2c4251);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #c1c1c1;
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.oval {
+			background: #2c4251;
+			height: 108px;
+			width: 225px;
+			border-radius: 50%;
+			top: 152px;
+			left: 88px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.inner-oval {
+			background: #c1c1c1;
+			height: 80px;
+			width: 170px;
+			border-radius: 50%;
+			margin: 13px 27px;
+		}
+
+		.square {
+			height: 50px;
+			width: 50px;
+			border: 7px solid #2c4251;
+			top: 295px;
+			left: 295px;
+			box-shadow: -258px -254px #2c4251;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.triangle {
+			height: 60px;
+			width: 70px;
+			background: #2c4251;			
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+			animation: anime3 2s normal infinite;
+		}
+
+		.triangle1 {
+			left: 292px;
+			top: 45px;
+		}
+
+		.triangle2 {
+			top: 295px;
+			left: 40px;
+		}
+
+		.triangle3 {
+			margin: 3px 0;
+			background: #c1c1c1;
+			scale: .67;
+		}
+
+		@keyframes anime1 {
+			to {
+				transform: scaleX(-1);
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				scale: 1.5;
+				box-shadow: -158px -154px #2c4251;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="oval">
+			<div class="inner-oval"></div>
+		</div>
+		<div class="triangle triangle1"></div>
+		<div class="triangle triangle2">
+			<div class="triangle triangle3"></div>
+		</div>
+		<div class="square"></div>
+	</div>
+</body>
+
+</html>

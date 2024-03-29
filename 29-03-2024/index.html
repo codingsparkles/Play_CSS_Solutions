@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 29th March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#cfd7c7, #fff, #70a9a1);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #70a9a1;
+			padding: 38px;
+			position: relative;
+			overflow: hidden;
+			box-sizing: border-box;
+		}
+
+		.cone {
+			position: relative;
+			animation: anime 2s alternate infinite;
+		}
+
+		.cone * {
+			position: absolute;
+		}
+
+		.triangle {
+			height: 110px;
+			width: 110px;
+			background: #cfd7c7;
+			clip-path: polygon(0 0, 33%100%, 100%32%);
+		}
+
+		.circle {
+			height: 110px;
+			width: 110px;
+			background: #cfd7c7;
+			border-radius: 50%;
+			top: 30px;
+			left: 30px;
+		}
+
+		.cone2 {
+			scale: -1+1;
+		}
+
+		.cone3 {
+			scale: -1;
+			top: 325px;
+		}
+
+		.cone4 {
+			scale: 1-1;
+			top: 325px;
+		}
+
+		.circle.center {
+			top: 145px;
+			left: 145px;
+			position: absolute;
+			scale: 2;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			0%,
+			60% {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			60% {
+				scale: .55;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="cone cone1">
+			<div class="triangle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="cone cone2">
+			<div class="triangle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="cone cone3">
+			<div class="triangle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="cone cone4">
+			<div class="triangle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="circle center"></div>
+	</div>
+</body>
+
+</html>

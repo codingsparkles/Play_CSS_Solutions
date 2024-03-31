@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 31st March, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#ff82a9, #ffebe7);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #ff82a9;
+			padding: 50px 65px;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+
+		.wrapper,
+		.parent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent * {
+			position: absolute;
+			animation: anime 2s alternate infinite;
+		}
+
+		.circle {
+			height: 40px;
+			width: 40px;
+			background: #ff82a9;
+			border-radius: 50%;
+			box-shadow: 0 0 0 0, 0 0 0 0 #ff82a9;
+			animation: anime6 2s alternate infinite;
+		}
+
+		.child {
+			background: #000;
+			height: 340px;
+			width: 15px;
+			border-radius: 15px;
+		}
+
+		.child2 {
+			animation: anime1 2s alternate infinite;
+		}
+
+		.child3 {
+			animation: anime2 2s alternate infinite;
+		}
+
+		.child4 {
+			animation: anime3 2s alternate infinite;
+		}
+
+		.child5 {
+			animation: anime4 2s alternate infinite;
+		}
+
+		.child6 {
+			animation: anime5 2s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			to {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime1 {
+
+			15%,
+			100% {
+				rotate: 30deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			30%,
+			100% {
+				rotate: 60deg;
+			}
+		}
+
+		@keyframes anime3 {
+
+			45%,
+			100% {
+				rotate: 90deg;
+			}
+		}
+
+		@keyframes anime4 {
+
+			60%,
+			100% {
+				rotate: 120deg;
+			}
+		}
+
+		@keyframes anime5 {
+
+			75%,
+			100% {
+				rotate: 150deg;
+			}
+		}
+
+		@keyframes anime6 {
+			to {
+				box-shadow: 0 0 0 10px, 0 0 0 20px #ff82a9;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1"></div>
+			<div class="child child2"></div>
+			<div class="child child3"></div>
+			<div class="child child4"></div>
+			<div class="child child5"></div>
+			<div class="child child6"></div>
+			<div class="circle"></div>
+		</div>
+	</div>
+</body>
+
+</html>

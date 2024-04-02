@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 2nd April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#da3e52, #f2e94e);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #da3e52;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent {
+			position: relative;
+			height: 250px;
+			width: 270px;
+			border: solid #f2e94e;
+			border-width: 25px 25px 0;
+			border-radius: 170px 170px 0 0;
+			margin-top: -40px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.parent::before,
+		.parent::after {
+			content: '';
+			position: absolute;
+			height: 140px;
+			width: 90px;
+			background: #f2e94e;
+			border-radius: 20px;
+			top: 130px;
+		}
+
+		.parent::before {
+			left: -25px;
+		}
+
+		.parent::after {
+			left: 205px;
+		}
+
+
+		.child {
+			background: #f2e94e;
+			position: absolute;
+			height: 20px;
+			width: 40px;
+			top: 70px;
+		}
+
+		.child1 {
+			left: 65px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.child2 {
+			left: 157px;
+			animation: anime2 2s alternate-reverse infinite;
+		}
+
+		@keyframes anime1 {
+			50% {
+				scale: .5;
+			}
+
+			100% {
+				scale: 1;
+			}
+		}
+
+		@keyframes anime2 {
+			50% {
+				top: 50px;
+			}
+
+			100% {
+				top: 110px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1"></div>
+			<div class="child child2"></div>
+		</div>
+	</div>
+</body>
+
+</html>

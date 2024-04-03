@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 3rd April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#cbb9a8, #0b4f6c);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: linear-gradient(#0b4f6c, #0b4f6c) center/100% 40px no-repeat #cbb9a8;
+			display: grid;
+			place-items: center;
+			animation: anime1 2s alternate infinite;
+			background-position: 0 30px;
+			overflow: hidden;
+		}
+
+		.circle {
+			height: 110px;
+			width: 110px;
+			border-radius: 50%;
+			background: #cbb9a8;
+			color: #0b4f6c;
+			border: 15px solid;
+			box-shadow: 0 0 0 -38px, 0 0 0 -38px;
+			-webkit-box-reflect: above -140px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			33% {
+				background-position: 0 30px;
+			}
+
+			50%,
+			70% {
+				background-position: 0 180px;
+			}
+
+			100% {
+				background-position: 0 330px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				box-shadow: 150px 148px 0 -38px, -158px 148px 0 -38px;
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle"></div>
+	</div>
+</body>
+
+</html>

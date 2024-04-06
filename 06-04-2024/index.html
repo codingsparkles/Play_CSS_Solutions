@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 6th April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#ccad8f, #262626);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #ccad8f;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+		}
+
+		.container {
+			height: 180px;
+			width: 360px;
+			background: #262626;
+			border-radius: 25px;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		.container * {
+			background: #ccad8f;
+			color: #ccad8f;
+		}
+
+		.circle {
+			height: 25px;
+			width: 25px;
+			border-radius: 50%;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.rectange {
+			height: 90px;
+			width: 20px;
+			border-radius: 20px;
+			margin: 3px 150px;
+			background: #262626;
+			box-shadow: 23px 0, 70px 0, -23px 0, -70px 0;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			20% {
+				box-shadow: 0 125px, 300px 125px, 300px 0;
+			}
+
+			33% {
+				box-shadow: 0 125px, 300px 125px, 300px 125px;
+			}
+
+			66% {
+				box-shadow: 0 125px, 0 125px, 0 125px;
+			}
+
+			100% {
+				box-shadow: 0 0, 0 0, 0 0;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			20% {
+				box-shadow: 23px 0, 70px 0, -23px 0, -70px 0;
+			}
+
+			30% {
+				box-shadow: 23px 0, 70px 0, -23px 0, -370px 0;
+			}
+
+			60% {
+				box-shadow: 23px 0, 370px 0, -23px 0, -370px 0;
+			}
+
+			80% {
+				box-shadow: 23px 0, 370px 0, -323px 0, -370px 0;
+			}
+
+			100% {
+				box-shadow: 323px 0, 370px 0, -323px 0, -370px 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="circle"></div>
+			<div class="rectange"></div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 7th April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#FF7088, #ECC1D2, #fff);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #FF7088;
+			padding: 10px;
+			box-sizing: border-box;
+			position: relative;
+		}
+
+		.box {
+			position: absolute;
+			height: 30px;
+			width: 30px;
+			zoom: 1.5;
+			background-color: #ECC1D2;
+			color: #ECC1D2;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.box2 {
+			bottom: 7px;
+			right: 7px;
+			scale: -1;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			25% {
+				box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 40px 0, 80px 0, 120px 0, 160px 0,
+					40px 40px, 40px 80px, 40px 120px, 80px 40px, 120px 40px, 80px 80px;
+			}
+
+			50% {
+				box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 40px 0, 80px 0, 120px 0, 160px 0,
+					40px 40px, 40px 80px, 40px 120px, 80px 40px, 120px 40px, 40px 40px;
+			}
+
+			75% {
+				box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 40px 0, 80px 0, 120px 0, 160px 0,
+					40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+			}
+
+			100% {
+				box-shadow: 0 40px, 0 40px, 0 40px, 0 40px, 40px 0, 40px 0, 40px 0, 40px 0,
+					40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box box1">
+		</div>
+		<div class="box box2">
+		</div>
+	</div>
+</body>
+
+</html>

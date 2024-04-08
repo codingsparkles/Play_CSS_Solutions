@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 8th April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(120deg, #accbe1, #536b78, #fff);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #accbe1;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.circle {
+			position: absolute;
+			height: 50px;
+			width: 50px;
+			background: #536b78;
+			color: #536b78;
+			border-radius: 50%;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.circle1 {
+			margin: 149px 172px;
+			box-shadow: 0 122px, 0 -122px, 130px 0, -120px 0, 130px 120px, -122px -120px, -122px 120px, 130px -120px;
+		}
+
+		.circle2 {
+			scale: .75;
+			margin: 210px 172px;
+			box-shadow: 0 162px, 0 -162px, 172px 0, -160px 0, 172px 160px, -162px -160px, -162px 160px, 172px -160px;
+		}
+
+		@keyframes anime1 {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle circle1"></div>
+		<div class="circle circle2"></div>
+	</div>
+</body>
+
+</html>

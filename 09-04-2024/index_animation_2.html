@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 9th April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#024F4A, #fff, #6CC331);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #024F4A;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.square {
+			height: 95px;
+			width: 95px;
+			background: repeating-conic-gradient(#024F4A 0 25%, #6CC331 0 50%);
+			rotate: 45deg;
+		}
+
+		.square:nth-child(odd) {
+			animation: anime1 2s alternate infinite;
+		}
+
+		.square:nth-child(even) {
+			animation: anime2 2s alternate infinite;
+		}
+
+		.square1 {
+			margin: 50px 75px
+		}
+
+		.square2 {
+			margin: -76px 5px
+		}
+
+		.square3 {
+			margin: 50px 5px;
+		}
+
+		.square4 {
+			margin: -215px 145px;
+		}
+
+		.square5 {
+			margin: 190px 145px;
+		}
+
+		.square6 {
+			margin: -422px 285px;
+		}
+
+		.square7 {
+			margin: 462px 285px;
+		}
+
+		.square8 {
+			margin: -488px 215px;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			60% {
+				rotate: 360deg;
+			}
+
+			60%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			60% {
+				rotate: -360deg;
+			}
+
+			60%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="square square1"></div>
+		<div class="square square2"></div>
+		<div class="square square3"></div>
+		<div class="square square4"></div>
+		<div class="square square5"></div>
+		<div class="square square6"></div>
+		<div class="square square7"></div>
+		<div class="square square8"></div>
+	</div>
+</body>
+
+</html>

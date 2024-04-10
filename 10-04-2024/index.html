@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 10th April, 2024</title>
+	<style>
+		body {
+			min-height: 97vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#294159, #fff, #FF8900);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #294159;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.wrapper,
+		.circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.circle {
+			height: 130px;
+			width: 130px;
+			background: #294159;
+			border-radius: 50%;
+			box-shadow: 0 0px 0 0 #FF8900,
+				0 0 0 40px #294159, 0 0 0 0 #FF8900;
+			animation: anime1 3s alternate infinite;
+		}
+
+		.diamond {
+			position: absolute;
+			height: 50px;
+			width: 50px;
+			background: #FF8900;
+			animation: anime2 3s infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			50% {
+				box-shadow: -15px 0px 0 30px #FF8900, 0 0 0 55px #294159, -20px 0 0 90px #FF8900;
+			}
+
+			50%,
+			100% {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			60% {
+				rotate: 360deg;
+			}
+
+			60%,
+			100% {
+				rotate: 45deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle">
+		</div>
+		<div class="diamond"></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 11th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#2f2d2e, #fff, #bec5ad);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #2f2d2e;
+			padding: 35px;
+			position: relative;
+			overflow: hidden;
+			box-sizing: border-box;
+		}
+
+		.wrapper,
+		.parent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.parent {
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+			overflow: hidden;
+			background: linear-gradient(#bec5ad, #bec5ad) center/140px 100% no-repeat;
+			animation: anime 2s alternate infinite;
+		}
+
+		.box {
+			height: 35px;
+			width: 310px;
+			background: #bec5ad;
+			border-radius: 40px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.box2,
+		.box3 {
+			width: 250px;
+			height: 30px;
+		}
+
+		.box3 {
+			margin-top: 115px;
+		}
+
+		.box5 {
+			position: absolute;
+			height: 240px;
+			width: 30px;
+			background: #2f2d2e;
+			top: 75px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			40%,
+			60% {
+				background: linear-gradient(#bec5ad, #bec5ad) center/0 0 no-repeat;
+			}
+		}
+
+		@keyframes anime1 {
+
+			40%,
+			60% {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime3 {
+
+			40%,
+			60% {
+				height: 50px;
+				top: 175px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+			<div class="box box3"></div>
+			<div class="box box4"></div>
+			<div class="box box5"></div>
+		</div>
+	</div>
+</body>
+
+</html>

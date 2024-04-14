@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 14th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#616283, #fff, #cb9cf2);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #616283;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.box {
+			background: #0000;
+			color: #cb9cf2;
+		}
+
+		.rounded-square {
+			height: 150px;
+			width: 150px;
+			border-radius: 30px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.rectangle {
+			position: fixed;
+			height: 20px;
+			width: 75px;
+			box-shadow: -40px 20px, 35px -20px, 35px -20px, -40px 20px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			30% {
+				box-shadow: 0 0 0 15px, 0 0 0 15px, 0 0 0 15px, 0 0 0 15px;
+			}
+
+			30%,
+			60% {
+				rotate: 360deg;
+				box-shadow: 0 0 0 15px, 0 0 0 15px, 0 0 0 15px, 0 0 0 15px;
+			}
+
+			60%,
+			100% {
+				rotate: 0deg;
+				box-shadow: -150px -150px 0 15px, 150px -150px 0 15px, -150px 150px 0 15px, 150px 150px 0 15px;
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				box-shadow: -40px 20px, 35px -20px, -120px -20px, 110px 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box rounded-square"></div>
+		<div class="box rectangle"></div>
+	</div>
+</body>
+
+</html>

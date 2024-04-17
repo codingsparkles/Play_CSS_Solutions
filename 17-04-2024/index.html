@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 17th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#fff, #ede7d9, #4b4237);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #4b4237;
+			color: #ede7d9;
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.square {
+			height: 100px;
+			width: 100px;
+			rotate: 45deg;
+			top: 150px;
+			left: 150px;
+			z-index: 1;
+			box-shadow: 0 0 0 0, 0 0 0 0#4b4237, 0 0 0 0;
+			animation: anime1 2s infinite;
+		}
+
+		.circle {
+			height: 95px;
+			width: 95px;
+			background: #ede7d9;
+			border-radius: 50%;
+			top: 25px;
+			left: 152px;
+			box-shadow: 0 255px;
+		}
+
+		.circle1 {
+			animation: anime2 2s infinite;
+		}
+
+		.circle2 {
+			height: 65px;
+			width: 65px;
+			background: #4b4237;
+			top: 40px;
+			left: 167px;
+			z-index: 2;
+			box-shadow: 0 255px#4b4237;
+		}
+
+		@keyframes anime1 {
+
+			40%,
+			60% {
+				box-shadow: 0 0 0 15px, 0 0 0 30px#4b4237, 0 0 0 40px;
+				rotate: 360deg;
+			}
+
+			60%,
+			100% {
+				box-shadow: 0 0 0 15px, 0 0 0 30px#4b4237, 0 0 0 40px;
+				rotate: 45deg;
+			}
+		}
+
+		@keyframes anime2 {
+
+			40%,
+			60% {
+				transform: scaleX(-1);
+			}
+
+			60%,
+			100% {
+				transform: scaleX(1);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="square"></div>
+		<div class="circle circle1"></div>
+		<div class="circle circle2"></div>
+	</div>
+</body>
+
+</html>

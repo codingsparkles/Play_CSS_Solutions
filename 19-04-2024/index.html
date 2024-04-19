@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 19th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#f7dd72, #4e6766);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #f7dd72;
+			display: grid;
+			place-items: center;
+		}
+
+		.parent {
+			height: 340px;
+			width: 310px;
+			background: repeating-linear-gradient(#4e6766 0 25px, #f7dd72 0 35px);
+			position: relative;
+		}
+
+		.child {
+			background: #f7dd72;
+			position: absolute;
+		}
+
+		.diamond {
+			height: 90px;
+			width: 90px;
+			rotate: 45deg;
+			background: linear-gradient(135deg, #f7dd72 0 71px, #0000 0 96px, #f7dd72 0 35px);
+		}
+
+		.diamond1 {
+			top: 228px;
+			left: 18px;
+			animation: anime1 3s alternate infinite;
+		}
+
+		.diamond2 {
+			bottom: 228px;
+			right: 18px;
+			scale: -1;
+			animation: anime2 3s alternate infinite;
+		}
+
+		.ellipsis {
+			height: 120px;
+			width: 50px;
+			border-radius: 50%;
+			top: 110px;
+			left: 125px;
+			background: linear-gradient(#f7dd72 0 30px, #0000 0 90px, #f7dd72 0 35px);
+			animation: anime3 3s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			50%,
+			100% {
+				top: 18px;
+			}
+		}
+
+		@keyframes anime2 {
+
+			50%,
+			100% {
+				bottom: 18px;
+			}
+		}
+
+		@keyframes anime3 {
+
+			50%,
+			100% {
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child diamond diamond1"></div>
+			<div class="child ellipsis"></div>
+			<div class="child diamond diamond2"></div>
+		</div>
+	</div>
+</body>
+
+</html>

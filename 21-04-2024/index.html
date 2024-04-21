@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 21st April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#9D7C7B, #C8C8C8);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #9D7C7B;
+			display: grid;
+			place-items: center;
+			position: relative;
+		}
+
+		.wrapper * {
+			background: #0000;
+			position: absolute;
+			color: #C8C8C8;
+		}
+
+		.diamond {
+			height: 30px;
+			width: 30px;
+			rotate: 45deg;
+			top: 185px;
+			left: 90px;
+			box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.rectangle {
+			height: 55px;
+			width: 140px;
+			border-radius: 55px;
+			top: 172px;
+			left: 225px;
+			box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0;
+			animation: anime2 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			50%,
+			100% {
+
+				box-shadow: 40px 40px, -40px -40px, 135px -135px, 55px -215px, 215px -55px;
+			}
+		}
+
+		@keyframes anime2 {
+
+			50%,
+			100% {
+				box-shadow: 0 -55px, 0 55px, -190px -110px, -190px 110px, -190px 0; 
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="diamond"></div>
+		<div class="rectangle"></div>
+	</div>
+</body>
+
+</html>

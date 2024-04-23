@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 23rd April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#5a6650, #f1f2ee);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #5a6650;
+			position: relative;
+		}
+
+		.wrapper * {
+			position: absolute;
+		}
+
+		.parent {
+			height: 110px;
+			width: 110px;
+			background: #f1f2ee;
+			border-radius: 20px;
+			padding: .65rem;
+			box-sizing: border-box;
+		}
+
+		.child {
+			height: 90px;
+			width: 90px;
+			background: #5a6650;
+			border-radius: 25px;
+		}
+
+		.parent1 {
+			top: 25px;
+			left: 27px;
+			animation: anime1 3s alternate infinite;
+		}
+
+		.parant2 {
+			top: 25px;
+			left: 270px;
+			animation: anime2 3s alternate infinite;
+		}
+
+		.parent3 {
+			top: 275px;
+			left: 270px;
+			animation: anime3 3s alternate infinite;
+		}
+
+		.parent4 {
+			top: 275px;
+			left: 27px;
+			animation: anime4 3s alternate infinite;
+		}
+
+		.parent5 {
+			top: 145px;
+			left: 145px;
+			scale: .75;
+			rotate: 45deg;
+			animation: anime5 3s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			20% {
+				top: 25px;
+				left: 27px;
+			}
+
+			40% {
+				top: 25px;
+				left: 270px;
+			}
+
+			60% {
+				top: 275px;
+				left: 270px;
+			}
+
+			80% {
+				top: 275px;
+				left: 27px;
+			}
+
+			100% {
+				top: 25px;
+				left: 27px;
+			}
+		}
+
+		@keyframes anime2 {
+			20% {
+				top: 25px;
+				left: 270px;
+			}
+
+			40% {
+				top: 275px;
+				left: 270px;
+			}
+
+			60% {
+				top: 275px;
+				left: 27px;
+			}
+
+			80% {
+				top: 25px;
+				left: 27px;
+			}
+
+			100% {
+				top: 25px;
+				left: 270px;
+			}
+		}
+
+		@keyframes anime3 {
+			20% {
+				top: 275px;
+				left: 270px;
+			}
+
+			40% {
+				top: 275px;
+				left: 27px;
+			}
+
+			60% {
+				top: 25px;
+				left: 27px;
+			}
+
+			80% {
+				top: 25px;
+				left: 270px;
+			}
+
+			100% {
+				top: 275px;
+				left: 270px;
+			}
+		}
+
+		@keyframes anime4 {
+			20% {
+				top: 275px;
+				left: 27px;
+			}
+
+			40% {
+				top: 25px;
+				left: 27px;
+			}
+
+			60% {
+				top: 25px;
+				left: 270px;
+			}
+
+			80% {
+				top: 275px;
+				left: 270px;
+			}
+
+			100% {
+				top: 275px;
+				left: 27px;
+			}
+		}
+
+		@keyframes anime5 {
+			to{
+				rotate: 360deg;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent parent1">
+			<div class="child"></div>
+		</div>
+		<div class="parent parant2">
+			<div class="child"></div>
+		</div>
+		<div class="parent parent3">
+			<div class="child"></div>
+		</div>
+		<div class="parent parent4">
+			<div class="child"></div>
+		</div>
+		<div class="parent parent5">
+			<div class="child"></div>
+		</div>
+	</div>
+</body>
+
+</html>

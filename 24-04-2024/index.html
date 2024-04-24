@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 24th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#4a2040, #ffff, #ec9ded);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #ec9ded;
+			position: relative;
+		}
+
+		.box {
+			position: absolute;
+			height: 112px;
+			width: 153px;
+			background: #ec9ded;
+			border: solid #4a2040;
+			border-width: 0 0 42px 77px;
+			animation: anime 3s alternate infinite;
+		}
+
+		.box2 {
+			scale: -1;
+			top: 246px;
+			right: 0;
+		}
+
+		.small-box {
+			position: absolute;
+			height: 55px;
+			width: 55px;
+			background: #4a2040;
+			top: 50px;
+			left: 173px;
+		}
+
+		.small-box1 {
+			animation: anime1 3s alternate infinite;
+		}
+
+		.small-box2 {
+			top: 295px;
+			left: 170px;
+			animation: anime2 3s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			66%,
+			100% {
+				transform: scaleY(-1);
+			}
+		}
+
+		@keyframes anime1 {
+			33% {
+				top: 50px;
+				left: 270px;
+				rotate: 360deg;
+			}
+
+			66% {
+				top: 170px;
+				left: 270px;
+			}
+
+			100% {
+				top: 170px;
+				left: 170px;
+			}
+		}
+
+		@keyframes anime2 {
+			33% {
+				top: 295px;
+				left: 70px;
+				rotate: 360deg;
+			}
+
+			66% {
+				top: 170px;
+				left: 70px;
+			}
+
+			100% {
+				top: 170px;
+				left: 170px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="small-box small-box1"></div>
+		<div class="small-box small-box2"></div>
+	</div>
+</body>
+
+</html>

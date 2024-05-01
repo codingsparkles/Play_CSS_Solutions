@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 1st May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7b2d26, #d7c9aa);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #7b2d26;
+            position: relative;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: absolute;
+            border: solid #d7c9aa;
+            background: #7b2d26;
+        }
+
+        .box1 {
+            border-width: 0 0;
+            height: 128px;
+            width: 265px;
+            top: 30px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .box2 {
+            top: 75px;
+            left: 75px;
+            height: 0;
+            width: 0;
+            border-width: 0 50px 50px;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .ellipsis,
+        .circle {
+            background: #d7c9aa;
+            position: absolute;
+        }
+
+        .ellipsis {
+            height: 32px;
+            width: 32px;
+            border-radius: 30px;
+            top: 153px;
+            left: 183px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .circle {
+            height: 43px;
+            width: 43px;
+            border-radius: 50%;
+            top: 325px;
+            left: 67px;
+            box-shadow: 0 0 #d7c9aa;
+            animation: anime3 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            50%,
+            100% {
+                border-width: 0 50px;
+            }
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                left: 66px;
+                height: 130px;
+                width: 165px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                height: 190px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                box-shadow: 224px 0 #d7c9aa;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="ellipsis"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

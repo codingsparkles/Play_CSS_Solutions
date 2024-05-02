@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 2nd May, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#fff4e9, #8d6b94);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #fff4e9;
+			position: relative;
+		}
+
+		.wrapper * {
+			background: #8d6b94;
+			position: absolute;
+		}
+
+		.circle {
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			top: 35px;
+			left: 33px;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.square {
+			height: 110px;
+			width: 110px;
+			border-radius: 20px;
+			top: 37px;
+			left: 245px;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.diamond {
+			height: 50px;
+			width: 50px;
+			rotate: 45deg;
+			top: 175px;
+			left: 175px;
+			animation: anime5 2s alternate infinite;
+		}
+
+		.triangle {
+			position: absolute;
+			top: 236px;
+			left: 25px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		.triangle .square {
+			position: absolute;
+			height: 50px;
+			width: 50px;
+			background: #8d6b94;
+			top: 40px;
+			left: 40px;
+		}
+
+		.child {
+			position: absolute;
+			height: 32px;
+			width: 125px;
+			background: #8d6b94;
+			border-radius: 40px 40px 30px 30px;
+			top: 82px;
+			left: 2px;
+		}
+
+		.child2 {
+			rotate: 120deg;
+			top: 40px;
+			left: -20px;
+			color: #8d6b94;
+		}
+
+		.child3 {
+			rotate: -120deg;
+			top: 40px;
+			left: 26px;
+		}
+
+		.rectangle {
+			height: 135px;
+			width: 75px;
+			border-radius: 20px;
+			top: 225px;
+			left: 262px;
+			animation: anime4 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+			to {
+				transform: scaleX(-1);
+			}
+		}
+
+		@keyframes anime2 {
+			to {
+				rotate: 360deg;
+			}
+		}
+
+		@keyframes anime3 {
+			to {
+				top: 360px;
+				transform: scaleY(-1);
+			}
+		}
+
+		@keyframes anime4 {
+			to {
+				width: 135px;
+				height: 75px;
+				top: 280px;
+				left: 230px;
+			}
+		}
+
+		@keyframes anime5 {
+			to {
+				scale: 1.5;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="circle"></div>
+		<div class="square"></div>
+		<div class="diamond"></div>
+		<div class="triangle">
+			<div class="child child1"></div>
+			<div class="child child2"></div>
+			<div class="child child3"></div>
+			<div class="square"></div>
+		</div>
+		<div class="rectangle"></div>
+	</div>
+</body>
+
+</html>

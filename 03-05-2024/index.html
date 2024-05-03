@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 3rd May, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#4c4c9d, #f7996e);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #4c4c9d;
+			position: relative;
+		}
+
+		.parent {
+			position: absolute;
+			background: repeating-linear-gradient(#f7996e 0 33px, #4c4c9d 0 52px);
+			height: 340px;
+			width: 255px;
+			margin: 30px 65px;
+			overflow: hidden;
+			animation: anime1 2s alternate infinite;
+			background-position: 340px 340px;
+		}
+
+		.child {
+			position: absolute;
+			background: #4c4c9d;
+			height: 370px;
+			width: 25px;
+			rotate: 12deg;
+			left: 115px;
+			top: -10px;
+			animation: anime2 2s alternate infinite;
+			box-shadow: 0 0 #4c4c9d, 0 0 #4c4c9d;
+		}
+
+		@keyframes anime2 {
+
+			50%,
+			100% {
+				box-shadow: 67px -20px #4c4c9d, -70px 10px #4c4c9d;
+			}
+		}
+
+		@keyframes anime1 {
+
+			50%,
+			100% {
+				background-position: -340px -340px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child"></div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 29th April, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#362417, #f1dabf);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #307473;
+			overflow: hidden;
+		}
+
+		.parent {
+			display: flex;
+			justify-content: space-evenly;
+			-webkit-box-reflect: below;
+		}
+
+		.child {
+			height: 200px;
+			width: 100px;
+			background: radial-gradient(circle at 50% 75%, #307473 20px, #c6d4ff 0);
+			clip-path: polygon(40%0%, 60%0%, 60%55%, 100% 75%, 50%100%, 0%75%, 40%55%);
+		}
+
+		.child2 {
+			animation: anime2 2s alternate infinite;
+		}
+
+		:is(.child1, .child3) {
+			margin-top: -80px;
+			animation: anime 2s alternate infinite;
+		}
+
+		@keyframes anime {
+
+			50%,
+			100% {
+				margin-top: 0;
+			}
+		}
+
+		@keyframes anime2 {
+
+			50%,
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="parent">
+			<div class="child child1"></div>
+			<div class="child child2"></div>
+			<div class="child child3"></div>
+		</div>
+	</div>
+</body>
+
+</html>

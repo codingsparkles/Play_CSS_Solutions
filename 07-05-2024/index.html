@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Play CSS - 7th May, 2024</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(#339c62, #fff, #9cde9f);
+		}
+
+		.wrapper {
+			height: 400px;
+			width: 400px;
+			background: #339c62;
+			position: relative;
+		}
+
+		.eye,
+		.nose,
+		.mouth {
+			position: absolute;
+		}
+
+		.eye {
+			height: 60px;
+			width: 60px;
+			background: #339c62;
+			border-radius: 50%;
+		}
+
+		.eye1 {
+			top: 82px;
+			left: 88px;
+			box-shadow: -6px -10px 0 26px #9cde9f;
+			animation: anime1 2s alternate infinite;
+		}
+
+		.eye2 {
+			top: 60px;
+			left: 253px;
+			box-shadow: 6px 10px 0 26px #9cde9f;
+			animation: anime2 2s alternate infinite;
+		}
+
+		.nose {
+			height: 80px;
+			width: 52px;
+			background: #9cde9f;
+			top: 185px;
+			left: 174px;
+			animation: anime3 2s alternate infinite;
+		}
+
+		.mouth {
+			height: 38px;
+			width: 136px;
+			border: solid #9cde9f;
+			border-width: 0 16px 22px;
+			top: 295px;
+			left: 116px;
+			animation: anime4 2s alternate infinite;
+		}
+
+		@keyframes anime1 {
+
+			0%,
+			50% {
+				box-shadow: 6px -10px 0 26px #9cde9f;
+				rotate: 360deg;
+			}
+
+			50%,
+			100% {
+				box-shadow: -6px -10px 0 26px #9cde9f;
+			}
+		}
+
+		@keyframes anime2 {
+
+			0%,
+			50% {
+				box-shadow: 6px 10px 0 26px #9cde9f;
+				rotate: 360deg;
+			}
+
+			50%,
+			100% {
+				box-shadow: -6px 10px 0 26px #9cde9f;
+			}
+		}
+
+		@keyframes anime3 {
+
+			0%,
+			25% {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			}
+
+			25%,
+			50% {
+				clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+			}
+
+			50%,
+			75% {
+				clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+			}
+
+			75%,
+			100% {
+				clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+			}
+		}
+
+		@keyframes anime4 {
+
+			0%,
+			50% {
+				border-radius: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="eye eye1"></div>
+		<div class="eye eye2"></div>
+		<div class="nose"></div>
+		<div class="mouth"></div>
+	</div>
+</body>
+
+</html>

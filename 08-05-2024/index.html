@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 8th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#a9fdac, #32a287);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dbd56e;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            background: #de8f6e;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            top: 32px;
+            left: 45px;
+            display: grid;
+            place-items: center;
+        }
+
+        .box1 {
+            animation: anime1 2s alternate infinite;
+        }
+
+        .box2 {
+            scale: 1.35;
+            top: 244px;
+            left: 60px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .inner-box {
+            height: 60px;
+            width: 60px;
+            background: #dbd56e;
+            border-radius: 15px;
+            rotate: 45deg;
+        }
+
+        .box3 {
+            top: 30px;
+            left: 253px;
+            animation: anime3 2s alternate infinite;
+        }
+
+        .box4 {
+            scale: .72;
+            top: 138px;
+            left: 187px;
+            border-radius: 25px;
+            animation: anime4 2s ease-in infinite;
+        }
+
+        .box5 {
+            scale: 1.15;
+            top: 268px;
+            left: 265px;
+            border-radius: 20px;
+            animation: anime5 2s ease-in infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: none;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: scale3d(1, 0, 1) rotate(360deg);
+            }
+
+            50%,
+            100% {
+                transform: none;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                scale: .25;
+            }
+
+            50%,
+            100% {
+                scale: .87;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                border-radius: 50%;
+            }
+
+            50%,
+            100% {
+                border-radius: 25px;
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                left: 200px
+            }
+
+            50%,
+            100% {
+                left: 265px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="inner-box"></div>
+        </div>
+        <div class="box box2">
+            <div class="inner-box"></div>
+        </div>
+        <div class="box box3">
+        </div>
+        <div class="box box4">
+        </div>
+        <div class="box box5">
+        </div>
+    </div>
+</body>
+
+</html>

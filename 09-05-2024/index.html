@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 9th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#dbd56e,#7d7c84);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #7d7c84;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            background: #dbd56e;
+            height: 28px;
+            width: 100%;
+            color: #dbd56e;
+            box-shadow: 0 50px, 0 100px, 0 150px, 0 -50px, 0 -100px, 0 -150px;
+        }
+
+        .box2 {
+            rotate: 90deg;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .circle {
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: #7d7c84;
+            box-shadow: 0 0 0 40px #dbd56e, 0 0 0 200px #0000;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 90deg;
+            }
+        }
+
+
+        @keyframes anime2 {
+
+            0%,
+            40% {
+                background: #0000;
+                scale: 5;
+            }
+
+            60%,
+            100% {
+                background: #7d7c84;
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

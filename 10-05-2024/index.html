@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 10th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#dbd56e, #1dd3b0);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #086375;
+            position: relative;
+        }
+
+        .circle {
+            position: absolute;
+            height: 70px;
+            width: 125px;
+            background: #1dd3b0;
+            border-radius: 50%;
+            top: 35px;
+            right: 60px;
+            color: #1dd3b0;
+            box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            animation: anime1 5s alternate infinite;
+        }
+
+        .circle2 {
+            position: absolute;
+            height: 45px;
+            width: 80px;
+            background: #086375;
+            color: #086375;
+            border-radius: 50%;
+            top: 47px;
+            left: 47px;
+            box-shadow: 0 0, 0 0, 0 0;
+            animation: anime2 5s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            10% {
+                box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            10%,
+            20% {
+                box-shadow: -170px 87px, -170px 87px, -170px 87px, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            20%,
+            30% {
+                box-shadow: -170px 87px, 0 175px, 0 175px, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            30%,
+            40% {
+                box-shadow: -170px 87px, 0 175px, -173px 262px, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            40%,
+            50% {
+                box-shadow: -170px 87px, 0 175px, -173px 262px, -190px 0, -190px 0, -190px 0, -190px 0;
+            }
+
+            50%,
+            60% {
+                box-shadow: -170px 87px, 0 175px, -173px 262px, -190px 0, 20px 87px, 20px 87px, 20px 87px;
+            }
+
+            60%,
+            70% {
+                box-shadow: -170px 87px, 0 175px, -173px 262px, -190px 0, 20px 87px, -191px 175px, -191px 175px;
+            }
+
+            70%,
+            100% {
+                box-shadow: -170px 87px, 0 175px, -173px 262px, -190px 0, 20px 87px, -191px 175px, 20px 262px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            40%,
+            50% {
+                box-shadow: 0 0, 0 0, 0 0;
+            }
+
+            50%,
+            60% {
+                box-shadow: 210px 88px, 210px 88px, 210px 88px;
+            }
+
+            60%,
+            70% {
+                box-shadow: 210px 88px, 0 175px, 0 175px;
+            }
+
+            70%,
+            100% {
+                box-shadow: 210px 88px, 0 175px, 210px 262px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle2"></div>
+    </div>
+</body>
+
+</html>

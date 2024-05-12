@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 12th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1a1b41, #f1ffe7);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #94524a;
+            display: grid;
+            place-items: center;
+        }
+
+        .parent {
+            background: #a27e6f;
+            border-radius: 50%;
+            height: 320px;
+            width: 320px;
+            position: relative;
+            animation: anime1 2s ease-in infinite;
+        }
+
+        .child1 {
+            position: absolute;
+            background: #a27e6f;
+            border: solid #94524a;
+            border-width: 22px 107px 0 107px;
+            height: 25px;
+            width: 25px;
+            top: 151px;
+            left: 36px;
+            animation: anime2 2s ease-in infinite;
+        }
+
+        .child2,
+        .child3 {
+            position: absolute;
+            background: #a27e6f;
+            height: 140px;
+            width: 40px;
+            border-radius: 15px;
+            bottom: 0;
+            left: -4px;
+            animation: anime3 2s ease-in infinite;
+        }
+
+        .child3 {
+            left: 282px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                height: 20px;
+            }
+
+            50%,
+            100% {
+                height: 320px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            75% {
+                transform: scaleX(-1);
+            }
+
+            75%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                height: 20px;
+            }
+
+            75%,
+            100% {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child child1"></div>
+            <div class="child child2"></div>
+            <div class="child child3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 14th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#144bf1, #fff, #ce61be);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #8C909C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        .box {
+            height: 110px;
+            width: 300px;
+            background: #A9ADC6;
+            padding: 1.2rem;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            scale: -1-1;
+        }
+
+        .circle {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            background: #8C909C;
+            color: #8C909C;
+            animation: anime1 3s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            10%,
+            50% {
+                transform: scaleY(1);
+                box-shadow: 70px 0, 140px 0;
+            }
+
+            60%,
+            80% {
+                transform: scaleY(-1);
+            }
+
+            80%,
+            100% {
+                transform: scaleY(1);
+                box-shadow: 70px 0, 140px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="circle"></div>
+        </div>
+        <div class="box box2">
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

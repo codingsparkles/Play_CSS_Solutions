@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 15th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#aaa1c8, #fff, #192a51);
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #192a51;
+            overflow: hidden;
+        }
+
+        .parent {
+            flex-direction: column;
+            gap: 2.6rem;
+            animation: anime 2s infinite;
+        }
+
+        .child {
+            height: 85px;
+            width: 330px;
+        }
+
+        .child1,
+        .child3 {
+            background-position: 0;
+            background: repeating-linear-gradient(90deg, #aaa1c8 0 30px, #192a51 0 60px);
+        }
+
+        .child1 {
+            animation: anime1 2s infinite;
+        }
+
+        .child3 {
+            animation: anime2 2s infinite;
+        }
+
+        .child2 {
+            background: #aaa1c8;
+            height: 60px;
+            width: 240px;
+            border-radius: 50%;
+            animation: anime3 2s infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                background-position: 330px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                background-position: -330px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                width: 60px;
+            }
+
+            50%,
+            100% {
+                width: 240px;
+            }
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                rotate: 90deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child child1"></div>
+            <div class="child child2"></div>
+            <div class="child child3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

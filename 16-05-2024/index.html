@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 16th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00D899, #fff, #448761);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            position: relative;
+            animation: anime 2s alternate infinite;
+
+            >* {
+                position: absolute;
+            }
+        }
+
+        .triangle {
+            border: solid;
+            border-width: 85px 72px;
+            border-color: #448761#0000;
+            top: 40px;
+            left: 125px;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .square {
+            border: 35px solid #448761;
+            height: 65px;
+            width: 65px;
+            background: #00D899;
+            top: 210px;
+            left: 130px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                background: linear-gradient(#448761, #448761) 0 10% /100% 70px no-repeat #00D899;
+            }
+
+            50%,
+            100% {
+                background: linear-gradient(#448761, #448761) 0 84% /100% 70px no-repeat #00D899;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                scale: .25
+            }
+
+            50%,
+            100% {
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="triangle">
+        </div>
+        <div class="square">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 17th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#470024, #cafe48);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #470024;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+
+            >* {
+                background: #cafe48;
+                position: absolute;
+            }
+        }
+
+        .circle {
+            height: 175px;
+            width: 175px;
+            border-radius: 50%;
+            border: 25px solid #470024;
+            box-shadow: 0 0 0 25px#cafe48;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .box {
+            height: 35px;
+            width: 100%;
+            border: 15px solid #470024;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .box1 {
+            rotate: 90deg;
+            animation: anime3 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                height: 40px;
+                width: 40px;
+            }
+
+            50%,
+            100% {
+                height: 175px;
+                width: 175px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 90deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </div>
+</body>
+
+</html>

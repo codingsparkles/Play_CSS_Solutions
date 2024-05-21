@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 21st May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7B615B, #fff, #B2B1D2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #7B615B;
+            position: relative;
+
+            * {
+                position: absolute;
+                background: #B2B1D2;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 50px;
+            width: 310px;
+            border-radius: 30px;
+            top: 240px;
+            left: 45px;
+        }
+
+        .box2 {
+            animation-name: anime2;
+        }
+
+        .box3 {
+            animation-name: anime3;
+        }
+
+        .diamond {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            rotate: 45deg;
+            top: 135px;
+            left: 175px;
+        }
+
+        .diamond1 {
+            animation-name: anime4;
+        }
+
+        .diamond2 {
+            animation-name: anime5;
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                rotate: 57deg;
+                top: 202px;
+                left: 98px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                rotate: -57deg;
+                top: 202px;
+                left: -8px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                top: 35px;
+                rotate: 45deg;
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                top: 320px;
+                rotate: 45deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="diamond diamond1"></div>
+        <div class="diamond diamond2"></div>
+    </div>
+</body>
+
+</html>

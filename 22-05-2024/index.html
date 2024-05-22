@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 22nd May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        .wrapper {
+            background: #94ecbe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#94ecbe, #d3d883, #4a7856);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #94ecbe;
+            justify-content: space-evenly;
+            overflow: hidden;
+
+            * {
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: 30px solid #4a7856;
+            animation-name: anime;
+        }
+
+        .box {
+            height: 200px;
+            width: 50px;
+            background: radial-gradient(1q at 50% 87%, #94ecbe 20px, #4a7856 0);
+            border-radius: 0 0 50px 50px;
+        }
+
+        .box1 {
+            align-self: start;
+            animation-name: anime1;
+        }
+
+        .box2 {
+            align-self: end;
+            scale: -1;
+            animation-name: anime2;
+        }
+
+        @keyframes anime {
+
+            0%,
+            25% {
+                transform: scaleX(-1);
+                box-shadow: 0 0 20px 0 #4a7856;
+            }
+
+            25%,
+            50% {
+                transform: scaleX(1);
+                box-shadow: 0 0 20px 0 #4a7856;
+            }
+
+            50%,
+            75% {
+                transform: scaleY(-1);
+                box-shadow: 0 0 20px 0 #4a7856;
+            }
+
+            75%,
+            100% {
+                transform: none;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                margin-top: -80px;
+            }
+
+            50%,
+            100% {
+                margin-top: 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                margin-bottom: -80px
+            }
+
+            50%,
+            100% {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="circle"></div>
+        <div class="box box2"></div>
+    </div>
+</body>
+
+</html>

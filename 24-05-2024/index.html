@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 24th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7498fa, #be92a2);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #D6E1FF;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .parent {
+            background: #be92a2;
+            height: 350px;
+            width: 350px;
+            clip-path: polygon(50%0%, 65%35%, 100%50%, 65%65%, 50%100%, 35%65%, 0%50%, 35%35%);
+            animation-name: anime1;
+        }
+
+        .child {
+            position: absolute;
+            height: 55px;
+            width: 55px;
+            background: #be92a2;
+            border-radius: 50%;
+            color: #be92a2;
+            border: 20px solid #d8e1ff;
+            animation-name: anime2;
+            box-shadow: 0 0 0 0, 0 0 0 0 #d8e1ff, 0 0 0 0;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                transform: scaleX(-1);
+            }
+
+            25%,
+            50% {
+                transform: scaleX(1);
+            }
+
+            50%,
+            75% {
+                transform: scaleY(-1);
+            }
+
+            75%,
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                box-shadow: 0 0 0 20px, 0 0 0 40px #d8e1ff, 0 0 0 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

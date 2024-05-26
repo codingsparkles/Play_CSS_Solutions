@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 26th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#E5EFC0, #423C5A);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #423C5A;
+            position: relative;
+
+            * {
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: #E5EFC0;
+            height: 160px;
+            width: 360px;
+            clip-path: polygon(0%10%, 100%38%, 100%100%, 0%90%);
+        }
+
+        .inner-box {
+            position: absolute;
+            height: 35px;
+            width: 35px;
+            background: #E5EFC0;
+            color: #E5EFC0;
+            top: 252px;
+            animation-name: anime1;
+        }
+
+        .rounded-box {
+            position: absolute;
+            height: 35px;
+            width: 65px;
+            background: #E5EFC0;
+            color: #E5EFC0;
+            top: 115px;
+            left: 40px;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 85px 10px, 168px 22px, 254px 35px;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                box-shadow: 0 0, 0 0, 0 0, 0 0;
+            }
+
+            50%,
+            100% {
+                box-shadow: 60px 0, 120px 0, -60px 0, -120px 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                box-shadow: 0 0, 0 0, 0 0;
+            }
+
+            50%,
+            100% {
+                box-shadow: 0 0 20px 0, 85px 10px, 85px 10px 20px 0, 168px 22px, 168px 22px 20px 0, 254px 35px, 254px 35px 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="inner-box"></div>
+        <div class="rounded-box"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 27th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: radial-gradient(#E5EFC0, #423C5A);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #423C5A;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .parent {
+            display: flex;
+            gap: 5px;
+            top: 70px;
+            left: 93px;
+            animation-name: anime1;
+        }
+
+        .parent,
+        .parent2,
+        .parent2 .box2,
+        .parent2 .circle {
+            position: absolute;
+        }
+
+        .box,
+        .circle {
+            background: #b98389;
+        }
+
+        .box {
+            height: 150px;
+            width: 40px;
+        }
+
+        .box2 {
+            width: 125px;
+            height: 125px;
+            align-self: end;
+        }
+
+        .skew {
+            clip-path: polygon(0%0%, 100%18%, 100%94%, 0%75%);
+        }
+
+        .skew-box2 {
+            scale: -1+1;
+        }
+
+        .parent2 {
+            top: 217px;
+            left: 17px;
+        }
+
+        .parent2 .box1 {
+            height: 40px;
+            width: 365px;
+            clip-path: polygon(0%0, 100%0, 94%100%, 6%100%);
+        }
+
+        .parent2 .box2 {
+            border: solid #b98389;
+            border-width: 0 37px;
+            height: 144px;
+            width: 191px;
+            background: #0000;
+            left: 50px;
+        }
+
+        .circle {
+            height: 75px;
+            width: 75px;
+            border-radius: 50%;
+            margin-top: -30px;
+        }
+
+        .circle1 {
+            margin-left: -30px;
+            animation-name: anime2;
+        }
+
+        .circle2 {
+            margin-left: 147px;
+            animation-name: anime3;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            10% {
+                transform: scaleX(-1);
+                translate: 220px -220px;
+            }
+
+            10%,
+            30% {
+                transform: scaleX(1);
+                translate: 0 0;
+            }
+
+            30%,
+            50% {
+                transform: scaleX(-1);
+                translate: -220px -220px;
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+                translate: 0 0;
+            }
+        }
+
+        @keyframes anime2 {
+            0%, 50%{
+                margin-left: 60px;
+            }
+        }
+
+        @keyframes anime3 {
+            0%, 50%{
+                margin-left: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="box skew skew-box1"></div>
+            <div class="box box2"></div>
+            <div class="box skew skew-box2"></div>
+        </div>
+        <div class="parent2">
+            <div class="box box1"></div>
+            <div class="box box2">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

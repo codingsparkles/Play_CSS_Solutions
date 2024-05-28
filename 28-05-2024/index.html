@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 28th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#E5EFC0, #423C5A);
+        }
+
+        body,
+        .wrapper {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #3b252c;
+            position: relative;
+
+            * {
+                position: absolute;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .square {
+            background: #aea4bf;
+            height: 135px;
+            width: 135px;
+            border-radius: 14px;
+            animation-name: anime1;
+        }
+
+        .circle {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            z-index: 2;
+            background: #3b252c;
+        }
+
+        .rounded-box {
+            height: 100px;
+            width: 55px;
+            background: radial-gradient(circle at 50% 16%, #3b252c 32%, #aea4bf 0);
+            border-radius: 55px;
+            top: 20px;
+            animation-name: anime2;
+        }
+
+        .box2 {
+            scale: -1;
+            top: 280px;
+            animation-name: anime3;
+        }
+
+        .box3,
+        .box4 {
+            rotate: 90deg;
+            top: 150px;
+            left: 305px;
+            animation-name: anime4;
+        }
+
+        .box4 {
+            left: 45px;
+            scale: -1;
+            animation-name: anime5;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                height: 10px;
+                width: 10px;
+            }
+
+            50%,
+            100% {
+                height: 135px;
+                width: 135px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                scale: -1;
+                top: 125px;
+            }
+
+            50%,
+            75% {
+                top: 20px;
+            }
+
+            75%,
+            100% {
+                scale: 1;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                scale: 1;
+                top: 175px;
+            }
+
+            50%,
+            75% {
+                top: 280px;
+            }
+
+            75%,
+            100% {
+                scale: -1;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                left: 200px;
+                scale: -1;
+            }
+
+            50%,
+            75% {
+                left: 305px;
+            }
+
+            75%,
+            100% {
+                scale: 1;
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                scale: 1;
+                left: 140px;
+            }
+
+            50%,
+            75% {
+                left: 45px;
+            }
+
+            75%,
+            100% {
+                scale: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+        <div class="circle"></div>
+        <div class="rounded-box box1"></div>
+        <div class="rounded-box box2"></div>
+        <div class="rounded-box box3"></div>
+        <div class="rounded-box box4"></div>
+    </div>
+</body>
+
+</html>

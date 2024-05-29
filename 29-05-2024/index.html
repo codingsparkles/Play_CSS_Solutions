@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 29th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(#3b252c, #f1e1e1, #aea4bf);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #f5cb5c;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            background: #242423;
+            color: #242423;
+        }
+
+        .big {
+            height: 180px;
+            width: 340px;
+            border-radius: 0 75px;
+            margin: -50px 95px;
+            box-shadow: -145px 305px;
+        }
+
+        .small {
+            height: 30px;
+            width: 30px;
+            margin: 107px 177px;
+            animation-name: anime1, anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                box-shadow: 0 0, 0 0, 0 0, 0 0;
+            }
+
+            20%,
+            100% {
+                box-shadow: 65px -20px, 130px 0, -65px -20px, -130px 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            40%,
+            60% {
+                border-radius: 50%;
+            }
+
+            60%,
+            80% {
+                border-radius: 0;
+                transform: scaleX(-1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box big"></div>
+        <div class="box small"></div>
+    </div>
+</body>
+
+</html>

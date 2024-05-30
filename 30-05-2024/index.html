@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 30th May, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(#BBB700, #fff, #60935d);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #60935d;
+            color: #BBB700;
+            display: grid;
+            place-items: center;
+
+            * {
+                position: absolute;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 400px;
+            width: 120px;
+            border: solid;
+            border-width: 0 70px;
+            animation-name: anime1;
+        }
+
+        .diamond {
+            height: 40px;
+            width: 40px;
+            background: #BBB700;
+            rotate: 45deg;
+            box-shadow: 110px -24px #60935d, -110px 24px #60935d, 24px -110px #60935d, -24px 110px #60935d, 90px 90px, -90px -90px;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                width: 0
+            }
+
+            30%,
+            100% {
+                width: 120px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            30% {
+                box-shadow: 0 0 #60935d, 0 0 #60935d, 0 0 #60935d, 0 0 #60935d, 0 0, 0 0;
+            }
+
+            30%,
+            50% {
+                box-shadow: 110px -24px #60935d, -110px 24px #60935d, 24px -110px #60935d, -24px 110px #60935d, 0 0, 0 0;
+            }
+
+            50%,
+            70% {
+                box-shadow: 110px -24px #60935d, -110px 24px #60935d, 24px -110px #60935d, -24px 110px #60935d, 90px 90px, -90px -90px;
+            }
+
+            70%,
+            80% {
+                box-shadow: 110px -24px #60935d, -110px 24px #60935d, 24px -110px #60935d, -24px 110px #60935d, 90px 90px, -90px -90px;
+                rotate: 225deg
+            }
+
+            80%,
+            100% {
+                box-shadow: 110px -24px #60935d, -110px 24px #60935d, 24px -110px #60935d, -24px 110px #60935d, 90px 90px, -90px -90px;
+                rotate: 45deg
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="diamond"></div>
+    </div>
+</body>
+
+</html>

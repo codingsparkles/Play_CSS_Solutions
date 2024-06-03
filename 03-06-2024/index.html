@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 3rd June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#881600, #cbff8c);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #d62828;
+            overflow: hidden;
+            position: relative;
+
+            * {
+                position: absolute;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 160px;
+            width: 160px;
+            background: #fcbf49;
+            clip-path: polygon(0%0%, 100%0%, 100%20%, 20% 20%, 20%80%, 70%80%, 70%100%, 0%100%);
+            translate: 0 0;
+            animation-name: anime1;
+        }
+
+        .box2 {
+            animation-name: anime2;
+        }
+
+        .box3,
+        .box4 {
+            scale: -1+1;
+            animation-name: anime3;
+        }
+
+        .box4 {
+            animation-name: anime4;
+        }
+
+        @keyframes anime1 {
+
+            15%,
+            100% {
+                translate: -65px -45px
+            }
+        }
+
+        @keyframes anime2 {
+
+            30%,
+            100% {
+                translate: 122px 108px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            45%,
+            100% {
+                translate: 54px 40px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            60%,
+            100% {
+                translate: -130px -108px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 4th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FBFF00, #fff, #ffad05);
+        }
+
+        body,
+        .wrapper,
+        .parent,
+        .child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #FBFF00;
+            overflow: hidden;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .wrapper {
+            flex-direction: column;
+            gap: 130px
+        }
+
+        .parant {
+            height: 50%;
+            width: 100%;
+        }
+
+        .parent2 {
+            scale: -1;
+        }
+
+        .child {
+            border: solid #ffad05;
+            border-width: 0 35px 35px;
+            height: 100px;
+            width: 180px;
+            position: relative;
+            animation-name: anime2;
+        }
+
+        .triangle {
+            height: 150px;
+            width: 70px;
+            background: #ffad05;
+            margin-top: 150px;
+            clip-path: polygon(100%0%, 100%75%, 50%100%, 0%75%, 0%0%);
+        }
+
+        .diamond {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            background: #ffad05;
+            rotate: 45deg;
+            translate: -35px 0;
+            animation-name: anime3
+        }
+
+        .diamond2 {
+            translate: 35px 0;
+            animation-name: anime4
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                translate: 0 -100px;
+            }
+
+            50%,
+            100% {
+                translate: 0 0;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                translate: -125px 0;
+            }
+        }
+
+        @keyframes anime4 {
+
+            50%,
+            100% {
+                translate: 125px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent parent1">
+            <div class="child">
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <div class="parent parent2">
+            <div class="child">
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <div class="diamond diamond1"></div>
+        <div class="diamond diamond2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 5th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#9da39a, #db2955);
+        }
+
+        body,
+        .wrapper,
+        .box,
+        .child {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #9da39a;
+
+            * {
+                background: #db2955;
+                rotate: 45deg;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 150px;
+            width: 150px;
+            animation-name: anime1;
+        }
+
+        .child {
+            background: #9da39a;
+            height: 90px;
+            width: 90px;
+        }
+
+        .inner {
+            height: 50px;
+            width: 50px;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                box-shadow: 0 0 0 20px #9da39a, 0 0 #db2955, 0 0 #db2955;
+            }
+
+            50%,
+            100% {
+                box-shadow: 0 0 0 20px #9da39a, 50px -50px #db2955, -50px 50px #db2955;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg
+            }
+
+            50%,
+            100% {
+                rotate: 45deg
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="child">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

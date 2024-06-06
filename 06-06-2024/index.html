@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 6th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#9da39a, #fff, #54494b);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #54494b;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .circle {
+            position: absolute;
+            background: #9da39a;
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            translate: -93px 90px;
+            animation-name: anime1;
+        }
+
+        .triangle {
+            height: 80px;
+            width: 95px;
+            background: #54494b;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            margin-top: -10px;
+        }
+
+        .circle2 {
+            scale: -1;
+            translate: 93px -90px;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            20%,
+            40% {
+                rotate: 360deg;
+                translate: -93px -90px;
+            }
+
+            40%,
+            60% {
+                translate: 93px -90px;
+            }
+
+            60%,
+            80% {
+                translate: 93px 90px;
+            }
+
+            80%,
+            100% {
+                rotate: 0deg;
+                translate: -93px 90px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            20%,
+            40% {
+                rotate: 360deg;
+                translate: 93px 90px;
+            }
+
+            40%,
+            60% {
+                translate: -93px 90px;
+            }
+
+            60%,
+            80% {
+                translate: -93px -90px;
+            }
+
+            80%,
+            100% {
+                rotate: 0deg;
+                translate: 93px -90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1">
+            <div class="triangle"></div>
+        </div>
+        <div class="circle circle2">
+            <div class="triangle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

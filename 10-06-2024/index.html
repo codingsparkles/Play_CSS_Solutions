@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 10th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#332c23, #fff, #9f87af);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #332c23;
+            position: relative;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            position: absolute;
+            border: solid #9f87af;
+            height: 224px;
+            width: 224px;
+            border-width: 50px 0 0 50px;
+            margin: 40px 37px;
+            animation-name: anime;
+        }
+
+        .box2 {
+            height: 143px;
+            width: 143px;
+            border-width: 30px 0 0 32px;
+            margin: 142px 137px;
+            animation-name: anime2;
+        }
+
+        .box3 {
+            height: 103px;
+            width: 103px;
+            border-width: 23px 0 0 23px;
+            margin: 218px 221px;
+            animation-name: anime1;
+        }
+
+        .inner-box {
+            background: #9f87af;
+            height: 40px;
+            width: 40px;
+        }
+
+        .box2 .inner-box {
+            height: 45px;
+            width: 38px;
+        }
+
+        .box1 .inner-box {
+            height: 47px;
+            width: 44px;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+                translate: -160px -160px;
+            }
+
+            50%,
+            100% {
+                translate: 0 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+                translate: -100px -100px;
+            }
+
+            50%,
+            100% {
+                translate: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="inner-box"></div>
+        </div>
+        <div class="box box2">
+            <div class="inner-box"></div>
+        </div>
+        <div class="box box3">
+            <div class="inner-box"></div>
+        </div>
+    </div>
+</body>
+
+</html>

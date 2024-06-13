@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 13th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#eaac8b, #00aae9);
+        }
+
+        body,
+        .wrapper,
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #eaac8b;
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 115px;
+            width: 200px;
+            border: solid #00aae9;
+            border-width: 35px 35px 0 35px;
+            animation-name: anime1;
+            translate: 0 0;
+        }
+
+        .inner-box {
+            height: 70px;
+            width: 120px;
+            border: solid #00aae9;
+            border-width: 20px 20px 0 20px;
+            align-self: end;
+        }
+
+        .box2 {
+            scale: -1;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30%,
+            60%,
+            80% {
+                rotate: 0deg;
+                translate: 0 0;
+            }
+
+            30%,
+            40% {
+                translate: -200px -200px;
+                rotate: 360deg;
+            }
+
+            90%,
+            100% {
+                rotate: 360deg;
+                translate: 200px -200px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            30%,
+            60%,
+            80% {
+                rotate: 0deg;
+                translate: 0 0;
+            }
+
+            30%,
+            40% {
+                translate: -200px 200px;
+                rotate: 360deg;
+            }
+
+            90%,
+            100% {
+                rotate: 360deg;
+                translate: 200px 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="inner-box"></div>
+        </div>
+        <div class="box box2">
+            <div class="inner-box"></div>
+        </div>
+    </div>
+</body>
+
+</html>

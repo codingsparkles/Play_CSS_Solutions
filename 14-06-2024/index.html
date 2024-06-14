@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 14th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#c3979f, #e1faf9);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #c3979f;
+            position: relative;
+
+            * {
+                position: absolute;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .rectangle {
+            height: 150px;
+            width: 50px;
+            background: #e1faf9;
+            top: 110px;
+            left: 175px;
+            color: #e1faf9;
+            box-shadow: 50px 40px, 100px 80px, 150px 120px;
+            -webkit-box-reflect: left -50px;
+            animation-name: anime1;
+        }
+
+        .circle {
+            height: 20px;
+            width: 20px;
+            background: #e1faf9;
+            border-radius: 50%;
+            top: 75px;
+            left: 190px;
+            animation-name: anime2;
+        }
+
+        .line {
+            height: 100px;
+            width: 10px;
+            background: #c3979f;
+            top: 200px;
+            left: 270px;
+            rotate: -45deg;
+            animation-name: anime3;
+        }
+
+        .line2 {
+            rotate: 45deg;
+            left: 120px;
+            animation-name: anime4;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                box-shadow: 0 0, 0 0, 0 0;
+            }
+
+            25%,
+            50% {
+                box-shadow: 50px 40px, 0 0, 0 0;
+            }
+
+            50%,
+            75% {
+                box-shadow: 50px 40px, 100px 80px, 0 0;
+            }
+
+            75%,
+            100% {
+                box-shadow: 50px 40px, 100px 80px, 150px 120px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                box-shadow: 0 -45px 0 3px #e1faf9;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            70% {
+                translate: -70px -60px;
+            }
+
+            70%,
+            100% {
+                translate: 0 0
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            70% {
+                translate: 70px -60px;
+            }
+
+            70%,
+            100% {
+                translate: 0 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rectangle"></div>
+        <div class="circle"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+    </div>
+</body>
+
+</html>

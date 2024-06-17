@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 17th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#e43f6f, #dfbbb1);
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dfbbb1;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                position: absolute;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .triangle {
+            background: #e43f6f;
+            height: 240px;
+            width: 270px;
+            translate: 0 45px;
+            clip-path: polygon(100% 0, 0 0, 50% 100%);
+            animation-name: anime1;
+        }
+
+        .triangle2 {
+            translate: 0 -45px;
+            width: 215px;
+            animation-name: anime2;
+        }
+
+        .triangle3,
+        .triangle4 {
+            background: #dfbbb1;
+        }
+
+        .triangle3 {
+            width: 110px;
+            height: 120px;
+            translate: 0 -60px;
+            animation-name: anime3;
+        }
+
+        .triangle4 {
+            width: 80px;
+            height: 100px;
+            scale: -1;
+            animation-name: anime4;
+        }
+
+        .circle {
+            height: 30px;
+            width: 30px;
+            background: #e43f6f;
+            border-radius: 50%;
+            translate: -135px -73px;
+            box-shadow: 265px 0 #e43f6f;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                translate: 0 -345px;
+                rotate: 360deg
+            }
+
+            50%,
+            100% {
+                rotate: 0;
+                translate: 0 45px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: -360deg;
+                translate: 0 -345px;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+                translate: 0 -45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="triangle triangle1"></div>
+        <div class="triangle triangle2"></div>
+        <div class="triangle triangle3"></div>
+        <div class="triangle triangle4"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

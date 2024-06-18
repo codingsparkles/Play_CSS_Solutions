@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 18th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fcfdaf, #dfbbb1);
+        }
+
+        body,
+        .wrapper,
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dba159;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box-container {
+            flex-wrap: wrap;
+            height: 160px;
+            width: 160px;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box,
+        .rotated-box {
+            height: 80px;
+            width: 80px;
+            border-radius: 24px;
+        }
+
+        .box {
+            background: linear-gradient(#dba159, #dba159)center/35px 35px no-repeat #fcfdaf;
+            box-shadow: 0 0 #fcfdaf;
+            animation-name: anime1;
+        }
+
+        .box2 {
+            rotate: 90deg;
+            animation-name: anime2;
+        }
+
+        .box3 {
+            rotate: 270deg;
+            animation-name: anime3;
+        }
+
+        .box4 {
+            rotate: 180deg;
+            animation-name: anime4;
+        }
+
+        .rotated-box {
+            position: absolute;
+            rotate: 45deg;
+            translate: -40px -120px;
+            background: #fcfdaf;
+            color: #fcfdaf;
+            box-shadow: 60px 170px, 170px -60px, 225px 110px;
+            animation: anime5 3s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            10%,
+            100% {
+                box-shadow: -80px 0 #fcfdaf;
+            }
+        }
+
+        @keyframes anime2 {
+
+            30%,
+            100% {
+                box-shadow: -80px 0 #fcfdaf;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                box-shadow: -80px 0 #fcfdaf;
+            }
+        }
+
+        @keyframes anime4 {
+
+            70%,
+            100% {
+                box-shadow: -80px 0 #fcfdaf;
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 45deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box-container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+        <div class="rotated-box"></div>
+    </div>
+</body>
+
+</html>

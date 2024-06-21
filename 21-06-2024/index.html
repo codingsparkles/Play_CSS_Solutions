@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 21st June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f43e6e, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #f43e6e;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .half-circle {
+            height: 115px;
+            width: 230px;
+            color: #f3f0f1;
+            border: 50px solid;
+            border-bottom: 0;
+            border-radius: 270px 270px 0 0;
+            animation: anime1 2s alternate infinite;
+        }
+
+
+        .bottom {
+            color: #FEAE60;
+            rotate: 180deg;
+        }
+
+        .center {
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            background: #FEAE60;
+            clip-path: polygon(50%0%, 70%30%, 100%50%, 70% 70%, 50%100%, 30%70%, 0%50%, 30%30%);
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                scale: .75;
+                box-shadow: 0 0 20px 0 currentColor;
+            }
+
+            50%,
+            100% {
+                scale: 1
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg
+            }
+
+            50%,
+            100% {
+                rotate: 0deg
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="half-circle top"></div>
+        <div class="half-circle bottom"></div>
+        <div class="center"></div>
+    </div>
+</body>
+
+</html>

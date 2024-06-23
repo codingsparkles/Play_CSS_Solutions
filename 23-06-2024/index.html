@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 23rd June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f43e6e, #fff);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #E3747A;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                position: absolute;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .circle {
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .circle1 {
+            height: 210px;
+            width: 220px;
+            background: #002F43;
+            color: #002F43;
+            translate: 188px -210px;
+            box-shadow: 0 390px, -405px 390px;
+            animation-name: anime2;
+        }
+
+        .circle2 {
+            height: 335px;
+            width: 335px;
+            background: transparent;
+            border: 10px solid #fff;
+        }
+
+        .circle3 {
+            height: 300px;
+            width: 300px;
+            background: #fff;
+            box-shadow: -105px -105px 0 -40px #002F43;
+            animation-name: anime3;
+        }
+
+        .square {
+            height: 60px;
+            width: 60px;
+            rotate: 45deg;
+            background: #E3747A;
+            margin-top: 30px;
+            margin-left: 20px;
+            box-shadow: 0 0 0 20px #fff, 0 0 0 30px #E3747A;
+            animation-name: anime1;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg
+            }
+
+            50%,
+            100% {
+                rotate: 45deg;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            33% {
+                box-shadow: 0 0, 0 0;
+            }
+
+            33%,
+            66% {
+                box-shadow: 0 390px, 0 390px;
+            }
+
+            66%,
+            100% {
+                box-shadow: 0 390px, -405px 390px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                rotate: -360deg
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

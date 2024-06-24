@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 24th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1B1E6A, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #1B1E6A;
+            position: relative;
+
+            * {
+                position: absolute;
+                animation-duration: 2s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .square {
+            top: 185px;
+            left: 54px;
+            height: 150px;
+            width: 150px;
+            animation-name: anime1;
+        }
+
+        .circle {
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            background: #fff;
+            top: 70px;
+            right: 22px;
+            animation-name: anime2;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                box-shadow: 0 0 0 0 #F43E6E, 0 0 0 0 #1B1E6A, 0 0 0 0 #F43E6E;
+            }
+
+            25%,
+            50% {
+                box-shadow: 17px -20px 0 10px #F43E6E, 17px -20px 0 10px #1B1E6A, 17px -20px 0 10px #F43E6E;
+            }
+
+            50%,
+            75% {
+                box-shadow: 17px -20px 0 10px #F43E6E, 25px -28px 0 18px #1B1E6A, 25px -28px 0 18px #F43E6E;
+            }
+
+            75%,
+            100% {
+                box-shadow: 17px -20px 0 10px #F43E6E, 25px -28px 0 18px #1B1E6A, 69px -72px 0 62px #F43E6E;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            33% {
+                box-shadow: 0 0 #fff, 0 0 #fff;
+            }
+
+            33%,
+            66% {
+                box-shadow: 0 80px #fff, 0 80px #fff;
+            }
+
+            66%,
+            100% {
+                box-shadow: 0 80px #fff, 0 160px #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

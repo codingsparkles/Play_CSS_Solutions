@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 27th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222328, #F3F1EC, #EFBE65);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #222328;
+            padding: 2rem 2.5rem;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+
+        .circle {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: #EFBE65;
+            align-self: flex-start;
+            color: #EFBE65;
+            box-shadow: 80px 0, 160px 0, 240px 0, -20px 20px #222328, 60px 20px #222328, 140px 20px #222328, 220px 20px #222328;
+            z-index: 5;
+            animation: anime 2s alternate infinite;
+        }
+
+        .circle2 {
+            z-index: 4;
+        }
+
+        .circle3 {
+            z-index: 3;
+        }
+
+        .circle4 {
+            z-index: 2;
+        }
+
+        .circle2,
+        .circle4 {
+            color: #F3F1EC;
+            background: #F3F1EC;
+        }
+
+        @keyframes anime {
+
+            0%,
+            14% {
+                box-shadow: 0 0, 0 0, 0 0, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328;
+            }
+
+            14%,
+            28% {
+                box-shadow: 80px 0, 80px 0, 80px 0, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328;
+            }
+
+            28%,
+            42% {
+                box-shadow: 80px 0, 160px 0, 160px 0, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328;
+            }
+
+            42%,
+            56% {
+                box-shadow: 80px 0, 160px 0, 240px 0, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328, -20px 20px #222328;
+            }
+
+            56%,
+            70% {
+                box-shadow: 80px 0, 160px 0, 240px 0, -20px 20px #222328, 60px 20px #222328, 60px 20px #222328, 60px 20px #222328;
+            }
+
+            70%,
+            84% {
+                box-shadow: 80px 0, 160px 0, 240px 0, -20px 20px #222328, 60px 20px #222328, 140px 20px #222328, 140px 20px #222328;
+            }
+
+            84%,
+            100% {
+                box-shadow: 80px 0, 160px 0, 240px 0, -20px 20px #222328, 60px 20px #222328, 140px 20px #222328, 220px 20px #222328;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+    </div>
+</body>
+
+</html>

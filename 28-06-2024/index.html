@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 28th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#EFBE65, #3D63C7);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #EFBE65;
+        }
+
+        .square {
+            height: 250px;
+            width: 250px;
+            background: repeating-conic-gradient(#EFBE65 0 25%, #3D63C7 0% 50%);
+            color: #000;
+            box-shadow: -15px 15px;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                color: red;
+                rotate: 90deg;
+            }
+
+            25%,
+            50% {
+                color: blue;
+                rotate: 180deg;
+            }
+
+            50%,
+            75% {
+                color: green;
+                rotate: 270deg;
+            }
+
+            75%,
+            100% {
+                color: #000;
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

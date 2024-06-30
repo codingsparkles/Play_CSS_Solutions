@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 30th June, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222328, #fff, #3D63C7);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #3D63C7;
+
+            * {
+                position: absolute;
+                animation-duration: 2s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+
+        .circle {
+            --a: #222328;
+            position: fixed;
+            background: radial-gradient(1q, #0000 80px, var(--a) 0 92px, #0000 0 112px, var(--a) 0 124px, #0000 0 144px, var(--a) 0 156px, #0000 0);
+            height: 320px;
+            width: 320px;
+            animation-name: anime1;
+        }
+
+        .circle1 {
+            margin-top: 30px;
+            margin-left: -30px;
+        }
+
+        .circle2 {
+            --a: #fff;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            33% {
+                background: radial-gradient(1q, #0000 80px, var(--a) 0 92px, #0000 0);
+            }
+
+            33%,
+            66% {
+                background: radial-gradient(1q, #0000 80px, var(--a) 0 92px, #0000 0 112px, var(--a) 0 124px, #0000 0);
+            }
+
+            66%,
+            100% {
+                background: radial-gradient(1q, #0000 80px, var(--a) 0 92px, #0000 0 112px, var(--a) 0 124px, #0000 0 144px, var(--a) 0 156px, #0000 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
+</body>
+
+</html>

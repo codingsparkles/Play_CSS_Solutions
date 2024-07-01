@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 1st July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222328, #fff, #3D63C7);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #EFBE65;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .thunder {
+            position: absolute;
+            background: #3D63C7;
+            height: 275px;
+            width: 175px;
+            top: 75px;
+            left: 120px;
+            clip-path: polygon(98% 0%, 50% 43%, 82% 43%, 0% 100%, 34% 57%, 5% 57%, 54% 0%);
+            animation: anime1 2s normal infinite;
+        }
+
+        .thunder1 {
+            background: #222328;
+            top: 97px;
+            left: 98px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                scale: 4
+            }
+
+            50%,
+            100% {
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="thunder thunder1"></div>
+        <div class="thunder thunder2"></div>
+    </div>
+</body>
+
+</html>

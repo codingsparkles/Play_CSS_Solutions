@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 2nd July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#E91E63, #EFBE65);
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            animation: anime 2s alternate infinite
+        }
+
+        @keyframes anime {
+
+            0%,
+            20% {
+                background: radial-gradient(1q at 0% 0%, #E91E63 40px, #222328 0 80px, #EFBE65 0);
+            }
+
+            20%,
+            40% {
+                background: radial-gradient(1q at 100% 0%, #E91E63 80px, #222328 0 160px, #EFBE65 0);
+            }
+
+            40%,
+            60% {
+                background: radial-gradient(1q at 100% 100%, #E91E63 120px, #222328 0 240px, #EFBE65 0);
+            }
+
+            60%,
+            80% {
+                background: radial-gradient(1q at 0% 100%, #E91E63 160px, #222328 0 320px, #EFBE65 0);
+            }
+
+            80%,
+            100% {
+                background: radial-gradient(1q at 0% 0%, #E91E63 200px, #222328 0 400px, #EFBE65 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+</body>
+
+</html>

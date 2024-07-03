@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 3rd July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#feae60, #fff, #e91e63);
+        }
+
+        body,
+        .wrapper,
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #e91e63;
+            gap: 40px;
+            overflow: hidden;
+
+            * {
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .box {
+            height: 375px;
+            width: 80px;
+            background: linear-gradient(#feae60 135px, #e91e63 0 235px, #feae60 0);
+            border-radius: 80px;
+            gap: 8px;
+            flex-direction: column;
+            animation-name: anime1;
+        }
+
+        .box2 {
+            animation-name: anime2;
+        }
+
+        .square {
+            background: #feae60;
+            color: #feae60;
+            height: 13px;
+            width: 13px;
+        }
+
+        @keyframes anime1 {
+            0%, 50%{
+                rotate: 360deg;
+            }
+            50%, 100%{
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes anime2 {
+            0%, 50%{
+                rotate: -360deg;
+            }
+            50%, 100%{
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="box box2">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="box box3">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+</body>
+
+</html>

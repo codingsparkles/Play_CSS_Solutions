@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 4th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 97vh;
+            background: radial-gradient(#feae60, #f7e4ed, #e91e63);
+        }
+
+        body,
+        .wrapper,
+        .half {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #f7e4ed;
+            gap: 30px;
+            animation: anime1 2s alternate infinite;
+            overflow: hidden;
+        }
+
+
+        .half {
+            height: 330px;
+            width: 165px;
+            background: #feae60;
+            border-radius: 165px 0 0 165px;
+        }
+
+        .circle2 {
+            background: #e91e63;
+            animation: anime2 2s alternate infinite
+        }
+
+        .inner {
+            background: inherit;
+            height: 240px;
+            width: 100px;
+            border-radius: 140px 0 0 140px;
+            border: 15px solid #f7e4ed;
+            animation: anime3 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                gap: 0
+            }
+
+            30%,
+            100% {
+                gap: 30px
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            30% {
+                rotate: 180deg;
+            }
+
+            60%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            60% {
+                scale: 0
+            }
+
+            70%,
+            100% {
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="half circle1">
+            <div class="inner"></div>
+        </div>
+        <div class="half circle2">
+            <div class="inner"></div>
+        </div>
+    </div>
+</body>
+
+</html>

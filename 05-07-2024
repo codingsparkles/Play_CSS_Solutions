@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 5th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 97vh;
+            background: radial-gradient(#e84142, #fff);
+        }
+
+        body,
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #fff;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background: #e84142;
+            animation: anime1 2s alternate infinite
+        }
+
+        .triangle *,
+        .circle {
+            background: #fff;
+            position: absolute;
+        }
+
+        .triangle {
+            position: relative;
+            background: linear-gradient(#fff 0 80px, #0000 0 140px, #fff 0);
+            height: 200px;
+            width: 230px;
+            margin-top: 50px;
+            margin-left: 40px;
+            clip-path: polygon(43% 0%, 50% 0%, 100% 93%, 94% 100%, 5% 100%, 0% 93%);
+            rotate: 120deg;
+        }
+
+        .circle {
+            position: absolute;
+            height: 19px;
+            width: 19px;
+            border-radius: 50%;
+            top: 79px;
+            left: 185px;
+            box-shadow: 110px 176px 0 1px #fff, -106px 183px #fff;
+        }
+
+        .rectangle {
+            height: 40px;
+            width: 185px;
+            border-radius: 30px 30px 0 0;
+            top: 125px;
+            left: 20px;
+        }
+
+        .rectangle2 {
+            height: 10px;
+            width: 108px;
+            border-radius: 0 0 10px 10px;
+            top: 79px;
+            left: 56px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                rotate: 360deg;
+            }
+
+            20%,
+            40% {
+                rotate: 0deg;
+            }
+
+            50%,
+            70% {
+                transform: scaleX(-1);
+            }
+
+            70%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class='triangle'>
+                <div class='rectangle'></div>
+                <div class='rectangle2'></div>
+            </div>
+            <div class='circle'></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 10th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#445583, #FEFBEB);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #445583;
+            position: relative;
+
+            * {
+                position: absolute;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .circle {
+            height: 240px;
+            width: 240px;
+            background: radial-gradient(1q, #0000 50px, #FEFBEB 0 60px, #0000 0);
+            border-radius: 50%;
+            border: 10px solid #FEFBEB;
+            overflow: hidden;
+            position: relative;
+            animation-name: anime1;
+        }
+
+        .line {
+            height: 240px;
+            width: 10px;
+            background: #FEFBEB;
+        }
+
+        .line1 {
+            rotate: 30deg;
+            translate: -50px -40px
+        }
+
+        .line2 {
+            rotate: -30deg;
+            translate: 50px -40px
+        }
+
+        .line3 {
+            rotate: 90deg;
+            translate: 0 60px
+        }
+
+        .line4,
+        .line5,
+        .line6 {
+            height: 120px;
+            translate: 0 -70px
+        }
+
+        .line4 {
+            height: 140px;
+        }
+
+        .line5 {
+            rotate: 60deg;
+            translate: -50px 25px
+        }
+
+        .line6 {
+            rotate: -60deg;
+            translate: 50px 25px
+        }
+
+        @keyframes anime1 {
+            0%, 50%{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line6"></div>
+        </div>
+    </div>
+</body>
+
+</html>

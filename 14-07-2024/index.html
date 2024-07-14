@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 14th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080b, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080b;
+            flex-direction: column;
+            align-items: start;
+            gap: 50px;
+        }
+
+        .item {
+            height: 100px;
+            width: 400px;
+            background: #E72059;
+            border-radius: 100px 0;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .item1 {
+            animation-name: anime1;
+        }
+
+        .item2 {
+            width: 300px;
+            animation-name: anime2;
+        }
+
+        .item3 {
+            width: 100px;
+            border-radius: 50%;
+            animation-name: anime3;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                width: 100px;
+            }
+
+            50%,
+            100% {
+                width: 400px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                width: 400px;
+            }
+
+            50%,
+            100% {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+</body>
+
+</html>

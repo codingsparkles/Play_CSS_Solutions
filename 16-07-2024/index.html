@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 16th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080b, #fff, #445583);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080b;
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            background: #152743;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            flex-direction: column;
+            animation: anime1 2s normal infinite
+        }
+
+        .child {
+            background: #fff;
+        }
+
+        .child1 {
+            height: 40px;
+            width: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .child2 {
+            height: 130px;
+            width: 110px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #fff 30px, #0000 0 40px, #fff 0);
+        }
+
+        .child3 {
+            height: 100px;
+            width: 30px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                rotate: 360deg;
+            }
+
+            25%,
+            50% {
+                scale: -1+1;
+                rotate: 0deg;
+            }
+
+            50%,
+            100% {
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child child1"></div>
+            <div class="child child2"></div>
+            <div class="child child3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

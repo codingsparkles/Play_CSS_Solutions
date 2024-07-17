@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 17th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#5244D4, #FEFFFE);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #FEFFFE 150px, #5244D4 0 200px, #07080b 0);
+
+            * {
+                position: absolute;
+            }
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .hexagon {
+            height: 170px;
+            width: 190px;
+            background: #5244D4;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation: anime1 2s alternate infinite;
+        }
+
+        .hex-tri {
+            background: #FEFFFE;
+            height: 120px;
+            width: 135px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 77% 95%, 50% 50%, 23% 95%, 0% 50%);
+            animation: anime1 2s alternate-reverse infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon"></div>
+        <div class="hex-tri"></div>
+    </div>
+</body>
+
+</html>

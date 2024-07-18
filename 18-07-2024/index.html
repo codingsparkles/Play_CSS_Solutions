@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 18th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#12BE99, #FEFFFE);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #12BE99 200px, #07080B 0);
+
+            * {
+                position: absolute;
+            }
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .hexagon {
+            background: #FFFFFF;
+            height: 125px;
+            width: 140px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .big {
+            animation: anime1 2s normal infinite;
+        }
+
+        .small,
+        .line {
+            background: #12BE99;
+        }
+
+        .line {
+            height: 15px;
+            width: 260px;
+        }
+
+        .line2 {
+            animation: anime2 2s normal infinite
+        }
+
+        .line3 {
+            animation: anime3 2s normal infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                height: 125px;
+                width: 140px;
+            }
+
+            25%,
+            50% {
+                height: 220px;
+                width: 250px;
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                height: 220px;
+                width: 250px;
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes anime2 {
+
+            60%,
+            100% {
+                rotate: 60deg;
+            }
+        }
+
+        @keyframes anime3 {
+
+            70%,
+            100% {
+                rotate: -60deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon big"></div>
+        <div class="hexagon small"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+</body>
+
+</html>

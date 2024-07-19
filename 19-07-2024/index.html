@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 19th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#CEA966, #FFF);
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+
+            *:not(.rectangle) {
+                position: absolute;
+            }
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            background: #CEA966;
+            animation: anime1 2s alternate infinite
+        }
+
+        .child {
+            height: 250px;
+            width: 220px;
+            background: #fff;
+            clip-path: polygon(0%0%, 100% 0%, 93% 85%, 50%100%, 7% 85%);
+        }
+
+        .child.inner {
+            background: linear-gradient(90deg, #fff 50%, #CEA966 0);
+            height: 220px;
+            width: 190px;
+        }
+
+        .diamond {
+            height: 70px;
+            width: 150px;
+            background: linear-gradient(90deg, #CEA966 50%, #fff 0);
+            clip-path: polygon(50% 0%, 100% 45%, 100% 55%, 50% 100%, 0% 55%, 0% 45%);
+        }
+
+        .diamond.inner {
+            height: 45px;
+            width: 125px;
+            background: linear-gradient(90deg, #fff 50%, #CEA966 0);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .rectangle {
+            height: 70px;
+            width: 30px;
+            background: linear-gradient(-73deg, #fff 0 6px, #CEA966 0 16px, #fff 0);
+            z-index: 1000;
+        }
+
+        .rectangle2 {
+            background: linear-gradient(-70deg, #CEA966 0 5px, #fff 0 15px, #CEA966 0);
+            scale: -1
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                transform: scaleX(-1);
+            }
+
+            25%,
+            50% {
+                transform: scaleX(1);
+            }
+
+            50%,
+            75% {
+                transform: rotate(360deg);
+            }
+
+            75%,
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child inner"></div>
+            <div class="diamond"></div>
+            <div class="diamond inner"></div>
+            <div class="rectangle rectangle1"></div>
+            <div class="rectangle rectangle2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

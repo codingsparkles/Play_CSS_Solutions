@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 20th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#01D295, #FFF);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #010100;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parent {
+            height: 100%;
+            width: 100%;
+            animation: anime 2s alternate infinite;
+        }
+
+        .rectangle {
+            position: absolute;
+            height: 60px;
+            width: 120px;
+            background: #01D295;
+            color: #01D295;
+            border-radius: 5px;
+            transform: skew(0deg, 25deg);
+            top: 220px;
+            left: 100px;
+            z-index: 1;
+            box-shadow: 0 0 0 16px #010100;
+            z-index: 3;
+        }
+
+        .rectangle2 {
+            z-index: 2;
+            animation: anime1 2s alternate infinite
+        }
+
+        .rectangle3 {
+            z-index: 1;
+            animation: anime2 2s alternate infinite
+        }
+
+        .rect {
+            position: absolute;
+            width: 24px;
+            height: 25px;
+            border-radius: 0 0 5px;
+            background: #01D295;
+            transform: skew(0deg, -28deg);
+            top: 265px;
+            left: 236px;
+            z-index: 5;
+            animation: anime3 2s alternate infinite
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                top: 150px;
+                left: 140px;
+                height: 105px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                top: 90px;
+                left: 180px;
+                height: 145px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                box-shadow: 40px 0 #01D295;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="rectangle rectangle1"></div>
+            <div class="rectangle rectangle2"></div>
+            <div class="rectangle rectangle3"></div>
+            <div class="rect"></div>
+        </div>
+    </div>
+</body>
+
+</html>

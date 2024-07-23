@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 23rd July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#8988A0, #FEFEFF, #101341);
+        }
+
+        body,
+        .wrapper,
+        .hexagon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #101341 200px, #000);
+            position: relative;
+        }
+
+        .hexagon {
+            height: 230px;
+            width: 270px;
+            background: linear-gradient(90deg, #8988A0 35%, #FEFEFF 0);
+            top: 100px;
+            left: 100px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);            
+        }
+
+        .parent {
+            animation: anime 2s alternate infinite;
+        }
+
+        .inner {
+            height: 150px;
+            width: 170px;
+            background: #101341;
+        }
+
+        .rect {
+            position: absolute;
+            width: 45px;
+            height: 116px;
+            left: 170px;
+            background: #FEFEFF;            
+            animation: anime1 2s alternate infinite
+        }
+
+        .rect2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        @keyframes anime {
+            0%, 50%{
+                background-position: 200px 200px;
+            }
+
+            50%, 100%{
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: skewX(0deg);
+                top: 155px;
+                left: 185px;
+            }
+
+            50%,
+            100% {
+                transform: skewX(30deg);
+                box-shadow: -15px 0 #101341;
+                top: 85px;
+                left: 170px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: skewX(0deg);
+                top: 155px;
+                left: 185px;
+            }
+
+            50%,
+            100% {
+                transform: skewX(-30deg);
+                box-shadow: -15px 0 #101341;
+                top: 200px;
+                left: 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon parent">
+            <div class="hexagon inner"></div>
+            <div class="rect rect1"></div>
+            <div class="rect rect2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

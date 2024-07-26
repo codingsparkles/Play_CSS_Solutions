@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 26th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1A74BC, #FFFFFF);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+        }
+
+        .circle {
+            height: 400px;
+            width: 400px;
+            background: #1A74BC;
+            border-radius: 50%;
+        }
+
+        .square {
+            height: 30px;
+            width: 30px;
+            border: solid #FFFFFF;
+            border-width: 40px 40px 0 0;
+            animation: anime1 2s alternate infinite
+        }
+
+        .square2 {
+            margin-top: -30px;
+            scale: -1
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                rotate: 0deg;
+            }
+
+            30%,
+            60% {
+                rotate: -45deg;
+            }
+
+            60%,
+            100% {
+                rotate: -45deg;
+                box-shadow: -5px 5px 0 5px #1A74BC, -25px 25px 0 25px #FFFFFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

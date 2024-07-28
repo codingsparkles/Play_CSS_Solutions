@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 28th July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#219DE9, #FFFFFF);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circle {
+            height: 400px;
+            width: 400px;
+            background: #219DE9;
+            border-radius: 50%;
+        }
+
+        .line {
+            position: absolute;
+            background: #FFFFFF;
+            width: 20px;
+            height: 240px;
+        }
+
+        .line1 {
+            animation: anime1 2s alternate infinite
+        }
+
+        .line2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        .line3 {
+            width: 15px;
+            height: 160px;
+            rotate: 90deg;
+            animation: anime3 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: skew(0deg, 0deg);
+            }
+
+            50%,
+            100% {
+                transform: skew(-35deg, 0deg);
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: skew(0deg, 0deg);
+            }
+
+            50%,
+            100% {
+                transform: skew(35deg, 0deg);
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                box-shadow: 0 0 #fff;
+            }
+
+            50%,
+            100% {
+                box-shadow: 40px 0 #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

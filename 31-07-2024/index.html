@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 31st July, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #225AE5);
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .parent {
+            animation: anime 2s alternate infinite
+        }
+
+        .hexagon {
+            height: 355px;
+            width: 230px;
+            border-radius: 40px;
+            rotate: 30deg
+        }
+
+        .hexagon2 {
+            rotate: -30deg
+        }
+
+        .hexagon3 {
+            rotate: 90deg
+        }
+
+        .inner,
+        .box,
+        .circle {
+            background: #07080B;
+        }
+
+        .hexagon,
+        .box2 {
+            background: #225AE5;
+        }
+
+        .inner {
+            height: 270px;
+            width: 160px;
+            border-radius: 6px;
+            rotate: 30deg
+        }
+
+        .inner2 {
+            rotate: -30deg
+        }
+
+        .inner3 {
+            rotate: 90deg
+        }
+
+        .box {
+            height: 90px;
+            width: 400px;
+        }
+
+        .circle {
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            border: 50px solid #225AE5;
+        }
+
+        .box2 {
+            height: 70px;
+            width: 50px;
+            margin-top: 240px;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                transform: scale(-1) rotate(360deg);
+            }
+
+            50%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="hexagon hexagon1"></div>
+            <div class="hexagon hexagon2"></div>
+            <div class="hexagon hexagon3"></div>
+            <div class="inner inner1"></div>
+            <div class="inner inner2"></div>
+            <div class="inner inner3"></div>
+            <div class="box"></div>
+            <div class="circle"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

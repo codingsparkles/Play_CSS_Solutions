@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS - 1st August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #7D47EF);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .box {
+            height: 45px;
+            border: solid #7D47EF;
+            border-width: 45px 0;
+            margin-top: -80px;
+            animation: anime1 3s alternate infinite;
+        }
+
+        .box2 {
+            rotate: 90deg;
+            animation: anime2 3s alternate infinite;
+        }
+
+        .box3 {
+            width: 45px;
+            border: none;
+            box-shadow: 45px 45px, -45px -45px, 45px -45px, -45px 45px;
+            animation: anime3 3s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            40% {
+                width: 135px;
+            }
+
+            40%,
+            100% {
+                width: 400px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            40% {
+                width: 135px;
+                margin-top: -80px;
+            }
+
+            40%,
+            100% {
+                margin-top: 50px;
+                width: 240px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            70% {
+                box-shadow: 0 0, 0 0, 0 0, 0 0;
+            }
+
+            70%,
+            100% {
+                box-shadow: 45px 45px, -45px -45px, 45px -45px, -45px 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 2nd August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080b, #fff);
+        }
+
+        body,
+        .wrapper,
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080b;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rectangle {
+            position: absolute;
+            background: #008DE4;
+            height: 70px;
+            width: 180px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .box {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            background: #008DE4;
+            animation: anime2 2s alternate infinite
+        }
+
+        .inner {
+            height: 180px;
+            width: 300px;
+            background: #07080b;
+            animation: anime3 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                border-radius: 30px 0;
+                transform: skewX(-12deg);
+                margin-left: -200px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                transform: skewX(-12deg);
+                border-radius: 0 150px 130px 0;
+                margin-right: -90px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                transform: skewX(0deg);
+                border-radius: 0 80px 80px 0;
+                margin-left: -150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="box inner"></div>
+        </div>
+        <div class="rectangle"></div>
+    </div>
+</body>
+
+</html>

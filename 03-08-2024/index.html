@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 3rd August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #FCFE53);
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #010001;
+            overflow: hidden;
+        }
+
+        .circle {
+            background: linear-gradient(#010001, #010001)center/220px 220px no-repeat #FCFE53;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            animation: anime1 3s alternate infinite
+        }
+
+        .inner {
+            background: #FCFE53;
+            height: 150px;
+            width: 150px;
+            position: relative;
+        }
+
+        .inner::after {
+            position: absolute;
+            content: '';
+            height: 60px;
+            width: 50px;
+            background: #FCFE53;
+            left: 140px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                background-position: -300px -300px;
+            }
+
+            30%,
+            50% {
+                background-position: 90px 90px;
+            }
+
+            50%,
+            70% {
+                background-position: 90px 90px;
+                rotate: 360deg;
+            }
+
+            70%,
+            100% {
+                background-position: 90px 90px;
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="circle inner"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 5th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #4A5DF0);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .square {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #4A5DF0 200px, #07080B 0);
+        }
+
+        .square {
+            height: 150px;
+            width: 150px;
+            border: solid #fff;
+            border-width: 40px 40px 0 0;
+
+            * {
+                position: absolute;
+                background: #fff;
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        .circle {
+            animation: anime1 3s ease-in infinite;
+        }
+
+        .box {
+            animation: anime3 3s ease-in infinite;
+        }
+
+        .rounded.box {
+            animation: anime2 3s ease-in infinite;
+        }
+
+        @keyframes anime1 {
+
+            30%,
+            60% {
+                border-radius: 50%;
+                margin-top: -100px;
+                margin-left: 100px;
+            }
+
+            60%,
+            100% {
+                border-radius: 50%;
+                margin-top: 100px;
+                margin-left: -100px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            30%,
+            60% {
+                border-radius: 10px;
+
+            }
+
+            60%,
+            100% {
+                border-radius: 10px;
+                box-shadow: 50px 0#4A5DF0, 0 -50px#4A5DF0, 20px -20px #fff;
+            }
+        }
+
+        @keyframes anime3 {
+
+            30%,
+            60% {
+                margin-top: 100px;
+                margin-left: -100px;
+            }
+
+            60%,
+            100% {
+                margin-top: -100px;
+                margin-left: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square">
+            <div class="box"></div>
+            <div class="box rounded"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

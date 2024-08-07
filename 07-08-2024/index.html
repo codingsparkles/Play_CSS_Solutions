@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 7th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #D8B433);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .square {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+            overflow: hidden;
+        }
+
+        .square {
+            background: #D8B433;
+            height: 400px;
+            width: 400px;
+            border-radius: 80px;
+        }
+
+        .circle {
+            background: #D8B433;
+            height: 50px;
+            width: 50px;
+            border: 30px solid #07080B;
+            border-radius: 50%;
+        }
+
+        .circle1,
+        .circle4 {
+            height: 70px;
+            width: 70px;
+        }
+
+        .circle1 {
+            transform: translate(-60px, 90px);
+            z-index: 2;
+            animation: anime1 3s alternate infinite;
+        }
+
+        .circle2 {
+            transform: translate(80px, -35px);
+            animation: anime2 3s alternate infinite
+        }
+
+        .circle3 {
+            margin-top: -50px;
+            margin-left: -115px;
+            z-index: 1;
+            border-color: #D8B433#D8B433#07080B#07080B;
+            rotate: -45deg;
+            animation: anime3 3s alternate infinite
+        }
+
+        .circle4 {
+            box-shadow: 0 0 0 10px#D8B433;
+            transform: translate(80px, -130px);
+            animation: anime4 3s alternate infinite;
+        }
+
+
+        @keyframes anime1 {
+            0%, 60% {
+                transform: translate(-60px, 0) scaleX(-1);
+            }
+
+            60%, 100% {
+                transform: translate(-60px, 90px) scaleX(1);
+            }
+        }
+
+        @keyframes anime2 {
+            0%, 60% {
+                transform: translate(120px, -120px);
+            }
+
+            60%, 100% {
+                transform: translate(80px, -35px);
+            }
+        }
+
+        @keyframes anime3 {
+            0%, 60% {
+                rotate: 360deg;
+            }
+
+            60%, 100% {
+                rotate: -45deg;
+            }
+        }
+
+        @keyframes anime4 {
+            0%, 60% {
+                transform: translate(80px, -40px) scaleY(-1);
+            }
+
+            60%, 100% {
+                transform: translate(80px, -130px) scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

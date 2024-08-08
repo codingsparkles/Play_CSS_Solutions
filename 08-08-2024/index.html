@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 8th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #01E296);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            background: #01E296;
+            width: 17px;
+            height: 185px;
+        }
+
+        .line1 {
+            animation: anime1 2s alternate infinite
+        }
+
+        .line2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        .line3 {
+            animation: anime3 2s alternate infinite
+        }
+
+        .line4 {
+            animation: anime4 2s alternate infinite;
+        }
+
+        .line5 {
+            animation: anime5 2s alternate infinite
+        }
+
+        .line6 {
+            animation: anime6 2s alternate infinite
+        }
+
+        .line7 {
+            animation: anime7 2s alternate infinite
+        }
+
+        .line8 {
+            animation: anime8 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                height: 275px;
+                translate: 0 60px;
+                transform: skewY(20deg);
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                translate: -175px;
+                height: 245px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                translate: 175px;
+                height: 245px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                height: 196px;
+                rotate: 77deg;
+                translate: 87px -95px;
+                transform: skewY(12deg);
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: -75deg;
+                translate: 94px 95px;
+                transform: skewY(-14deg);
+            }
+        }
+
+        @keyframes anime6 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                height: 210px;
+                rotate: 70deg;
+                translate: -85px -155px;
+                transform: skewY(20deg);
+            }
+        }
+
+        @keyframes anime7 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                height: 190px;
+                rotate: -70deg;
+                translate: -94px 155px;
+                transform: skewY(-20deg);
+            }
+        }
+
+        @keyframes anime8 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: -67deg;
+                translate: 98px -154px;
+                transform: skewY(-20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+        <div class="line line7"></div>
+        <div class="line line8"></div>
+    </div>
+</body>
+
+</html>

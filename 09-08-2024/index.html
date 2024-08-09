@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 9th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #FE5D00);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+        }
+
+        .parent {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+        }
+
+        .parent1 {
+            animation: anime1 3s alternate infinite
+        }
+
+        .parent2 {
+            animation: anime2 3s alternate infinite
+        }
+
+        .parent3 {
+            animation: anime3 3s alternate infinite
+        }
+
+        .parent4 {
+            animation: anime4 3s alternate infinite
+        }
+
+        .child {
+            height: 140px;
+            width: 140px;
+            background: radial-gradient(1q at 100% 100%, #07080B 40px, #FE5D00 0 65px, #07080B 0 77px, #FE5D00 0 102px, #07080B 0 114px, #FE5D00 0 140px, #07080B 0);
+        }
+
+        .child::before,
+        .child::after {
+            position: absolute;
+            content: '';
+            height: 25px;
+            width: 10px;
+            border-radius: 0 6px 6px 0;
+            background: #FE5D00;
+            right: 0;
+            top: 0;
+            box-shadow: 0 38px #FE5D00, 0 75px #FE5D00;
+            animation: anime5 3s alternate infinite;
+        }
+
+        .child::after {
+            rotate: 90deg;
+            top: 130px;
+            right: 57px;
+        }
+
+        .parent2 {
+            scale: -1
+        }
+
+        .parent3 {
+            scale: -1+1
+        }
+
+        .parent4 {
+            scale: 1-1
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                translate: -75px -75px;
+            }
+
+            50%,
+            100% {
+                translate: -25px -125px
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                translate: 75px 65px;
+            }
+
+            50%,
+            100% {
+                translate: 25px 125px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                translate: 75px -75px;
+            }
+
+            50%,
+            100% {
+                translate: 125px -25px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                translate: -75px 65px;
+            }
+
+            50%,
+            100% {
+                translate: -125px 25px;
+            }
+        }
+
+        @keyframes anime5 {
+
+            0%,
+            50% {
+                border-radius: 0 0 0 0;
+            }
+
+            50%,
+            100% {
+                border-radius: 0 6px 6px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent parent1">
+            <div class="child"></div>
+        </div>
+        <div class="parent parent2">
+            <div class="child"></div>
+        </div>
+        <div class="parent parent3">
+            <div class="child"></div>
+        </div>
+        <div class="parent parent4">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+
+</html>

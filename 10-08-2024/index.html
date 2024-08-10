@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 10th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #F4D029);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #F4D029 200px, #000 0);
+            gap: 10px
+        }
+
+        .box {
+            border: solid #fff;
+            border-width: 75px 25px 25px;
+            height: 25px;
+            width: 80px;
+            position: relative;
+        }
+
+        .box1 {
+            animation: anime1 2s alternate infinite
+        }
+
+        .box2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            height: 38px;
+            width: 92px;
+            border: solid #F4D029;
+            border-width: 0 12px 12px 0;
+            top: -75px;
+            left: -25px;
+        }
+
+        .box2::before {
+            border-width: 25px 0 0 25px;
+            top: -50px;
+            left: 0;
+        }
+
+        @keyframes anime1 {
+            0%, 25% {
+                transform: scaleX(-1);
+            }
+            25%, 50% {
+                transform: scaleX(1);
+            }
+            50%, 75%{
+                transform: scaleX(1) rotate(360deg);
+            }
+            75%, 100%{
+                transform: scaleX(1) rotate(0deg);
+            }
+        }
+
+        @keyframes anime2 {
+            0%, 25% {
+                transform: scaleY(-1);
+            }
+            25%, 50% {
+                transform: scaleY(1);
+            }
+            50%, 75%{
+                transform: scaleY(1) rotate(360deg);
+            }
+            75%, 100%{
+                transform: scaleY(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </div>
+</body>
+
+</html>

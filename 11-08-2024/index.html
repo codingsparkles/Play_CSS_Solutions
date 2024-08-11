@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 11th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #30CA9E);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #07080B;
+        }
+
+        .parent {
+            position: relative;
+            height: 170px;
+            width: 170px;
+            display: flex;
+            top: 114px;
+            left: 175px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .triangle {
+            height: inherit;
+            width: inherit;
+            background: #30CA9E;
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        }
+
+        .rectangle {
+            height: inherit;
+            width: 15px;
+            background: #30CA9E;
+            top: 10px;
+            left: 100px;
+            border-radius: 10px;
+            margin-left: -5px;
+        }
+
+        .parent2 {
+            height: 140px;
+            width: 170;
+            rotate: 52deg;
+            top: 45px;
+            left: 140px;
+        }
+
+        .parent3 {
+            height: 140px;
+            width: 170;
+            rotate: -52deg;
+            top: -270px;
+            left: 140px;
+        }
+
+        .parent4 {
+            width: 155px;
+            height: 140px;
+            top: -410px;
+            left: 85px;
+            rotate: 239deg
+        }
+
+        .parent5 {
+            width: 155px;
+            height: 140px;
+            top: -366px;
+            left: 85px;
+            rotate: -239deg
+        }
+
+        .parent4 .triangle {
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+
+        .parent5 .triangle {
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .parent6 {
+            height: 245px;
+            width: 84px;
+            top: -650px;
+            left: 60px;
+            rotate: 180deg
+        }
+
+        @keyframes anime {
+
+            0%,
+            40% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent parent1">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="parent parent2">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="parent parent3">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="parent parent4">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="parent parent5">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="parent parent6">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

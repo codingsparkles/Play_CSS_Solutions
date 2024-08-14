@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 14th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #F45649);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #F45649 200px, #000);
+
+            * {
+                position: fixed;
+            }
+        }
+
+        .diamond {
+            background: #fff;
+            height: 120px;
+            width: 110px;
+            border-radius: 5px 6px;
+            transform: skew(0deg, -30deg);
+            animation: anime1 2s alternate infinite;
+        }
+
+        .diamond1 {
+            translate: 60px 32px
+        }
+
+        .diamond2 {
+            transform: skew(0deg, 30deg);
+            translate: -57px 32px
+        }
+
+        .diamond3 {
+            translate: 0 -64px;
+            rotate: 60deg
+        }
+
+        .circle {
+            height: 40px;
+            width: 40px;
+            background: #F45649;
+            color: #F45649;
+            border-radius: 50%;
+            box-shadow: 60px 35px, -60px 35px, 0 -60px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .line {
+            height: 50px;
+            width: 6px;
+            background: #F45649;
+            margin-top: -50px;
+        }
+
+        .line2 {
+            rotate: 55deg;
+            margin-top: 40px;
+            margin-left: -65px;
+        }
+
+        .line3 {
+            rotate: -55deg;
+            margin-top: 40px;
+            margin-left: 65px;
+        }
+
+        @keyframes anime1 {
+            0%, 30% {
+                scale: .5;
+            }
+            30%, 100% {
+                scale: 1
+            }
+        }
+
+        @keyframes anime2 {
+            0%, 30% {
+                box-shadow: 0 0, 0 0, 0 0;
+            }
+            30%, 100% {
+                box-shadow: 60px 35px, -60px 35px, 0 -60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="diamond diamond1"></div>
+        <div class="diamond diamond2"></div>
+        <div class="diamond diamond3"></div>
+        <div class="circle"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+</body>
+
+</html>

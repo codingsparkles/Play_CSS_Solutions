@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 15th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #5547FE);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #5547FE 200px, #000);
+
+            * {
+                position: fixed;
+            }
+        }
+
+        .box {
+            height: 30px;
+            width: 100px;
+            background: #5547FE;
+            border: solid #fff;
+            border-width: 25px 0;
+            margin-left: -110px;
+            -webkit-box-reflect: right 30px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .line {
+            background: #fff;
+            height: 100px;
+            width: 35px;
+        }
+
+        .line1 {
+            transform: skewX(-30deg);
+            margin-top: 130px;
+            margin-left: -65px;
+            -webkit-box-reflect: above 30px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .line2 {
+            transform: skewX(30deg);
+            margin-top: -130px;
+            margin-left: -65px;
+            -webkit-box-reflect: below 30px;
+            animation: anime3 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scaleY(-1)
+            }
+
+            50%,
+            100% {
+                transform: scaleY(1)
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: skewX(-30deg) scaleX(-1)
+            }
+
+            50%,
+            100% {
+                transform: skewX(-30deg) scaleX(1)
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                transform: skewX(30deg) scaleX(-1)
+            }
+
+            50%,
+            100% {
+                transform: skewX(30deg) scaleX(1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+    </div>
+</body>
+
+</html>

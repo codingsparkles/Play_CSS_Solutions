@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 16th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#07080B, #fff, #FE01AF);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #000;
+        }
+
+        .circle {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: anime2 3s alternate infinite;
+
+            * {
+                position: absolute;
+                background: #000;
+            }
+        }
+
+        .half-circle {
+            height: 310px;
+            width: 111px;
+            border: 45px solid #FE01AF;
+            border-radius: 0 200px 200px 0;
+            right: 0
+        }
+
+        .abstract {
+            height: 201px;
+            width: 200px;
+            background: #FE01AF;
+            -webkit-box-reflect: below;
+            animation: anime1 3s alternate infinite
+        }
+
+        .diamond {
+            height: 110px;
+            width: 50px;
+            top: 40px;
+            left: 70px;
+            rotate: 135deg;
+            clip-path: polygon(50% 0%, 100% 30%, 50% 100%, 50% 100%, 0% 30%);
+        }
+
+        .triangle {
+            height: 50px;
+            width: 50px;
+            top: -13px;
+            left: 97px;
+            rotate: 30deg;
+            transform: skewX(10deg);
+        }
+
+        .triangle2 {
+            top: 100px;
+            left: -15px;
+            rotate: 160deg
+        }
+
+        .ele {
+            height: 30px;
+            width: 175px;
+            bottom: 0;
+            clip-path: polygon(45%0%, 85%15%, 100%100%, 0%100%);
+        }
+
+        .ele2 {
+            rotate: 90deg;
+            scale: 1-1;
+            top: 67px;
+            right: -75px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            60% {
+                rotate: 0deg;
+            }
+
+            70%,
+            80% {
+                rotate: 360deg;
+            }
+
+            80%,
+            100% {
+                rotate: 0deg
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="abstract">
+                <div class="diamond"></div>
+                <div class="triangle triangle1"></div>
+                <div class="triangle triangle2"></div>
+                <div class="ele ele1"></div>
+                <div class="ele ele2"></div>
+            </div>
+            <div class="half-circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

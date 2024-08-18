@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 18th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1442CC, #745DDF, #2EB6EA);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            height: 340px;
+            width: 340px;
+            border-radius: 50%;
+            background: #1442CC;
+            top: 30px;
+            left: 0;
+            overflow: hidden;
+            z-index: 2;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .square {
+            position: absolute;
+            height: 300px;
+            width: 340px;
+            background: #2EB6EA;
+            border-radius: 120px 120px 0;
+            margin: -90px 80px;
+            box-shadow: 150px 50px #2EB6EA;
+        }
+
+        .half-circle {
+            position: absolute;
+            height: 150px;
+            width: 300px;
+            border-radius: 150px 150px 0 0;
+            background: #1442CC;
+            top: 209px;
+            left: 120px;
+        }
+
+        .half-circle2 {
+            z-index: 1;
+            height: 130px;
+            width: 240px;
+            top: 240px;
+            left: 159px;
+            background: #745DDF;
+            animation: anime1 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                transform: scaleY(-1);
+            }
+            30%,
+            60% {
+                transform: scaleY(-1) rotate(360deg);
+            }
+
+            60%,
+            100% {
+                transform: scaleY(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle">
+            <div class="square square1"></div>
+            <div class="half-circle"></div>
+        </div>
+        <div class="half-circle half-circle2"></div>
+    </div>
+</body>
+
+</html>

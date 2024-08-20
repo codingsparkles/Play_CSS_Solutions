@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 20th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #2B61D1);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #2B61D1 200px, #000)
+        }
+
+        .hexagon {
+            background: #FFFEFE;
+            height: 250px;
+            width: 220px;
+            clip-path: polygon(50%0, 100%25%, 100%75%, 50% 100%, 0 75%, 0 25%);
+            overflow: hidden;
+            position: relative;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .hexagon1,
+        .hexagon2 {
+            background: #2B61D1;
+            position: absolute;
+            display: grid;
+            place-items: center;
+        }
+
+        .hexagon1 {
+            height: 135px;
+            width: 120px;
+            top: 100px;
+            left: -25px;
+        }
+
+        .hexagon2 {
+            height: 200px;
+            width: 170px;
+            top: 55px;
+            left: 73px;
+        }
+
+        .hexagon1 .hexagon.inner {
+            height: 60%;
+            width: 60%;
+        }
+
+        .hexagon2 .hexagon.inner {
+            height: 70%;
+            width: 70%;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                transform: rotate(360deg);
+            }
+
+            25%,
+            50% {
+                transform: rotate(0deg) scaleX(-1);
+            }
+
+            50%,
+            75% {
+                transform: rotate(0deg) scale(.5);
+            }
+
+            75%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon">
+            <div class="hexagon hexagon1">
+                <div class="hexagon inner"></div>
+            </div>
+            <div class="hexagon hexagon2">
+                <div class="hexagon inner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 21st August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#136AAD, #fff);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #136AAD 200px, #000 0);
+        }
+
+        body,
+        .wrapper,
+        .hexagon,
+        .triangle {
+            display: grid;
+            place-items: center;
+        }
+
+        .hexagon {
+            background: #FEFEFF;
+            height: 270px;
+            width: 230px;
+            clip-path: polygon(50%0, 100%25%, 100%75%, 50% 100%, 0 75%, 0 25%);
+            animation: anime1 2s alternate infinite
+        }
+
+        .inner {
+            height: 75%;
+            width: 75%;
+            background: #136AAD;
+        }
+
+        .triangle {
+            position: fixed;
+            height: 160px;
+            width: 115px;
+            background: #136AAD;
+            clip-path: polygon(0 0, 100% 30%, 100% 58%, 0% 100%);
+            margin-left: -115px;
+            margin-top: 25px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .triangle.inner {
+            position: absolute;
+            height: 95%;
+            width: 110%;
+            clip-path: polygon(30%10%, 30%60%, 100%26%, 100%50%, 0%100%, 0%0%);
+            background: #FEFEFF;
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        .triangle2 {
+            scale: -1+1;
+            margin-left: 115px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scale(.5);
+            }
+
+            50%,
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon">
+            <div class="hexagon inner"></div>
+        </div>
+        <div class="triangle triangle1">
+            <div class="triangle inner"></div>
+        </div>
+        <div class="triangle triangle2">
+            <div class="triangle inner"></div>
+        </div>
+    </div>
+</body>
+
+</html>

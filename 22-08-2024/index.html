@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 22nd August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #3FFFFE);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #3FFFFE 200px, #000);
+        }
+
+        body,
+        .wrapper,
+        .hexagon {
+            display: grid;
+            place-items: center;
+        }
+
+        .hexagon {
+            background: #FEFEFF;
+            height: 270px;
+            width: 230px;
+            clip-path: polygon(50%0, 100%25%, 100%75%, 50% 100%, 0 75%, 0 25%);
+            overflow: hidden;
+        }
+
+        .triangle {
+            position: absolute;
+            height: 25px;
+            border: solid;
+            border-color: #3FFFFE #0000;
+            border-width: 92px 55px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .triangle2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        .triangle3 {
+            animation: anime3 2s alternate infinite
+        }
+
+        .square {
+            position: absolute;
+            height: 100px;
+            width: 55px;
+            border: solid #FFFEFE;
+            border-width: 0;
+            animation: anime4 2s alternate infinite
+        }
+
+        .square1 {
+            rotate: 30deg;
+            margin-left: -10px
+        }
+
+        .square2 {
+            scale: -1 1;
+            rotate: -30deg;
+            margin-left: 10px
+        }
+
+        @keyframes anime1 {
+
+            30%,
+            100% {
+                rotate: 30deg;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                rotate: -30deg;
+            }
+        }
+
+        @keyframes anime3 {
+
+            70%,
+            100% {
+                rotate: 90deg;
+            }
+        }
+
+        @keyframes anime4 {
+
+            70%,
+            100% {
+                border-width: 0 0 12px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon">
+            <div class="triangle triangle1"></div>
+            <div class="triangle triangle2"></div>
+            <div class="triangle triangle3"></div>
+        </div>
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 23rd August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #0E67AE);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #000 182px, #0E67AE 0 200px, #000 0);
+            animation: anime1 2s alternate infinite;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .square {
+            position: absolute;
+            height: 70px;
+            width: 120px;
+            border: solid #0E67AE;
+            border-width: 60px 0 50px 60px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .square1 {
+            translate: -40px -25px
+        }
+
+        .square2 {
+            scale: -1;
+            translate: 30px 40px;
+            border-width: 50px 0 50px 60px;
+        }
+
+        .square::after {
+            position: absolute;
+            content: '';
+            border: solid;
+            border-width: 30px 40px;
+            border-color: #000#000#0E67AE#0E67AE;
+            top: -60px;
+            left: 110px;
+        }
+
+        .square2::after {
+            border-width: 25px 40px;
+            top: -50px;
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                background-position: -400px -400px;
+            }
+
+            50%,
+            100% {
+                background-position: 400px 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+    </div>
+</body>
+
+</html>

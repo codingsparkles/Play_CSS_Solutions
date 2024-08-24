@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 24th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #1FB4FA);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #1FB4FA 200px, #000 0);
+
+            * {
+                position: absolute;
+                background: #FFFEFE;
+            }
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rect {
+            height: 70px;
+            width: 120px;
+            border-radius: 5px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .rect2 {
+            rotate: 60deg
+        }
+
+        .rect3 {
+            rotate: -60deg
+        }
+
+        .rectangle {
+            height: 120px;
+            width: 55px;
+            border-radius: 6px;
+            color: #FFFEFE;
+            -webkit-box-reflect: left 175px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .rectangle1 {
+            transform: skewY(-20deg);
+            translate: 115px -40px;
+        }
+
+        .rectangle2 {
+            transform: skewY(20deg);
+            translate: 115px 45px;
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: skew(0);
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                transform: skewY(20deg);
+            }
+
+            30%,
+            60% {
+                transform: skewY(20deg) rotate(360deg);
+            }
+
+            60%,
+            100% {
+                transform: skewY(0) rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+        <div class="rect rect3"></div>
+        <div class="rectangle rectangle1"></div>
+        <div class="rectangle rectangle2"></div>
+    </div>
+</body>
+
+</html>

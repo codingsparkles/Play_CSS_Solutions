@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 26th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #8BCAFE);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #000;
+            overflow: hidden;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .rounded.rect {
+            position: absolute;
+            background: #8BCAFE;
+            height: 130px;
+            widtH: 25px;
+            border-radius: 20px;
+            translate: 0 -135px;
+            -webkit-box-reflect: below 135px;
+            animation: anime3 2s alternate infinite
+        }
+
+        .rounded::after,
+        .rounded::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 220px;
+            background: inherit;
+            border-radius: 25px;
+        }
+
+        .rounded::after {
+            rotate: 60deg;
+            translate: -85px -50px
+        }
+
+        .rounded::before {
+            rotate: -60deg;
+            translate: 85px -50px
+        }
+
+        .circle {
+            background: #4187F7;
+            color: #4187F7;
+            border-radius: 50%;
+            height: 75px;
+            width: 75px;
+            box-shadow: -160px 85px, -160px 85px 0 6px#000, 160px 85px, 160px 85px 0 6px#000, 160px -85px, 160px -85px 0 6px#000, -160px -85px, -160px -85px 0 6px#000;
+            z-index: 1;
+            animation: anime1 2s alternate infinite
+        }
+
+        .square {
+            position: absolute;
+            background: #8BCAFE;
+            width: 60px;
+            height: 150px;
+            translate: -160px 0;
+            -webkit-box-reflect: right 260px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .square::before {
+            position: absolute;
+            content: '';
+            rotate: -60deg;
+            background: inherit;
+            height: 170px;
+            width: inherit;
+            left: 100px;
+            top: -40px;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                box-shadow: 0 0, 0 0 0 0#000, 0 0, 0 0 0 0#000, 0 0, 0 0 0 0#000, 0 0, 0 0 0 0#000;
+            }
+
+            50%,
+            100% {
+                box-shadow: -160px 85px, -160px 85px 0 6px#000, 160px 85px, 160px 85px 0 6px#000, 160px -85px, 160px -85px 0 6px#000, -160px -85px, -160px -85px 0 6px#000;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: scaleY(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                transform: scaleY(-1);
+                -webkit-box-reflect: above 135px;
+            }
+
+            50%,
+            100% {
+                transform: scaleY(1);
+                -webkit-box-reflect: below 135px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rounded rect"></div>
+        <div class="circle"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

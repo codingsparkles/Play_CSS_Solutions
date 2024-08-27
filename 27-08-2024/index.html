@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 27th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #30377B);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(#30377B 200px, #000 0);
+            overflow: hidden;
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            animation: anime1 2s alternate infinite;
+        }
+
+        .box {
+            position: absolute;
+            background: #0000;
+            height: 160px;
+            width: 65px;
+            border: solid #FFFEFE;
+            border-width: 0 35px 35px 35px;
+            border-radius: 0 0 25px 25px;
+        }
+
+        .box1 {
+            margin-top: 30px;
+        }
+
+        .box2 {
+            width: 48px;
+            border-width: 35px 20px 0 0;
+            margin-top: -60px;
+            margin-left: -68px;
+            border-radius: 0;
+            -webkit-box-reflect: right;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                transform: scaleX(-1) rotate(45deg);
+            }
+
+            25%,
+            50% {
+                transform: scaleX(1) rotate(0deg);
+            }
+
+            50%,
+            75% {
+                transform: scaleX(-1) rotate(-45deg);
+            }
+
+            75%,
+            100% {
+                transform: scaleX(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

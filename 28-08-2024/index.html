@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 28th August, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #DF3E6B);
+            user-select: none;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #000;
+            overflow: hidden;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            height: 140px;
+            width: 140px;
+            border: 25px solid #DF3E6B;
+            border-radius: 0;
+            animation: anime1 3s alternate infinite
+        }
+
+        .circle1 {
+            rotate: -45deg;
+            translate: -11px 0
+        }
+
+        .circle2 {
+            rotate: 135deg;
+            translate: 11px 0
+        }
+
+        .line {
+            position: absolute;
+            height: 120px;
+            width: 25px;
+            background: #DF3E6B;
+            rotate: -38deg;
+            border: solid#000;
+            border-width: 0 20px;
+            animation: anime2 3s alternate infinite
+        }
+
+        .line2 {
+            rotate: 90deg;
+            border-width: 0 15px 0 0;
+            translate: 140px 9px;
+            width: 20px;
+        }
+
+        @keyframes anime1 {
+
+            50%,
+            100% {
+                border-radius: 50% 50% 38% 50%;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: scale(-1) rotate(360deg);
+            }
+
+            50%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+    </div>
+</body>
+
+</html>

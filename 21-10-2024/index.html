@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 21st October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#2a344f, #f5814e, #fff, #00848b);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #2a344f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        p {
+            position: absolute;
+            background: #ffffff;
+            height: 150px;
+            width: 150px;
+            border: 65px solid #00848b;
+            animation: anime 2s alternate infinite
+        }
+
+        p+p {
+            top: 200px;
+            width: 210px;
+            height: 105px;
+            border-width: 0 95px 95px 95px;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime {
+
+            25%,
+            100% {
+                rotate: 45deg
+            }
+        }
+
+        @keyframes anime1 {
+            25% {
+                rotate: 0deg;
+                border-radius: 0 0 200px 200px;
+            }
+
+            50% {
+                border-radius: 0 0 200px 200px;
+            }
+
+            100% {
+                border-radius: 0 0 200px 200px;
+                box-shadow: 0 50px 0 50px #f5814e;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p></p>
+        <p></p>
+    </div>
+</body>
+
+</html>

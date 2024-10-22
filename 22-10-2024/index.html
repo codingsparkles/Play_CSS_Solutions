@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 22nd October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f5814e, #00848b, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .circle {
+            color: #00848b;
+            border-radius: 50%;
+            border: 100px solid;
+            height: 200px;
+            width: 200px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .circle2 {
+            animation: anime1 2s alternate infinite;
+            color: #f5814e;
+        }
+
+        .square {
+            color: #00848b;
+            border: 70px solid;
+            height: 300px;
+            width: 300px;
+            rotate: 45deg;
+            animation: anime3 2s alternate infinite;
+        }
+
+        .square1 {
+            color: #f5814e;
+            animation: anime4 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            60%,
+            100% {
+                margin-left: -400px;
+            }
+        }
+
+        @keyframes anime1 {
+
+            60%,
+            100% {
+                margin-left: 400px
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            60% {
+                rotate: 360deg;
+            }
+
+            60%,
+            100% {
+                margin-top: 525px;
+                rotate: 45deg;
+                margin-left: -100px
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            60% {
+                rotate: 360deg;
+            }
+
+            60%,
+            100% {
+                margin-top: 525px;
+                rotate: 45deg;
+                margin-left: 100px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+    </div>
+</body>
+
+</html>

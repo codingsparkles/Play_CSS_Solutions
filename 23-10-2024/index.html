@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 23rd October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00848b, #f5814e, #dc1363);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ffffff;
+            flex-wrap: wrap;
+        }
+
+        .leaf {
+            --c: #2a344f;
+            height: 50%;
+            width: 50%;
+            background: var(--c);
+            rotate: 90deg;
+            animation: anime 3s alternate infinite
+        }
+
+        .leaf2,
+        .leaf3 {
+            scale: 1-1;
+            --c: #00848b
+        }
+
+        .leaf3 {
+            --c: #f5814e
+        }
+
+        .leaf4 {
+            --c: #dc1363
+        }
+
+        @keyframes anime {
+            33% {
+                border-radius: 200px;
+            }
+
+            66% {
+                border-radius: 100px;
+            }
+
+            100% {
+                border-radius: 200px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="leaf leaf3"></div>
+        <div class="leaf leaf4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 24th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00848b, #f5814e, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(#00a6b2 50%, #fe4a49 0)center/90% 95% no-repeat #feebd3;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .circle {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            background: #fe4a49;
+            animation: anime 2s alternate infinite
+        }
+
+        @keyframes anime {
+            25% {
+                margin-left: -400px;
+            }
+
+            50% {
+                margin-left: -400px;
+                box-shadow: 400px 0#00a6b2, 0 0 0 15px #fe4a49, 400px 0 0 15px #00a6b2;
+            }
+
+            75% {
+                margin-left: -400px;
+                box-shadow: 400px 0#00a6b2, 0 0 0 15px #feebd3, 400px 0 0 15px #00a6b2;
+            }
+
+            100% {
+                margin-left: -400px;
+                box-shadow: 400px 0#00a6b2, 0 0 0 15px #feebd3, 400px 0 0 15px #feebd3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+    </div>
+</body>
+
+</html>

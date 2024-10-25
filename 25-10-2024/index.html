@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 25th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fe4a49, #00a6b2, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #feebd3;
+            overflow: hidden;
+            position: relative;
+
+            * {
+                background: #feebd3;
+                position: absolute;
+                border: solid;
+                border-color: #fe4a49#fe4a49#00a6b2#00a6b2;
+            }
+        }
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border-width: 50px;
+            rotate: -45deg;
+        }
+
+        .rectangle {
+            height: 30px;
+            width: 350px;
+            border-width: 50px 0;
+        }
+
+        .wrapper:hover .circle {
+            animation: expand 3s alternate infinite
+        }
+
+        .wrapper:hover .rectangle {
+            animation: anime 3s alternate infinite
+        }
+
+        @keyframes expand {
+
+            0%,
+            50% {
+                border-width: 0
+            }
+
+            60%,
+            100% {
+                border-width: 50px
+            }
+        }
+
+        @keyframes anime {
+
+            0%,
+            10% {
+                rotate: 90deg;
+                height: 0;
+                width: 30px;
+                box-shadow: 0 200px 0 150px #feebd3, 0 -200px 0 150px #feebd3;
+            }
+
+            10%,
+            30% {
+                rotate: 90deg;
+                height: 30px;
+                width: 50px;
+                box-shadow: 0 200px 0 150px #feebd3, 0 -200px 0 150px #feebd3;
+            }
+
+            30%,
+            60% {
+                rotate: 90deg;
+                height: 30px;
+                width: 350px;
+                box-shadow: 0 200px 0 150px #feebd3, 0 -200px 0 150px #feebd3;
+            }
+
+            60%,
+            100% {
+                rotate: 0deg;
+                height: 30px;
+                width: 350px;
+                box-shadow: 0 200px 0 150px #0000, 0 -200px 0 150px #0000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='circle'></div>
+        <div class='rectangle'></div>
+    </div>
+</body>
+
+</html>

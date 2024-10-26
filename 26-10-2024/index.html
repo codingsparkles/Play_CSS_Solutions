@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 26th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00a6b2, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .square {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #00a6b2;
+            overflow: hidden;
+            position: relative;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .square {
+            height: 180px;
+            width: 180px;
+            background: #00a6b2;
+            color: #feebd3;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .rounded-square {
+            height: 110px;
+            width: 110px;
+            background: #fe4a49;
+            border-radius: 15px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .circle {
+            background: #feebd3;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 12px solid #00a6b2;
+            box-shadow: 0 0 0 25px#feebd3;
+        }
+
+        .circle1 {
+            animation: anime3 2s alternate infinite;
+        }
+
+        .circle2 {
+            animation: anime4 2s alternate infinite;
+        }
+
+        .circle3 {
+            animation: anime5 2s alternate infinite;
+        }
+
+        .circle4 {
+            animation: anime6 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+            25% {
+                box-shadow: 25px 0
+            }
+
+            50% {
+                box-shadow: 25px 0, -25px 0
+            }
+
+            75% {
+                box-shadow: 25px 0, -25px 0, 0 25px
+            }
+
+            100% {
+                box-shadow: 25px 0, -25px 0, 0 25px, 0 -25px
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            80% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime3 {
+
+            20%,
+            100% {
+                margin-top: -230px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            40%,
+            100% {
+                margin-bottom: -230px;
+            }
+        }
+
+        @keyframes anime5 {
+
+            60%,
+            100% {
+                margin-left: -230px;
+            }
+        }
+
+        @keyframes anime6 {
+
+            80%,
+            100% {
+                margin-right: -230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="square">
+            <div class="rounded-square"></div>
+        </div>
+    </div>
+</body>
+
+</html>

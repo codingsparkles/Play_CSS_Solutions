@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 27th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fe4a49, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #feebd3;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 90px;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .heart {
+            --c: #fe4a49;
+            height: 55px;
+            width: 55px;
+            border: solid var(--c);
+            border-width: 80px 0 0 80px;
+            position: relative;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            position: absolute;
+            content: '';
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: var(--c);
+            top: -80px;
+            left: 10px
+        }
+
+        .heart::after {
+            left: -80px;
+            top: 10px
+        }
+
+        .heart2 {
+            --c: #00a6b2;
+            scale: -1 1;
+        }
+
+        .heart3 {
+            --c: #00a6b2;
+            scale: 1-1
+        }
+
+        .heart4 {
+            scale: -1-1
+        }
+
+        .square {
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            background: #ffa09a;
+            margin-left: 110px;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .square::before {
+            content: '';
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background: #feebd3;
+            color: #feebd3;
+            top: -30px;
+            left: -30px;
+            box-shadow: 140px 0, 0 140px, 140px 140px
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scale(.5) rotate(360deg)
+            }
+
+            60%,
+            100% {
+                transform: scale(1) rotate(0deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="heart heart1"></div>
+        <div class="heart heart2"></div>
+        <div class="heart heart3"></div>
+        <div class="heart heart4"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

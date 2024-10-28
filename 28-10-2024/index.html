@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 28th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00a6b2, #fe4a49, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #00a6b2;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            position: absolute;
+            height: 130px;
+            width: 130px;
+            background: #fe4a49;
+            border-radius: 0;
+            top: 0;
+            left: 0;
+            animation: anime1 2s alternate infinite
+        }
+
+        .box1 {
+            position: absolute;
+            height: 280px;
+            width: 200px;
+            background: #feebd3;
+            bottom: 0;
+            right: 0;
+            border-radius: 90px 0 0;
+            animation: anime2 2s alternate infinite
+        }
+
+        .box1::before {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 120px;
+            background: #00a6b2;
+            top: 80px;
+            right: 0;
+            border-radius: 30px 0 0
+        }
+
+        @keyframes anime1 {
+            to {
+                height: 300px;
+                border-radius: 0 0 130px 0;
+            }
+        }
+
+        @keyframes anime2 {
+            from {
+                scale: 1.5
+            }
+
+            to {
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>

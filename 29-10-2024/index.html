@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 29th October, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fe4a49, #00a6b2, #feebd3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #feebd3;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            border: 30px solid;
+            border-color: #fe4a49#00a6b2;
+            rotate: -45deg;
+            animation: anime 2s alternate infinite;
+        }
+
+        .box2 {
+            height: 150px;
+            width: 150px;
+            border-color: #00a6b2#fe4a49;
+        }
+
+        .box3 {
+            height: 210px;
+            width: 210px;
+            border-color: #fe4a49#00a6b2;
+        }
+
+        .box4 {
+            height: 30px;
+            width: 30px;
+            border: none;
+            background: #fe4a49;
+            margin-left: -170px;
+            box-shadow: -30px -30px#00a6b2, -60px -60px#fe4a49, 120px 120px#fe4a49, 150px 150px#00a6b2, 180px 180px#fe4a49;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                border-radius: 0 200px;
+            }
+
+            50%,
+            100% {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

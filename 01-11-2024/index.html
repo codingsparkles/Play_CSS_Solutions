@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 1st November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#feebd3, #333, #fe4a49);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ffa09a;
+            position: relative;
+        }
+
+        .rect {
+            position: absolute;
+            height: 210px;
+            width: 65px;
+            border-radius: 50px;
+            rotate: 45deg;
+            background: #feebd3;
+            animation: anime 2s normal infinite;
+        }
+
+        .rect2,
+        .rect4 {
+            rotate: -45deg
+        }
+
+        .rect3,
+        .rect4 {
+            background: #fe4a49;
+            width: 40px;
+            height: 185px
+        }
+
+        .heart {
+            position: absolute;
+            margin-top: -260px;
+            display: flex;
+            -webkit-box-reflect: below 155px;
+            animation: anime1 2s normal infinite
+        }
+
+        .part {
+            background: #feebd3;
+            color: #feebd3;
+            height: 100px;
+            width: 60px;
+            border-radius: 1in 1in 0 0;
+            rotate: -45deg;
+            margin-left: -30px;
+            box-shadow: -160px 0
+        }
+
+        .part2 {
+            rotate: 45deg;
+            margin-right: -30px;
+            box-shadow: 160px 0
+        }
+
+        @keyframes anime {
+
+            0%,
+            20% {
+                transform: scale(.5)
+            }
+
+            20%,
+            50% {
+                transform: scale(.75) rotate(360deg)
+            }
+
+            60%,
+            100% {
+                transform: scale(1) rotate(0deg)
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+        <div class="rect rect3"></div>
+        <div class="rect rect4"></div>
+        <div class="heart">
+            <div class="part part1"></div>
+            <div class="part part2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

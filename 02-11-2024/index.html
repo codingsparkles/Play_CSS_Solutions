@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 2nd November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ffa09a, #00a6b2, #fe4a49);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ffa09a;
+            position: relative;
+        }
+
+        .circle {
+            --c: #00a6b2;
+            position: absolute;
+            height: 260px;
+            width: 260px;
+            border: 25px solid;
+            border-radius: 50%;
+            border-color: var(--c)var(--c)#0000;
+            rotate: 45deg;
+        }
+
+        .circle::before {
+            content: '';
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: var(--c);
+            top: 217px;
+            left: 15px;
+            box-shadow: 204px 0 var(--c)
+        }
+
+        .circle2 {
+            --c: #fe4a49;
+            height: 170px;
+            width: 170px;
+            rotate: 225deg;
+        }
+
+        .circle2::before {
+            top: 140px;
+            left: 3px;
+            box-shadow: 140px 0 var(--c)
+        }
+
+        .circle3 {
+            --c: #000;
+            height: 80px;
+            width: 80px;
+            rotate: 45deg
+        }
+
+        .circle3::before {
+            top: 62px;
+            left: -12px;
+            box-shadow: 79px 0 var(--c)
+        }
+
+        .wrapper:hover :is(.circle1, .circle3) {
+            animation: anime 2s normal infinite
+        }
+
+        .wrapper:hover .circle2 {
+            animation: anime1 2s normal infinite
+        }
+
+        @keyframes anime {
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes anime1{
+            100% {
+                rotate: -360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+</body>
+
+</html>

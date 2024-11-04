@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 4th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FFAB38, #000);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(circle, #FFAB38 0 120px, #000 0 210px, #FFAB38 0);
+            margin: 0;
+            animation: anime 2s alternate infinite
+        }
+
+        @keyframes anime {
+
+            0%,
+            25% {
+                background: radial-gradient(circle, #FFAB38 0 120px, green 0 150px, blue 0 180px, red 0 210px, #FFAB38 0);
+            }
+
+            25%,
+            50% {
+                background: radial-gradient(circle, #FFAB38 0 120px, blue 0 150px, red 0 180px, green 0 210px, #FFAB38 0);
+            }
+
+            50%,
+            75% {
+                background: radial-gradient(circle, #FFAB38 0 120px, red 0 150px, green 0 180px, blue 0 210px, #FFAB38 0);
+            }
+
+            75%,
+            100% {
+                background: radial-gradient(circle, #FFAB38 0 120px, #000 0 210px, #FFAB38 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+</body>
+
+</html>

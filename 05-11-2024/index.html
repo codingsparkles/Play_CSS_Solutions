@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 5th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1b1b1b, #dcd8c6, #ff2401);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #1b1b1b;
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            background: #dcd8c6;
+            color: #dcd8c6;
+            border-radius: 50%;
+            animation: anime 2s alternate infinite;
+            box-shadow: -130px -130px, -130px 0, -130px 130px,
+                0 -130px, 130px -130px, 0 130px#ff2401,
+                130px 130px #ff2401, 130px 0#ff2401;
+        }
+
+        .box {
+            --c: #dcd8c6;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background: radial-gradient(circle at 112%50%, #1b1b1b 20px, #0000 0),
+                radial-gradient(circle at -12%50%, #1b1b1b 20px, var(--c) 0);
+            margin-top: -130px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        .box2 {
+            margin-top: 130px;
+            margin-left: -260px
+        }
+
+        .box3 {
+            rotate: 90deg;
+            margin-top: -260px;
+            margin-left: 130px;
+        }
+
+        .box4 {
+            --c: #ff2401;
+            margin-top: 130px;
+            margin-left: 260px
+        }
+
+        .box5 {
+            --c: #ff2401;
+            rotate: 90deg;
+            margin-top: 260px;
+            margin-left: 130px;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                height: 0;
+                width: 0;
+            }
+
+            50%,
+            100% {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</body>
+
+</html>

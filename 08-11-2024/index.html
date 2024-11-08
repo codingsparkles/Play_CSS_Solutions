@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 8th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1b1b1b, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dcd8c6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            position: absolute;
+            border: 30px solid#1b1b1b;
+            height: 250px;
+            width: 250px;
+            border-radius: 50px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .box2 {
+            animation: anime1 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            0%,
+            25% {
+                border-radius: 50%;
+                margin-top: 0;
+                margin-left:0
+            }
+
+            25%,
+            50% {
+                border-radius: 50px;
+                margin-top: 0;
+                margin-left:0
+            }
+
+            50%,
+            100% {
+                margin-top: -300px;
+                margin-left: -280px
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                border-radius: 50%;
+                margin-top: 0;
+                margin-left:0
+            }
+
+            25%,
+            50% {
+                border-radius: 50px;
+                margin-top: 0;
+                margin-left:0
+            }
+
+            50%,
+            100% {
+                margin-top: 300px;
+                margin-left: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </div>
+</body>
+
+</html>

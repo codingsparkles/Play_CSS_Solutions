@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 9th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#dcd8c6, #1b1b1b, #ff2401);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dcd8c6;
+        }
+
+        .circle {
+            position: fixed;
+            height: 130px;
+            width: 130px;
+            background: #1b1b1b;
+            border-radius: 50%;
+        }
+
+        .box {
+            border: 5px solid#ff2401;
+            animation: anime3 2s alternate infinite;
+        }
+
+        .circle1 {
+            animation: anime1 2s alternate infinite;
+        }
+
+        .circle2 {
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                translate: 100px 100px
+            }
+
+            25%,
+            50% {
+                translate: -100px 100px
+            }
+
+            50%,
+            75% {
+                translate: -100px -100px
+            }
+
+            75%,
+            100% {
+                translate: 100px -100px
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            25% {
+                translate: -100px -100px
+            }
+
+            25%,
+            50% {
+                translate: 100px -100px
+            }
+
+            50%,
+            75% {
+                translate: 100px 100px
+            }
+
+            75%,
+            100% {
+                translate: -100px 100px
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            25% {
+                height: 0px;
+                width: 0px;
+            }
+
+            25%,
+            100% {
+                height: 200px;
+                width: 200px;
+                z-index: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

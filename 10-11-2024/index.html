@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 10th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .box4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dcd8c6;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background: repeating-conic-gradient(#dcd8c6 0 25%, #1b1b1b 0 50%);
+            animation: anime1 2s alternate infinite;
+        }
+
+        .box2,
+        .box3 {
+            background: radial-gradient(1q at 100%0%, #ff2401 200px, #dcd8c6 0);
+            animation: anime2 2s alternate infinite;
+        }
+
+        .box3 {
+            scale: -1 1
+        }
+
+        .box4 {
+            background: #1b1b1b
+        }
+
+        .box4::before {
+            position: absolute;
+            content: '';
+            height: 70px;
+            width: 70px;
+            background: #dcd8c6;
+            rotate: 45deg;
+            animation: anime3 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                background-size: 6% 6%;
+            }
+
+            25%,
+            50% {
+                background-size: 13% 13%;
+            }
+
+            50%,
+            100% {
+                background-size: 33.5% 33.5%;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                background-position: 100px 100px;
+            }
+
+            50%,
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 45deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

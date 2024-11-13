@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 13th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ff2401;
+            padding: 0 35px;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            background: repeating-linear-gradient(90deg, #dcd8c6 0 33px, #ff2401 0 66px);
+            height: 400px;
+            width: 100%;
+        }
+
+        a {
+            height: 70px;
+            width: 70px;
+            background: linear-gradient(90deg, #ff2401 0 50%, #dcd8c6 0);
+            animation: anime1 3s ease-in infinite;
+        }
+
+        a:nth-child(2) {
+            height: 140px
+        }
+
+        a:nth-child(3) {
+            height: 200px
+        }
+
+        a:nth-child(4) {
+            height: 260px
+        }
+
+        a:nth-child(5) {
+            height: 320px
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                align-self: flex-start;
+            }
+
+            20%,
+            40%,
+            60%,
+            100% {
+                align-self: center;
+            }
+
+            40%,
+            60% {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+</body>
+
+</html>

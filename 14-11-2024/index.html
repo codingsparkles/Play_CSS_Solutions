@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 14th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dcd8c6;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box {
+            background: #1b1b1b;
+            border-radius: 0 0 30px 0;
+            height: 400px;
+            width: 200px;
+            left: 0;
+            -webkit-box-reflect: right 10px;
+            position: absolute;
+        }
+
+        .inner-box {
+            background: #dcd8c6;
+            height: 100px;
+            width: 175px;
+            border-radius: 0 0 30px 0;
+            color: #ff2401;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            10% {
+                box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+            }
+
+            30%,
+            60% {
+                box-shadow: 0 0 0 8px, 0 80px 0 8px, 0 160px 0 8px, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+            }
+
+            60%,
+            80% {
+                box-shadow: 0 0 0 8px, 0 80px 0 8px, 0 160px 0 8px,
+                    0 0 0 16px #dcd8c6, 0 80px 0 16px #dcd8c6,
+                    0 160px 0 16px#dcd8c6;
+            }
+
+            80%,
+            100% {
+                box-shadow: 0 0 0 8px, 0 80px 0 8px, 0 160px 0 8px,
+                    0 0 0 16px #dcd8c6, 0 80px 0 16px #dcd8c6,
+                    0 160px 0 16px#dcd8c6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="inner-box"></div>
+        </div>
+    </div>
+</body>
+
+</html>

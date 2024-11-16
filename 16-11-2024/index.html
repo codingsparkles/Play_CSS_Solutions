@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 16th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #dcd8c6;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .element {
+            position: absolute;
+            background: linear-gradient(90deg, #0000 25%, #ff2401 0);
+            height: 190px;
+            width: 95px;
+            clip-path: polygon(100% 0, 0 50%, 100% 100%)
+        }
+
+        .element {
+            left: 100px;
+            animation-duration: 2s;
+            animation-timing-function: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        .element2 {
+            animation-name: anime1;
+            ;
+        }
+
+        .element3 {
+            animation-name: anime2;
+        }
+
+        .element4 {
+            animation-name: anime3;
+        }
+
+        .element5 {
+            animation-name: anime4;
+        }
+
+        .element6 {
+            animation-name: anime5;
+        }
+
+        .element7 {
+            animation-name: anime6;
+        }
+
+        .element8 {
+            animation-name: anime7;
+        }
+
+        @keyframes anime1 {
+
+            20%,
+            100% {
+                rotate: 45deg;
+                left: 190px
+            }
+        }
+
+        @keyframes anime2 {
+
+            30%,
+            100% {
+                rotate: 90deg;
+                left: 260px;
+                top: 60px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            30%,
+            100% {
+                rotate: 135deg;
+                top: 155px;
+                left: 265px
+            }
+        }
+
+        @keyframes anime4 {
+
+            40%,
+            100% {
+                rotate: 180deg;
+                top: 220px;
+                left: 200px
+            }
+        }
+
+        @keyframes anime5 {
+
+            50%,
+            100% {
+                rotate: 225deg;
+                top: 225px;
+                left: 110px
+            }
+        }
+
+        @keyframes anime6 {
+
+            60%,
+            100% {
+                rotate: 270deg;
+                top: 160px;
+                left: 45px
+            }
+        }
+
+        @keyframes anime7 {
+
+            70%,
+            100% {
+                rotate: 315deg;
+                top: 70px;
+                left: 40px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="element element1"></div>
+        <div class="element element2"></div>
+        <div class="element element3"></div>
+        <div class="element element4"></div>
+        <div class="element element5"></div>
+        <div class="element element6"></div>
+        <div class="element element7"></div>
+        <div class="element element8"></div>
+    </div>
+</body>
+
+</html>

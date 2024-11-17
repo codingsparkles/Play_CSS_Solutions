@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 17th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q, #dcd8c6 200px, #ff2401);
+        }
+
+        .circle {
+            position: absolute;
+            background: #ff2401;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            color: #ff2401;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .circle::before {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background: #dcd8c6;
+            top: 100px;
+            left: -100px;
+            box-shadow: 200px 0#dcd8c6
+        }
+
+        .circle2 {
+            rotate: 180deg;
+            color: #0000;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            20%,
+            60% {
+                margin-top: -200px;
+                box-shadow: 0 0, 0 0;
+            }
+
+            60%,
+            100% {
+                margin-top: -200px;
+                box-shadow: -100px 100px, 100px 100px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            20%,
+            60% {
+                margin-top: 200px;
+                box-shadow: 0 0, 0 0;
+            }
+
+            60%,
+            100% {
+                margin-top: 200px;
+                box-shadow: -100px 100px, 100px 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 19th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1b1b1b, #fff, #ff2401);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ff2401;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            height: 20%;
+            width: 15px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .line:nth-child(odd) {
+            background: #1b1b1b
+        }
+
+        .line:nth-child(even) {
+            background: #dcd8c6;
+            z-index: 1
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                transform: rotate(0deg);
+            }
+
+            30%,
+            50% {
+                height: 100%;
+                transform: rotate(0deg);
+            }
+
+            50%,
+            100% {
+                height: 100%;
+                transform: rotate(calc(15deg * var(--i)));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="line" style="--i:0"></div>
+        <div class="line" style="--i:1"></div>
+        <div class="line" style="--i:2"></div>
+        <div class="line" style="--i:3"></div>
+        <div class="line" style="--i:4"></div>
+        <div class="line" style="--i:5"></div>
+        <div class="line" style="--i:6"></div>
+        <div class="line" style="--i:7"></div>
+        <div class="line" style="--i:8"></div>
+        <div class="line" style="--i:9"></div>
+        <div class="line" style="--i:10"></div>
+        <div class="line" style="--i:11"></div>
+    </div>
+</body>
+
+</html>

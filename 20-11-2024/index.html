@@ -28,37 +28,63 @@
         .wrapper {
             height: 400px;
             width: 400px;
-            background: repeating-conic-gradient(#1b1b1b 0 25%, #dcd8c6 0 50%)
+            animation: anime1 2s alternate infinite;
         }
 
         .circle {
             height: 250px;
             width: 250px;
             border-radius: 50%;
-            background: repeating-conic-gradient(#dcd8c6 0 25%, #1b1b1b 0 50%);
-            animation: anime 2s alternate infinite
+            animation: anime2 2s alternate infinite
         }
 
-        @keyframes anime {
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                background: repeating-conic-gradient(#659287 0 25%, #FFE6A9 0 50%);
+            }
+
+            25%,
+            50% {
+                background: repeating-conic-gradient(#659287 0 25%, #FFE6A9 0 50%);
+            }
+
+            50%,
+            75% {
+                background: repeating-conic-gradient(#6A42C2 0 25%, #FFF7D1 0 50%);
+            }
+
+            75%,
+            100% {
+                background: repeating-conic-gradient(#1b1b1b 0 25%, #dcd8c6 0 50%)
+            }
+        }
+
+        @keyframes anime2 {
 
             0%,
             25% {
                 transform: scaleX(-1);
+                background: repeating-conic-gradient(#FFE6A9 0 25%, #659287 0 50%);
             }
 
             25%,
             50% {
                 transform: scaleX(1);
+                background: repeating-conic-gradient(#FFE6A9 0 25%, #659287 0 50%);
             }
 
             50%,
             75% {
                 transform: scaleY(-1);
+                background: repeating-conic-gradient(#FFF7D1 0 25%, #6A42C2 0 50%);
             }
 
             75%,
             100% {
                 transform: scaleY(1);
+                background: repeating-conic-gradient(#dcd8c6 0 25%, #1b1b1b 0 50%);
             }
         }
     </style>

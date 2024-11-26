@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 26th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#1b1b1b, #dcd8c6, #ff2401);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #ff2401;
+        }
+
+        .parent {
+            background: #dcd8c6;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            color: #1b1b1b;
+            border: 15px solid#ff2401;
+            box-shadow: 50px 50px, 50px -50px, -50px -50px, -50px 50px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            25% {
+                color: #EBEAFF;
+                box-shadow: -50px 50px, 50px 50px, 50px -50px, -50px -50px;
+            }
+
+            25%,
+            50% {
+                color: #A1EEBD;
+                box-shadow: -50px -50px, -50px 50px, 50px 50px, 50px -50px;
+            }
+
+            50%,
+            75% {
+                color: #FFF6E9;
+                box-shadow: 50px -50px, -50px -50px, -50px 50px, 50px 50px;
+            }
+
+            75%,
+            100% {
+                box-shadow: 50px 50px, 50px -50px, -50px -50px, -50px 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent"></div>
+    </div>
+</body>
+
+</html>

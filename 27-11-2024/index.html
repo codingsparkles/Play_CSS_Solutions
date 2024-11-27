@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 27th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff2401, #dcd8c6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(90deg, #dcd8c6 50%, #1b1b1b 0) center/200px 200px no-repeat#ff2401;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            background: #dcd8c6;
+            border-radius: 1in 1in 0;
+            animation: anime2 2s alternate infinite
+        }
+
+        .circle2,
+        .circle3 {
+            background: #1b1b1b
+        }
+
+        .circle2,
+        .circle4 {
+            scale: -1 1
+        }
+
+        @keyframes anime2 {
+            0%, 25% {
+                border-radius: 0;
+            }
+            25%, 50%{
+                border-radius: 1in;
+            }
+            50%, 75% {
+                border-radius: 1in 1in 0;
+                transform: scaleY(-1);
+            }
+            75%, 100% {
+                border-radius: 1in 1in 0;
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+    </div>
+</body>
+
+</html>

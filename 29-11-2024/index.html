@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 29th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#e3747a, #ffffff, #12a9b0);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #12a9b0;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .child {
+            background: #e3747a;
+            height: 160px;
+            width: 88px;
+            border-radius: 0 1in 0 0;
+            -webkit-box-reflect: right -40px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .child2 {
+            left: 132px;
+            animation: anime 2s alternate infinite, anime2 2s alternate infinite;
+        }
+
+        .child3 {
+            left: 264px;
+            animation: anime 2s alternate infinite, anime3 2s alternate infinite;
+        }
+
+        .parent2 .child {
+            top: 120px;
+            background: #ffffff;
+        }
+
+        .parent1 .child {
+            background: #002f43
+        }
+
+        .parent3 .child {
+            border-radius: 0 1in 0 60px;
+            top: 240px
+        }
+
+        @keyframes anime {
+
+            0%,
+            25% {
+                left: -150px
+            }
+
+            25%,
+            50% {
+                left: 0;
+                transform: rotate(360deg);
+            }
+
+            50%,
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                left: 132px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            50%,
+            100% {
+                left: 264px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent parent1">
+            <div class="child child1">
+            </div>
+            <div class="child child2">
+            </div>
+            <div class="child child3">
+            </div>
+        </div>
+        <div class="parent parent2">
+            <div class="child child1">
+            </div>
+            <div class="child child2">
+            </div>
+            <div class="child child3">
+            </div>
+        </div>
+        <div class="parent parent3">
+            <div class="child child1">
+            </div>
+            <div class="child child2">
+            </div>
+            <div class="child child3">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

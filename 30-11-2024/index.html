@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 30th November, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3d88b7, #ffffff, #ffc931);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #3d88b7;
+            position: relative;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .circle {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            background: #ffc931;
+            animation: anime 2s alternate infinite;
+        }
+
+        .circle2 {
+            height: 30px;
+            width: 30px;
+            animation: anime1 2s alternate infinite;
+        }
+
+        .line {
+            position: fixed;
+            background: linear-gradient(#ffc931, #ffc931) center/4px 100% no-repeat #0000;
+            width: 20px;
+            height: 300px;
+            border: dotted #ffc931;
+            border-width: 20px 0;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                border: 5px solid#3d88b7;
+                box-shadow: 0 0 0 0 #ffffff, 0 0 0 0 #3d88b7,
+                    0 0 0 0 #ffc931, 0 0 0 0 #3d88b7,
+                    0 0 0 0 #ffffff
+            }
+
+            50%,
+            100% {
+                border: 10px solid#3d88b7;
+                box-shadow: 0 0 0 8px #ffffff, 0 0 0 22px #3d88b7,
+                    0 0 0 30px#ffc931, 0 0 0 45px #3d88b7,
+                    0 0 0 55px #ffffff;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                border: 7px solid#3d88b7;
+                box-shadow: 0 0 0 0 #ffffff, 0 0 0 0#3d88b7,
+                    0 0 0 0 #ffc931, 0 0 0 0#3d88b7,
+                    0 0 0 0 #ffffff, 0 0 0 0#3d88b7
+            }
+
+            50%,
+            100% {
+                border: 7px solid#3d88b7;
+                box-shadow: 0 0 0 2px #ffffff, 0 0 0 10px#3d88b7,
+                    0 0 0 13px #ffc931, 0 0 0 20px#3d88b7,
+                    0 0 0 24px #ffffff, 0 0 0 33px#3d88b7
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            25% {
+                height: 0;
+                rotate: 0deg;
+            }
+
+            25%,
+            50% {
+                height: 300px;
+            }
+
+            50%,
+            100% {
+                rotate: calc(var(--i) * 45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="line line1" style="--i: 0"></div>
+        <div class="line line2" style="--i: 1"></div>
+        <div class="line line3" style="--i: 2"></div>
+        <div class="line line4" style="--i: 3"></div>
+    </div>
+</body>
+
+</html>

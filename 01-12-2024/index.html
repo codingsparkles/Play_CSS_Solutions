@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 1st December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f23d0c, #eaa747, #ffffff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .doll {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #f23d0c;
+        }
+
+        .doll {
+            flex-direction: column;
+            animation: anime 1s alternate infinite
+        }
+
+        .head {
+            height: 120px;
+            width: 120px;
+            background: #eaa747;
+            border-radius: 50%
+        }
+
+        .hand {
+            height: 55px;
+            width: 300px;
+            background: linear-gradient(90deg, #eaa747 35px,
+                    #ffffff 0 52px, #eaa747 0 250px,
+                    #ffffff 0 268px, #eaa747 0);
+            border-radius: 1in;
+            margin-top: -20px
+        }
+
+        .rest {
+            display: flex;
+            margin-top: -10px;
+            gap: 5px
+        }
+
+        .leg {
+            width: 80px;
+            height: 200px;
+            background: linear-gradient(#eaa747 140px,
+                    #ffffff 0 158px, #eaa747 0);
+            border-radius: 0 0 1in 1in
+        }
+
+        .leg.right {
+            rotate: 15deg
+        }
+
+        .leg.left {
+            rotate: -15deg
+        }
+
+        .doll::before {
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background: #0a0e2d;
+            z-index: 1;
+            border-radius: 1in;
+            margin-top: -30px;
+            box-shadow: 0 60px #0a0e2d, 0 116px 0 -7px #f23d0c, 0 100px#eaa747
+        }
+
+        @keyframes anime {
+
+            0%,
+            30% {
+                rotate: -15deg;
+            }
+
+            40%,
+            50% {
+                rotate: 0deg;
+            }
+
+            50%,
+            70% {
+                rotate: 15deg;
+            }
+
+            80%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="doll">
+            <div class="head"></div>
+            <div class="hand"></div>
+            <div class="rest">
+                <div class="leg right"></div>
+                <div class="leg left"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

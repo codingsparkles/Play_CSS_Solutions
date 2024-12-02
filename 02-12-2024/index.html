@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 2nd December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#0a0e2d, #f23d0c, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .candy-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0a0e2d;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .candy-wrapper {
+            position: absolute;
+            flex-direction: column;
+            rotate: 45deg;     
+            animation: anime1 2s alternate infinite;       
+        }
+
+        .candy {
+            height: 175px;
+            width: 150px;
+            background: linear-gradient(#f23d0c 70%, #fff 0);
+            clip-path: polygon(25% 35%, 10% 0%, 90% 0%, 75% 35%, 100% 35%, 100% 100%, 0% 100%, 0% 35%);
+            position: relative;
+        }
+
+        .candy::before,
+        .candy::after {
+            position: absolute;
+            content: '';
+            height: 20px;
+            width: 18px;
+            background: #fff;
+            top: 20px;
+            left: 30px;
+            transform: skewY(40deg);
+            color: #fff;
+            box-shadow: 35px -30px, 70px -60px;
+        }
+
+        .candy::after {
+            transform: skewY(-40deg);
+            left: 47px;
+            top: 20px;
+            box-shadow: -35px -30px, 35px 28px, 70px 56px
+        }
+
+        .candy2 {
+            scale: -1;
+        }
+
+        @keyframes anime1 {
+            0%, 20% {
+                scale: calc(var(--i)* 0.125);
+                translate: calc(var(--i) * 50px);
+                opacity: calc(var(--i)* .25);
+            }
+            20%, 40% {
+                translate: calc(var(--i) * 25px);
+            }
+            40%, 60% {
+                translate: calc(var(--i) * -55px);
+            }
+            60%, 80% {
+                translate: calc(var(--i) * 65px);
+            }
+            80%, 100% {
+                scale: 1;
+                translate: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="candy-wrapper candy-wrapper-1">
+            <div class="candy candy1"></div>
+            <div class="candy candy2"></div>
+        </div>
+        <div class="candy-wrapper candy-wrapper-2" style="--i: 1">
+            <div class="candy candy1"></div>
+            <div class="candy candy2"></div>
+        </div>
+        <div class="candy-wrapper candy-wrapper-3" style="--i: -3">
+            <div class="candy candy1"></div>
+            <div class="candy candy2"></div>
+        </div>
+        <div class="candy-wrapper candy-wrapper-4" style="--i: 2">
+            <div class="candy candy1"></div>
+            <div class="candy candy2"></div>
+        </div>
+        <div class="candy-wrapper candy-wrapper-5" style="--i: -2">
+            <div class="candy candy1"></div>
+            <div class="candy candy2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

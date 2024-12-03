@@ -37,8 +37,8 @@
         .candy-wrapper {
             position: absolute;
             flex-direction: column;
-            rotate: 45deg;     
-            animation: anime1 2s alternate infinite;       
+            rotate: 45deg;
+            animation: anime1 2s alternate infinite;
         }
 
         .candy {
@@ -75,21 +75,31 @@
         }
 
         @keyframes anime1 {
-            0%, 20% {
+
+            0%,
+            20% {
                 scale: calc(var(--i)* 0.125);
                 translate: calc(var(--i) * 50px);
                 opacity: calc(var(--i)* .25);
             }
-            20%, 40% {
+
+            20%,
+            40% {
                 translate: calc(var(--i) * 25px);
             }
-            40%, 60% {
+
+            40%,
+            60% {
                 translate: calc(var(--i) * -55px);
             }
-            60%, 80% {
+
+            60%,
+            80% {
                 translate: calc(var(--i) * 65px);
             }
-            80%, 100% {
+
+            80%,
+            100% {
                 scale: 1;
                 translate: 0;
                 opacity: 1;

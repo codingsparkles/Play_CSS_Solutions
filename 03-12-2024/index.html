@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 3rd December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f23d0c, #163a0d, #bed8ee);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .candy-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #bed8ee;
+            position: relative;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .circle {
+            height: 90px;
+            width: 90px;
+            background: #f23d0c;
+            color: #f23d0c;
+            border-radius: 50%;
+            bottom: 40px;
+            box-shadow: -48px -80px, 48px -80px;
+            animation: anime1 2s linear infinite;
+            z-index: 2;
+        }
+
+        .leaf {
+            background: #163a0d;
+            height: 130px;
+            width: 110px;
+            left: 260px;
+            rotate: 10deg;
+            top: 65px;
+            border-radius: 2in 0;
+            animation: move 2s linear infinite, anime2 2s linear infinite;
+            z-index: 1;
+        }
+
+        .leaf2 {
+            rotate: -90deg;
+            animation: move 2s linear infinite, anime3 2s linear infinite;
+        }
+
+        .leaf3 {
+            rotate: -40deg;
+            animation: move 2s linear infinite, anime4 2s linear infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                box-shadow: 0 0, 0 0;
+            }
+
+            50%,
+            100% {
+                box-shadow: -48px -80px, 48px -80px;
+            }
+        }
+
+        @keyframes move {
+
+            0%,
+            50% {
+                scale: .25;
+                opacity: .5;
+            }
+
+            50%,
+            100% {
+                top: 65px;
+                scale: 1;
+                opacity: 1;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                top: 230px;
+                left: 150px;
+            }
+
+            50%,
+            100% {
+                left: 260px;
+                top: 65px;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            50% {
+                left: 150px;
+                top: 230px;
+            }
+
+            50%,
+            100% {
+                top: 65px;
+                left: 30px;
+            }
+        }
+
+        @keyframes anime4 {
+
+            0%,
+            50% {
+                left: 150px;
+                top: 230px;
+            }
+
+            50%,
+            100% {
+                left: 145px;
+                top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="leaf leaf3"></div>
+    </div>
+</body>
+
+</html>

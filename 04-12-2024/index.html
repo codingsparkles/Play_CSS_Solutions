@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 4th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#eaa747, #163a0d, #f23d0c);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #eaa747;
+            position: relative;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .square {
+            background: #163a0d;
+            height: 260px;
+            width: 260px;
+            animation: anime1 1s reverse infinite
+        }
+
+        .box {
+            height: 250px;
+            width: 250px;
+            background: #f23d0c;
+            position: relative;
+            display: grid;
+            place-items: center;
+            animation: anime1 1s linear infinite
+        }
+
+        .box::before,
+        .box::after {
+            content: '';
+            position: absolute;
+            border: solid;
+            border-color: #0000#163a0d;
+            border-width: 30px 125px
+        }
+
+        .box::after {
+            rotate: 90deg;
+        }
+
+        .circle {
+            background: #ffffff;
+            color: #ffffff;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            margin-top: -30px;
+            box-shadow: 15px 25px, -15px 25px
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg
+            }
+
+            50%,
+            100% {
+                rotate: calc(var(--i) * 45deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square" style="--i: 1"></div>
+        <div class="box" style="--i: 0"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

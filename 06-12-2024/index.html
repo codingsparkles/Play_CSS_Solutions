@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 6th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#0a0e2d, #fff, #eaa747);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0a0e2d;
+            flex-direction: column
+        }
+
+        .cherry {
+            background: #f23d0c;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .ice-cream {
+            height: 250px;
+            width: 240px;
+            background: linear-gradient(#ffffff 50%, #eaa747 0);
+            border-radius: 50% 50% 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+            position: relative
+        }
+
+        .ice-cream::before {
+            position: absolute;
+            content: '';
+            background: #ffffff;
+            border-radius: 50px;
+            height: 100px;
+            width: 40px;
+            top: 95px;
+            left: 120px;
+            box-shadow: 65px -25px 0 -5px#fff,
+                -95px -50px#fff;
+            animation: anime1 2s linear infinite
+        }
+
+        @keyframes anime1 {
+            to {
+                height: 200px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="cherry"></div>
+        <div class="ice-cream"></div>
+    </div>
+</body>
+
+</html>

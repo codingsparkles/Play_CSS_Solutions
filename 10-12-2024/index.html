@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 10th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#0a0e2d, #fff, #eaa747);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #f23d0c;
+            flex-direction: column;
+        }
+
+        .line {
+            height: 50px;
+            width: 16px;
+            background: #fff;
+            border: solid #eaa747;
+            border-width: 0 0 20px;
+            margin-top: -150px;
+            animation: anime 2s alternate infinite;
+        }
+
+        .circle {
+            background: #0a0e2d;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .diamond {
+            position: fixed;
+            height: 150px;
+            width: 40px;
+            background: radial-gradient(1q, #ffffff 30px, #eaa747);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime {
+
+            50%,
+            100% {
+                margin-top: -30px;
+                height: 150px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            50%,
+            100% {
+                rotate: calc(var(--i) * 20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="line"></div>
+        <div class="circle">
+            <div class="diamond" style="--i:1"></div>
+            <div class="diamond" style="--i:2"></div>
+            <div class="diamond" style="--i:3"></div>
+            <div class="diamond" style="--i:4"></div>
+            <div class="diamond" style="--i:5"></div>
+            <div class="diamond" style="--i:6"></div>
+            <div class="diamond" style="--i:7"></div>
+            <div class="diamond" style="--i:8"></div>
+            <div class="diamond" style="--i:9"></div>
+        </div>
+    </div>
+</body>
+
+</html>

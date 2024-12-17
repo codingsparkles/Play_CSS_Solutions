@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 17th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ffadc7, #ff4026, #fff, #1f6636);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: radial-gradient(1q, #ffadc7 130px, #ff4026 0);
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+
+        .bottom {
+            position: absolute;
+            background: #1f6636;
+            height: 70px;
+            width: 250px;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0%100%);
+            top: 282px;
+            left: 75px;
+            animation: anime1 2s alternate infinite
+        }
+
+        .bottom::before {
+            position: absolute;
+            content: '';
+            height: 50px;
+            width: 50px;
+            background: #fff;
+            color: #fff;
+            border-radius: 50%;
+            top: -25px;
+            left: 25px;
+            box-shadow: 50px 0, 100px 0, 150px 0;
+        }
+
+        .circle {
+            position: absolute;
+            background: #fff;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            top: 170px;
+            left: 185px;
+            box-shadow: 70px 0, -70px 0, 35px 60px,
+                -35px 60px, 35px -60px, -35px -60px;
+            animation: anime2 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                transform: scaleX(-1);
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bottom"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

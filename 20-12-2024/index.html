@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 20th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#006f57, #f8edd1);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: #006f57;
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+
+        .snow-man {
+            position: relative;
+            background: #f8edd1;
+            height: 115px;
+            width: 115px;
+            border-radius: 50%;
+            top: 80px;
+            left: 140px;
+            box-shadow: 0 130px 0 35px#f8edd1;
+            animation: anime 2s linear infinite
+        }
+
+        .mouth {
+            position: absolute;
+            height: 35px;
+            width: 35px;
+            background: linear-gradient(#0000 50%, #000 0);
+            border-radius: 50%;
+            top: 45px;
+            left: 38px;
+            box-shadow: -20px -25px 0 -10px, 20px -25px 0 -10px
+        }
+
+        .snow-man::before {
+            position: absolute;
+            content: '';
+            height: 45px;
+            width: 70px;
+            background: #000;
+            top: -55px;
+            left: 7px;
+            border-inline: 15px solid#006f57;
+            box-shadow: 0 25px
+        }
+
+        @keyframes anime {
+
+            0%,
+            20% {
+                scale: .5;
+                left: 100px;
+            }
+
+            20%,
+            40% {
+                scale: .25;
+                left: 50px;
+            }
+
+            45%,
+            50% {
+                scale: 1;
+                left: 140px;
+            }
+
+            50%,
+            70% {
+                scale: .5;
+                left: 160px;
+            }
+
+            70%,
+            90% {
+                scale: .25;
+                left: 180px;
+            }
+
+            90%,
+            100% {
+                scale: 1;
+                left: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="snow-man">
+            <div class="mouth">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

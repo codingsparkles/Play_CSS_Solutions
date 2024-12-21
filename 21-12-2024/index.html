@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 21st December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f8edd1, #006f57);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            background: #f8edd1;
+            height: 400px;
+            width: 400px;
+        }
+
+        .triangle {
+            height: 135px;
+            width: 135px;
+            background: #006f57;
+            border-radius: 0 40px 3in 40px;
+            rotate: 45deg;
+            scale: calc(var(--i) * 1);
+            animation: anime 2s linear infinite
+        }
+
+        .triangle:nth-child(even) {
+            background: #cc1623;
+            margin-top: -50px;
+            margin-bottom: -50px
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                transform: translate(-200px, -200px);
+            }
+
+            50%,
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="triangle" style="--i:1;z-index:3"></div>
+        <div class="triangle" style="--i:1.25;z-index:2"></div>
+        <div class="triangle" style="--i:1.55"></div>
+    </div>
+</body>
+
+</html>

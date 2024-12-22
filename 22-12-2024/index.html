@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 22nd December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f8edd1, #006f57);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: #f8edd1;
+            height: 400px;
+            width: 400px;
+        }
+
+        .parent {
+            background: #f9d213;
+            height: 280px;
+            width: 280px;
+            border-radius: 50%;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .parent::before {
+            position: absolute;
+            content: '';
+            height: 90px;
+            width: 90px;
+            background: radial-gradient(1q at 50% 188%, #0000 120px, #006f57) ;
+            margin-top: -290px;
+        }
+
+        .child {
+            position: absolute;
+            height: 180px;
+            width: 7px;
+            background: #006f57;
+            animation: anime 2s alternate infinite
+        }
+
+        .child::before,
+        .child::after {
+            position: absolute;
+            content: '';
+            height: 30px;
+            width: 30px;
+            border: double #006f57;
+            border-width: 0 0 15px 15px;
+            rotate: -45deg;
+            left: -20px;
+        }
+
+        .child::before {
+            top: -20px;
+        }
+
+        .child::after {
+            bottom: -20px;
+            rotate: 135deg
+        }
+
+        @keyframes anime {
+            0%, 40% {
+                height: calc(var(--i) *60px);
+            }
+            50%, 100% {
+                height: 180px;
+                rotate: calc(var(--i) * 45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child" style="--i:0"></div>
+            <div class="child" style="--i:1"></div>
+            <div class="child" style="--i:2"></div>
+            <div class="child" style="--i:3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

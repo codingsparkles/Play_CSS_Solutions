@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 24th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#4B96BF, #F7D50B, #2A3951);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: #07080B;
+            height: 400px;
+            width: 400px;
+        }
+
+        .circle {
+            position: fixed;
+            border: 12px dotted #F7D50B;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            background: #0000;
+            animation: anime1 2s alternate-reverse infinite
+        }
+
+        .level2 {
+            height: 180px;
+            width: 180px;
+            border-width: 28px;
+            border-color: #4B96BF;
+            animation: anime1 2s alternate infinite
+        }
+
+        .level3 {
+            height: 300px;
+            width: 300px;
+            border-width: 45px;
+            border-color: #2A3951
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle level1"></div>
+        <div class="circle level2"></div>
+        <div class="circle level3"></div>
+    </div>
+</body>
+
+</html>

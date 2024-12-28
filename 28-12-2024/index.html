@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 28th December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#2B88D9, #314259, #EAC2B5);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .hexagon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: radial-gradient(1q at 12% 15%, #314259 23px, #0000),
+                radial-gradient(1q at 85% 85%,
+                    #314259 23px, #2B88D9);
+            height: 400px;
+            width: 400px;
+        }
+
+        .hexagon {
+            background: #EAC2B5;
+            height: 250px;
+            width: 300px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation: anime1 2s alternate infinite
+        }
+
+        .hexagon.blue {
+            height: 170px;
+            width: 210px;
+            background: #2B88D9
+        }
+
+        .hexagon.child {
+            height: 160px;
+            width: 200px;
+            background: radial-gradient(1q, #EAC2B5 50px, #2B88D9 0 55px, #EAC2B5 0);
+            position: relative
+        }
+
+        .child::before,
+        .child::after {
+            position: absolute;
+            content: '';
+            height: 80px;
+            width: 5px;
+            background: #2B88D9;
+            border-radius: 1in
+        }
+
+        ::before {
+            rotate: 45deg;
+        }
+
+        ::after {
+            rotate: -45deg;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hexagon">
+            <div class="hexagon blue">
+                <div class="hexagon child"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

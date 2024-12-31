@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 31st December, 2024</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3AA5AC, #ECECEC, #34383F);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q at 0%,
+                    #ECECEC 200px, #21252C);
+        }
+
+        .half-circle {
+            position: relative;
+            background: #3AA5AC;
+            height: 200px;
+            width: 190px;
+            border-radius: 1in 1in 0 0;
+            translate: 210px 200px
+        }
+
+        .half-circle::before {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background: #21252C;
+            color: #21252C;
+            border-radius: 1in;
+            content: '';
+            top: -45px;
+            left: 80px;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            10% {
+                box-shadow: 0 0 0 15px #ECECEC;
+            }
+
+            10%,
+            33% {
+                box-shadow: 0 0 0 15px #ECECEC,
+                    0 70px, -180px 30px;
+            }
+
+            33%,
+            66% {
+                box-shadow: 0 0 0 15px #ECECEC,
+                    0 70px, -180px 30px, 40px 120px, -40px 120px, -220px -25px, -220px 85px;
+            }
+
+            66%,
+            100% {
+                box-shadow: 0 0 0 15px #ECECEC,
+                    0 70px, -180px 30px, 40px 120px, -40px 120px, -220px -25px, -220px 85px, -260px 30px, 0 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="half-circle"></div>
+    </div>
+</body>
+
+</html>

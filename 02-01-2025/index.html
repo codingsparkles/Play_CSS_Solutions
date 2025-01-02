@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 2nd January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ECECEC, #3AA5AC, #21252C);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: #ECECEC;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px;
+            width: 400px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .dotted-rect {
+            height: 35px;
+            width: 300px;
+            border: dotted #21252C;
+            border-width: 0 35px
+        }
+
+        .container {
+            flex-wrap: wrap;
+            animation: anime1 2s alternate infinite
+        }
+
+        .child {
+            position: relative;
+            height: 60px;
+            width: 93px;
+            animation: anime2 2s alternate infinite
+        }
+
+        .child::before,
+        .child::after {
+            position: absolute;
+            content: '';
+            height: 30px;
+            width: 60px;
+            border-radius: 1in 1in 0 0;
+            background: var(--b);
+        }
+
+        .child::before {
+            --b: #3AA5AC;
+            align-self: start;
+            margin-left: 30px;
+        }
+
+        .child::after {
+            --b: #34383F;
+            scale: -1;
+            align-self: end;
+            margin-right: 30px;
+        }
+
+        .child:nth-child(even),
+        :is(.child3, .child5, .child9) {
+            scale: -1-1
+        }
+
+        .child:nth-child(even)::before {
+            --b: #21252C;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                gap: 2rem
+            }
+
+            50%,
+            100% {
+                gap: 0
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                rotate: 360deg;
+            }
+
+            50%,
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dotted-rect l1"></div>
+        <div class="container">
+            <div class="child child1"></div>
+            <div class="child child2"></div>
+            <div class="child child3"></div>
+            <div class="child child4"></div>
+            <div class="child child5"></div>
+            <div class="child child6"></div>
+            <div class="child child7"></div>
+            <div class="child child8"></div>
+            <div class="child child9"></div>
+        </div>
+        <div class="dotted-rect l2"></div>
+    </div>
+</body>
+
+</html>

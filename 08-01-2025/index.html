@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 8th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FF9A8D, #FFFFFF, #11638C);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+
+            * {
+                position: absolute
+            }
+        }
+
+        .square {
+            height: 200px;
+            width: 200px;
+            color: #FF9A8D;
+            animation: anime 2s linear infinite;
+            box-shadow: 100px 100px#40AFDB, 100px -100px,
+                -100px 100px, -100px -100px#11638C
+        }
+
+        .circle {
+            background: #FFFFFF;
+            border: 85px solid#11638C;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            animation: anime1 2s linear infinite
+        }
+
+        @keyframes anime {
+
+            0%,
+            20% {
+                box-shadow: 0 0
+            }
+
+            20%,
+            40% {
+                box-shadow: 100px 100px#40AFDB,
+                    -100px -100px#11638C
+            }
+
+            40%,
+            60% {
+                box-shadow: 100px 100px#40AFDB,
+                    -100px -100px#11638C
+            }
+
+            60%,
+            100% {
+                box-shadow: 100px 100px#40AFDB, -100px -100px#11638C, 100px -100px, -100px 100px;
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            25% {
+                box-shadow: 0 0 0 0 #FFFFFF;
+            }
+
+            25%,
+            50% {
+                transform: scaleX(-1);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+                box-shadow: 0 0 0 85px#FFFFFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

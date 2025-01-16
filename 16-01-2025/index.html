@@ -16,7 +16,7 @@
 
         body {
             min-height: 100vh;
-            background: radial-gradient(#FFFFFF, #0E172B, #BBBBCB);
+            background: radial-gradient(#FFFFFF, #50A6FF, #BBBBCB);
             user-select: none;
         }
 
@@ -24,7 +24,8 @@
         .wrapper,
         .progress-bar,
         .circle,
-        .info {
+        .info,
+        .percentage {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -71,6 +72,7 @@
             width: 110px;
             background: #fff;
             z-index: 1;
+            box-shadow: 0 -60px 0 -50px #50A6FF;
         }
 
         .circle .info {
@@ -80,9 +82,61 @@
             scale: -1 1;
         }
 
+        .percentage {
+            visibility: hidden;
+        }
+
+        .percentage::before {
+            animation: anime1 5s linear infinite;
+            content: '100%';
+            visibility: visible;
+        }
+
         @keyframes loader {
             to {
                 --angle: 0deg;
+            }
+        }
+
+        @keyframes anime1 {
+            10% {
+                content: '90%'
+            }
+
+            20% {
+                content: '80%'
+            }
+
+            30% {
+                content: '70%'
+            }
+
+            40% {
+                content: '60%'
+            }
+
+            50% {
+                content: '50%'
+            }
+
+            60% {
+                content: '40%'
+            }
+
+            70% {
+                content: '30%'
+            }
+
+            80% {
+                content: '20%'
+            }
+
+            90% {
+                content: '10%'
+            }
+
+            100% {
+                content: '0%'
             }
         }
 
@@ -101,7 +155,7 @@
             <div class="circle circle2">
                 <div class="info">
                     <span>DATA</span>
-                    <span>87%</span>
+                    <span class="percentage"></span>
                 </div>
             </div>
         </div>

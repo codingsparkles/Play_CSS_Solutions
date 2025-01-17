@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 17th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        /* Hover on the circle to see the color change */
+        :root {
+            --color1: #50A6FF;
+            --color2: #FFFFFF;
+        }
+
+        :root .circle:hover {
+            --color2: #50A6FF;
+            --color1: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FFFFFF, #50A6FF, #BBBBCB);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0E172B;
+        }
+
+        .circle {
+            background: var(--color1);
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            border: 60px solid var(--color2);
+        }
+
+        .parent {
+            box-shadow: -20px -20px 30px var(--color2),
+                10px 10px 50px var(--color2);
+        }
+
+        .parent::before {
+            position: absolute;
+            border-radius: 50%;
+            content: '';
+            height: 60px;
+            width: 60px;
+            background: var(--color2);
+            box-shadow: -20px -25px 0 -22px var(--color1)
+        }
+
+        .circle.child {
+            height: 45px;
+            width: 10px;
+            border-radius: 1in;
+            border-width: 15px;
+            margin-top: -60px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle parent">
+            <div class="circle child"></div>
+        </div>
+    </div>
+</body>
+
+</html>

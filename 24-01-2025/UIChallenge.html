@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 24th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#212121, #e91e63);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .loader {
+            background: #e91e63;
+            border-radius: 1in;
+            border: 5px solid#e91e63;
+            height: 65px;
+            width: 65px;
+            gap: 4px;
+            flex-direction: column;
+            overflow: hidden
+        }
+
+        .box {
+            height: 20px;
+            width: 65px;
+            background: #212121;
+            animation: anime1 2s alternate infinite
+        }
+
+        .box2 {
+            animation: anime2 2s alternate infinite
+        }
+
+        .box3 {
+            animation: anime3 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+            20%, 100% {
+                width: 0
+            }
+        }
+
+        @keyframes anime2 {
+
+            40%, 100% {
+                width: 0
+            }
+        }
+
+        @keyframes anime3 {
+
+            60%, 100% {
+                width: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="loader">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

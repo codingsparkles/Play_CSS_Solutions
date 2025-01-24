@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 24th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#F43E6E, #FFFFFF);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #1B1E6A;
+        }
+
+        .square {
+            position: relative;
+            height: 260px;
+            width: 260px;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime1 {
+            33% {
+                box-shadow: inset -80px 80px#F43E6E;
+            }
+
+            66% {
+                box-shadow: inset -80px 80px#F43E6E,
+                    inset -90px 90px#1B1E6A;
+            }
+
+            66%,
+            100% {
+                box-shadow: inset -80px 80px#F43E6E,
+                    inset -90px 90px#1B1E6A,
+                    inset -120px 120px#F43E6E;
+            }
+        }
+
+        .square::before {
+            position: absolute;
+            content: '';
+            background: #FFFFFF;
+            color: #fff;
+            height: 80px;
+            width: 80px;
+            border-radius: 1in;
+            top: 20px;
+            right: -40px;
+            box-shadow: 0 70px, 0 140px;
+            animation: anime2 2s alternate infinite
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            50% {
+                transform: scaleX(-1)
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

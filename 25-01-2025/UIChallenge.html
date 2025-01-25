@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 25th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff3d00, #FFFFFF, #e91e63);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            background: #FFFFFF;
+            height: 70px;
+            width: 70px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                position: absolute
+            }
+        }
+
+        .circle {
+            height: 15px;
+            width: 15px;
+            background: #ff3d00;
+            border-radius: 1in;
+            translate: 12px 10px;
+            animation: anime1 2s linear infinite
+        }
+
+        .triangle {
+            background: #ff9371;
+            height: 50px;
+            width: 50px;
+            rotate: 45deg;
+            translate: -5px 50px;
+            box-shadow: 30px -50px#ff3d00;
+            animation: anime2 2s linear infinite
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                translate: -100px 10px
+            }
+
+            20%,
+            60% {
+                translate: 12px 10px;
+            }
+
+            70%,
+            100% {
+                translate: 102px 10px;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            20% {
+                translate: -5px 100px
+            }
+
+            20%,
+            60% {
+                translate: -5px 50px;
+            }
+
+            70%,
+            100% {
+                translate: -5px 100px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="circle"></div>
+            <div class="triangle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

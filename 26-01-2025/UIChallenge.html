@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 26th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3AA5FD, #FFFFFF);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .letter,
+        .letter span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            height: 30px;
+            width: 150px;
+            overflow: hidden;
+        }
+
+        .letter {
+            flex-direction: column;
+        }
+
+        .letter span {
+            height: 30px;
+            width: 30px;
+            color: #fff;
+        }
+
+        .letter:nth-child(odd) span:first-child {
+            margin-top: 30px;
+        }
+
+        .letter:nth-child(even) span:first-child {
+            margin-top: -30px;
+        }
+
+        .container.move .letter:nth-child(odd) span:first-child {
+            animation: anime1 1s ease infinite
+        }
+
+        .container.move .letter:nth-child(even) span:first-child {
+            animation: anime2 1s ease infinite;
+        }
+
+        @keyframes anime1 {
+            to {
+                margin-top: -30px;
+            }
+        }
+
+        @keyframes anime2 {
+            to {
+                margin-top: 30px;
+            }
+        }
+
+        .letter:nth-child(odd) span:first-child,
+        .letter:nth-child(even) span:last-child {
+            background: #3AA5FD;
+        }
+
+        .letter:nth-child(odd) span:last-child,
+        .letter:nth-child(even) span:first-child {
+            background: #000;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var containerElmt = document.querySelector('.container');
+
+            containerElmt.addEventListener('mouseenter', function (e) {
+                containerElmt.classList.add('move');
+            });
+            containerElmt.addEventListener('mouseleave', function () {
+                containerElmt.classList.remove('move');
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="letter first">
+                <span>H</span>
+                <span>W</span>
+            </div>
+            <div class="letter second">
+                <span>O</span>
+                <span>O</span>
+            </div>
+            <div class="letter third">
+                <span>V</span>
+                <span>R</span>
+            </div>
+            <div class="letter fourth">
+                <span>L</span>
+                <span>E</span>
+            </div>
+            <div class="letter fifth">
+                <span>R</span>
+                <span>D</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

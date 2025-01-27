@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 27th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3AA5FD, #FFFFFF);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card,
+        ul,
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            background: #1b233d;
+            height: 280px;
+            width: 240px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px #aadef3b8;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: .5rem;
+        }
+
+        header {
+            background: #009bba;
+            height: 180px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            position: absolute;
+            content: '';
+            height: 45px;
+            width: 40px;
+            background: #009bba;
+            border-radius: 10px 0 0 0;
+            rotate: 37deg;
+            left: 120px;
+            top: 3px;
+            box-shadow: -20px 0#1b233d, -40px 3px#1b233d;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.25rem;
+            width: 80px;
+            height: 30px;
+            background: #1b233d;
+            padding: 5px 10px;
+            border-radius: 10px 0 10px 10px;
+            box-shadow: 0 40px #009bba, 0 20px#1b233d, 10px 0#1b233d;
+        }
+
+        h2 {
+            color: #fff
+        }
+
+        ul {
+            list-style-type: none;
+            color: #aadef3b8;
+            gap: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            flex-direction: column;
+            text-align: center;
+            gap: .25rem;
+            padding: 0 .5rem
+        }
+
+        li:nth-child(2) {
+            border-inline: 1px solid;
+        }
+
+        li span:first-child {
+            font-size: .85rem;
+        }
+
+        li span:nth-child(2) {
+            font-size: .65rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <header>
+                <h1>LOGO</h1>
+            </header>
+            <h2>STATS CARD</h2>
+            <ul class="status">
+                <li>
+                    <span>2626</span>
+                    <span>UI elements</span>
+                </li>
+                <li>
+                    <span>100%</span>
+                    <span>Free for use</span>
+                </li>
+                <li>
+                    <span>38,631</span>
+                    <span>Contributers</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

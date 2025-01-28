@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 27th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#0E85AE, #FEC539, #173454);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .subscribe-card {
+            padding: 1rem 1.5rem 2rem;
+            background: #FFFFFF;
+            border-radius: .25rem;
+            letter-spacing: .25rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        input {
+            border: solid grey;
+            border-width: 0 0 1px;
+            width: 200px;
+            margin-top: 1.25rem;
+            outline: none;
+        }
+
+        .subscribe-card::before,
+        .subscribe-card::after {
+            background: #0f0092;
+            position: absolute;
+            content: '';
+        }
+
+        .subscribe-card::before {
+            content: 'SUBMIT';
+            color: #fff;
+            font-weight: bold;
+            font-size: .85rem;
+            padding: .5rem 1rem;
+            border-radius: 1in 0 0 1in;
+            bottom: -20px;
+            width: 100px;
+            right: -10px;
+        }
+
+        .subscribe-card::after {
+            height: 10px;
+            width: 10px;
+            bottom: 10px;
+            right: -10px;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="subscribe-card">
+            <h1>SUBSCRIBE</h1>
+            <input type='text' placeholder="Your e-mail" />
+        </div>
+    </div>
+</body>
+
+</html>

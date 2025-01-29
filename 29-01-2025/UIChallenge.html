@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 29th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, darkgrey);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            background: #fff;
+            height: 250px;
+            width: 180px;
+            border-radius: 20px;
+            flex-direction: column;
+            padding: 2rem;
+            gap: .5rem;
+            box-sizing: border-box;
+
+            * {
+                align-self: start
+            }
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #86867c;
+        }
+
+        button {
+            position: absolute;
+            height: 40px;
+            width: 120px;
+            border-radius: 1in;
+            border: none;
+            background: #008bf8;
+            color: #fff;
+            translate: 0 150px;
+            transition: all .5s;
+            opacity: 0;
+        }
+
+        .card:hover {
+            outline: 1px solid#008bf8
+        }
+
+        .card:hover button {
+            translate: 0 120px;
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h1>Hover Me</h1>
+            <p>To see the action button</p>
+            <button>More Info</button>
+        </div>
+    </div>
+</body>
+
+</html>

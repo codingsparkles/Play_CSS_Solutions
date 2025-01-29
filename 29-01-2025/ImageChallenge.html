@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 29th January, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FE686A, #0E172B);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0E172B;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .circle {
+            background: #0E172B;
+            height: 400px;
+            width: 400px;
+            border: 60px solid #FE686A;
+            border-radius: 50%;
+            box-sizing: border-box;
+            animation: anime 2s alternate infinite
+        }
+
+        .circle2 {
+            border: 40px solid#FE686A;
+            height: 180px;
+            width: 180px;
+            animation: anime1 2s alternate infinite
+        }
+
+        span {
+            height: 400px;
+            width: 10px;
+            background: #0E172B;
+            clip-path: polygon(100% 0%, 55% 50%, 100% 100%, 0% 100%, 50% 50%, 0% 0%);
+            transform: rotate(calc(var(--i)*6deg));
+        }
+
+        @keyframes anime {
+            0%, 50% {
+                transform: scaleY(-1)
+            }
+        }
+
+        @keyframes anime1 {
+            0%, 50% {
+                transform: scaleX(-1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+            <span style="--i:16"></span>
+            <span style="--i:17"></span>
+            <span style="--i:18"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:21"></span>
+            <span style="--i:22"></span>
+            <span style="--i:23"></span>
+            <span style="--i:24"></span>
+            <span style="--i:25"></span>
+            <span style="--i:26"></span>
+            <span style="--i:27"></span>
+            <span style="--i:28"></span>
+            <span style="--i:29"></span>
+            <span style="--i:30"></span>
+        </div>
+    </div>
+</body>
+
+</html>

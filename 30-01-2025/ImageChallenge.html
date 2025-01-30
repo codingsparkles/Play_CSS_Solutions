@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 30th January, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FEC539, #0E85AE);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #FEC539;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .square {
+            background: #0E85AE;
+            height: 250px;
+            width: 250px;
+            rotate: 45deg;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .square::before {
+            position: absolute;
+            content: '';
+            background: #004C6E;
+            color: #004C6E;
+            height: 270px;
+            width: 270px;
+            border-radius: 50%;
+            translate: 170px -10px;
+            box-shadow: -180px -180px, -180px 180px, -360px 0
+        }
+
+        .square::after {
+            position: absolute;
+            content: '';
+            background: #FEC539;
+            color: #FEC539;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            translate: -30px -30px;
+            box-shadow: 210px 210px, 210px 0, 0 210px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

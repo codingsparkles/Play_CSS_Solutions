@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 31st January, 2025 - UI Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ADD8E6, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .form-group {
+            position: relative;
+            width: 200px;
+            height: 40px;
+        }
+
+        input {
+            --color: #fff;
+            border: solid var(--color);
+            position: absolute;
+            background: #0000;
+            outline: none;
+            border-width: 0 0 1px;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input:focus {
+            --color: #ADD8E6;
+        }
+
+        label {
+            position: absolute;
+            pointer-events: none;
+            transform: translateY(0);
+            letter-spacing: -2px;
+            font-size: 1.25rem
+        }
+
+        span {
+            --color: #fff;
+            color: var(--color);
+            display: inline-block;
+            transition: .3s cubic-bezier(0, .8, .1, 1.5);
+        }
+
+        span:nth-child(1) {
+            transition-delay: .05s;
+        }
+
+        span:nth-child(2) {
+            transition-delay: .10s;
+        }
+
+        span:nth-child(3) {
+            transition-delay: .15s;
+        }
+
+        span:nth-child(4) {
+            transition-delay: .20s;
+        }
+
+        span:nth-child(5) {
+            transition-delay: .25s;
+        }
+
+        span:nth-child(6) {
+            transition-delay: .30s;
+        }
+
+        span:nth-child(7) {
+            transition-delay: .35s;
+        }
+
+        span:nth-child(8) {
+            transition-delay: .40s;
+        }
+
+        input:focus~label span {
+            transform: translateY(-20px);
+            --color: #ADD8E6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-group">
+            <input type="text" id="username" required>
+            <label for="username">
+                <span>U</span>
+                <span>s</span>
+                <span>e</span>
+                <span>r</span>
+                <span>n</span>
+                <span>a</span>
+                <span>m</span>
+                <span>e</span>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>

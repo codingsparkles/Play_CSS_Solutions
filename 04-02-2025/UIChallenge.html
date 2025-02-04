@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 4th February, 2025 - UI Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff0000, #FFFFFF);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .rect {
+            height: 255px;
+            width: 204px;
+            position: absolute;
+            border-radius: 12px;
+        }
+
+        .rect1 {
+            height: 150px;
+            width: 120px;
+            background: #ff0000;
+            translate: 45px 55px;
+            animation: anime1 3s ease infinite
+        }
+
+        .rect2 {
+            background: #FFFFFF;
+            border-radius: 10px;
+            opacity: .97
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            20% {
+                translate: 45px -55px;
+            }
+
+            25%,
+            45% {
+                translate: 45px 55px;
+            }
+
+            50%,
+            70% {
+                translate: -45px 55px;
+            }
+
+            75%,
+            100% {
+                translate: -45px -55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+    </div>
+</body>
+
+</html>

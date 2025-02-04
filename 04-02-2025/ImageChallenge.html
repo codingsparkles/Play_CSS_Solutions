@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 4th February, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7BC7A9, #0E172B, #E6E3DC);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0E172B;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .element {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: radial-gradient(1q, #E6E3DC 65px, #142A43);
+            border-radius: 50% 0 50% 50%;
+            box-shadow: 100px -100px#7BC7A9;
+            animation: anime1 2s alternate infinite;
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                scale: -1 1;
+                left: 100px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="element"></div>
+    </div>
+</body>
+
+</html>

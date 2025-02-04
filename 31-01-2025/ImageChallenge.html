@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 31st January, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#FB9A4B, #2A4880);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+        }
+
+        .ele {
+            --deg:135deg;
+            height: 400px;
+            width: 200px;
+            background: linear-gradient(var(--deg),
+                    #FB9A4B 45%, #1399ED 0 50%,
+                    #FB9A4B 0 66.5%, #2A4880 0);
+            animation: anime1 2s alternate infinite          
+        }
+
+        .ele.ele2 {
+            scale: -1 1;
+            right: 0;
+        }
+
+        @keyframes anime1 {
+            0%, 50% {
+                transform: scaleX(-1) scale(.5) rotate(360deg)
+            }
+
+            50%, 100% {
+                transform: scaleX(1) scale(1) rotate(0deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ele ele1"></div>
+        <div class="ele ele2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 6th February, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7BC7A9, #F9AEA0, #0D2741);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #0E172B;
+            position: relative;
+        }
+
+        .wrapper * {
+            position: absolute;
+        }
+
+        .triangle {
+            height: 400px;
+            width: 170px;
+            background: #7BC7A9;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            bottom: 0;
+            animation: anime1 2s normal infinite
+        }
+
+        .tri2 {
+            background: #F9AEA0;
+            scale: -1;
+            left: 110px;
+            top: 0
+        }
+
+        .tri3 {
+            background: #0D2741;
+            left: 220px
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            30% {
+                height: 100px
+            }
+
+            30%,
+            60% {
+                height: 400px;
+                transform: scaleX(-1)
+            }
+
+            60%,
+            100% {
+                transform: scaleX(1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="triangle tri1"></div>
+        <div class="triangle tri2"></div>
+        <div class="triangle tri3"></div>
+    </div>
+</body>
+
+</html>

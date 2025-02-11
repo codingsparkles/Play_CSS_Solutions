@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 10th February, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#152A43, #FFFFFF, #7BC7A9);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            gap: 55px;
+            background: #0E172B;
+        }
+
+        .box {
+            height: 400px;
+            width: 60px;
+            background: #0D2741;
+            position: relative;
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+        }
+
+        .box:nth-child(odd)::before {
+            background: #7BC7A9;
+            width: 100%;
+            height: 40%;
+            top: 240px;
+            animation: anime 2s alternate infinite
+        }
+
+        .box:nth-child(even)::before {
+            background: #F9AEA0;
+            width: 100%;
+            height: 60%;
+            top: 0;
+            animation: anime1 2s alternate infinite
+        }
+
+        @keyframes anime {
+
+            0%,
+            50% {
+                top: 0
+            }
+
+            50%,
+            100% {
+                top: 240px
+            }
+        }
+
+        @keyframes anime1 {
+
+            0%,
+            50% {
+                top: 160px
+            }
+
+            50%,
+            100% {
+                top: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

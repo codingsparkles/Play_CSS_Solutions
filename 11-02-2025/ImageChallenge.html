@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 11th February, 2025 - Image Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7BC7A9, #FFFFFF, #0E172B);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: radial-gradient(1q at 0%100%, #F9AEA0 400px, #0E172B);
+        }
+
+        .square {
+            position: relative;
+            height: 180px;
+            width: 180px;
+            background: #7BC7A9;
+            rotate: 45deg;
+            translate: 80px 140px;
+            display: grid;
+            place-items: center;
+            animation: anime 2s linear infinite
+        }
+
+        .square::before,
+        .square::after {
+            position: absolute;
+            content: '';
+        }
+
+        .square::before {
+            height: 150%;
+            width: 82%;
+            background: repeating-linear-gradient(90deg, #fff 0 6px, #0000 0 35px);
+        }
+
+        .square::after {
+            background: #0D2640;
+            height: 58%;
+            width: 58%;
+        }
+
+        @keyframes anime {
+
+            0%,
+            20% {
+                rotate: 135deg;
+            }
+
+            25%,
+            45% {
+                rotate: 215deg;
+            }
+
+            50%,
+            70% {
+                rotate: 315deg;
+            }
+
+            75%,
+            100% {
+                rotate: 135deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

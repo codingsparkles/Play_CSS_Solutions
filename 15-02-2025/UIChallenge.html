@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - 15th February, 2025 - UI Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            user-select: none;
+            background: radial-gradient(#ff2288, #3b82f6, #22c55e);
+        }
+
+        body,
+        .wrapper,
+        .box,
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .box {
+            background: #171717;
+            height: 260px;
+            width: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg,
+        .text {
+            position: absolute;
+        }
+
+        .bg {
+            height: 98%;
+            width: 98%;
+        }
+
+        .text {
+            height: 97%;
+            width: 97%;
+            background: #171717;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .box:hover .bg {
+            animation: anime1 3s linear infinite;
+            background: conic-gradient(from var(--angle), #ff2288,
+                    #171717,
+                    #387ef0,
+                    #171717,
+                    #ff2288);
+        }
+
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes anime1 {
+            to {
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="bg"></div>
+            <div class="text">
+                HOVER ME
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

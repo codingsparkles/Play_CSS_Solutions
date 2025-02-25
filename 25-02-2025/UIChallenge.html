@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - February 25, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f0f0f0, #fff, #e9b50b);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .input__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .input__container,
+        .input__search {
+            --b: 4px;
+            transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            border: var(--b) solid #000;
+        }
+
+        .input__container {
+            background: #f0f0f0;
+            padding: 1.25rem;
+            transform-style: preserve-3d;
+            transform: rotateX(10deg) rotateY(-10deg);
+            perspective: 1000px;
+            box-shadow: 10px 10px 0 #000;
+        }
+
+        .input__container::before {
+            content: "USERNAME";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #e9b50b;
+            color: #000;
+            font-weight: bold;
+            padding: 5px 10px;
+            font-size: 14px;
+            transform: translateZ(50px);
+            border: 2px solid #000;
+        }
+
+        .shadow__input {
+            content: "";
+            position: absolute;
+            transform: translateZ(-50px);
+        }
+
+        .input__search {
+            --b: 3px;
+            padding: 1rem;
+            font-size: 18px;
+            background: #fff;
+            transform: translateZ(10px);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .input__container:hover {
+            transform: rotateX(5deg) rotateY(1deg) scale(1.05);
+            box-shadow: 25px 25px 0 -5px #e9b50b, 25px 25px 0 0 #000;
+        }
+
+        .input__search:hover,
+        .input__search:focus {
+            background: #f0f0f0;
+            transform: translateZ(20px) translateX(-5px) translateY(-5px);
+            box-shadow: 5px 5px 0 0 #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="input__container">
+            <div class="shadow__input"></div>
+            <input type="text" name="username" class="input__search" placeholder="Enter username">
+        </div>
+    </div>
+</body>
+
+</html>

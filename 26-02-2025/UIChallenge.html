@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Play CSS Daily Target Solution - February 26, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            --shadowColor: #000;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff0000, #fff, #296fbb);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .popup,
+        header,
+        footer,
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .popup {
+            background: #FFF;
+            padding: 1rem;
+            flex-direction: column;
+            max-width: 320px;
+            box-sizing: border-box;
+            box-shadow: 15px 15px var(--shadowColor);
+            gap: 1rem
+        }
+
+        header {
+            gap: 1rem;
+            align-self: start
+        }
+
+        h1 {
+            font-weight: 900
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            background: radial-gradient(1q, #fff 10px, #000);
+        }
+
+        hr {
+            width: 100%
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        footer {
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%
+        }
+
+        button {
+            padding: 1rem;
+            width: 100%;
+            color: #000;
+            border: 3px solid var(--shadowColor);
+            box-shadow: 5px 5px var(--shadowColor);
+            background: #fff;
+            font-size: 1rem;
+            font-weight: bold
+        }
+
+        button:nth-child(2) {
+            background: #000;
+            color: #fff;
+        }
+
+        button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px var(--shadowColor);
+            transition: all .5s
+        }
+
+        button:nth-child(1):hover {
+            background: #296fbb;
+            color: #fff;
+            --shadowColor: #296fbb
+        }
+
+        button:nth-child(2):hover {
+            background: #ff0000;
+            --shadowColor: #ff0000
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="popup">
+            <header>
+                <div class="icon">
+                    !
+                </div>
+                <h1>WARNING</h1>
+            </header>
+            <hr />
+            <section>
+                <p>This is a brutalist card with a very angry button. Proceed with caution, you've been warned.</p>
+            </section>
+            <hr />
+            <footer>
+                <button>MARK AS READ</button>
+                <button>OKAY</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

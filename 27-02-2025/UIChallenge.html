@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Option Switch Button - Play CSS Daily Target Solution - February 27, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#03a9f4, #fcebeb);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .option,
+        .option:before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .switch {
+            font-size: 1rem;
+            position: relative;
+            width: 4.6rem;
+            height: 2.2rem;
+        }
+
+        .switch input {
+            opacity: 0;
+        }
+
+        .option {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #fff;
+            transition: .5s;
+            border-radius: 2rem;
+        }
+
+        .option:before {
+            position: absolute;
+            content: "YES";
+            height: 1.1rem;
+            width: 1.1rem;
+            border-radius: 2rem;
+            background: #03a9f4;
+            color: #fff;
+            font-size: .6rem;
+            padding: .3rem;
+            transition: .5s;
+            margin-left: -36px
+        }
+
+        .switch input:checked+.option {
+            background: #fcebeb;
+        }
+
+        .switch input:checked+.option:before {
+            margin-left: 36px;
+            background: #f44336;
+            content: 'NO';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="option"></span>
+        </label>
+    </div>
+</body>
+
+</html>

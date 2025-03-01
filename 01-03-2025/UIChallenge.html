@@ -43,6 +43,10 @@
             width: 300px;
             border-radius: 8px;
             position: relative;
+            transform: translateY(-55px);
+            opacity: 0;
+            transition: all .5s;
+            scale: .5
         }
 
         .notification::before,
@@ -69,11 +73,27 @@
         span {
             margin-left: -30px
         }
+
+        button {
+            padding: .5rem;
+            border-radius: .5rem;
+            background: #509AF8;
+            color: #fff;
+            border: none;
+            position: fixed;
+        }
+
+        .wrapper:has(button:hover) .notification {
+            transform: translateY(-65px);
+            opacity: 1;
+            scale: 1
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
+        <button>Hover Me</button>
         <div class="notification">
             <span>lorem ipsum dolor sit amet</span>
         </div>

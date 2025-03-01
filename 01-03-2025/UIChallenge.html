@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Download Button - Play CSS Daily Target Solution - March 1, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #509AF8);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .notification,
+        .notification::before,
+        .notification::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .notification {
+            background: #509AF8;
+            color: #fff;
+            height: 45px;
+            width: 300px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .notification::before,
+        .notification::after {
+            content: '!';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+        }
+
+        .notification::before {
+            background: radial-gradient(1q, #fff 10px, #0000);
+            color: #509AF8;
+            margin-left: -255px;
+            rotate: 180deg
+        }
+
+        .notification::after {
+            content: "\00d7";
+            font-size: 1.5rem;
+            margin-left: 255px
+        }
+
+        span {
+            margin-left: -30px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="notification">
+            <span>lorem ipsum dolor sit amet</span>
+        </div>
+    </div>
+</body>
+
+</html>

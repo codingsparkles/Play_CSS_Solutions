@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile Card - Play CSS Daily Target Solution - March 2, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #509AF8);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card,
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            padding: 3rem 2rem;
+            background: linear-gradient(-45deg,
+                    #0000 0 6%, #171717 0 94%, #0000 0);
+            gap: 2.5rem;
+            flex-direction: column;
+            max-width: 220px;
+            border-radius: 1.5rem
+        }
+
+        img {
+            background: #FFF;
+            height: 80px;
+            width: 80px;
+            border-radius: 1rem;
+            object-fit: cover;
+        }
+
+        section {
+            flex-direction: column;
+            color: #fff
+        }
+
+        h1 {
+            margin: 0 0 .5rem;
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: .85rem;
+            margin: 0 0 .5rem
+        }
+
+        p {
+            font-size: .65rem
+        }
+
+        button {
+            padding: .75rem 1.5rem;
+            border-radius: 2rem;
+            transition: all .5s;
+            font-weight: bold;
+            border: none;
+        }
+
+        button:hover {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <header>
+                <img src="https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="profile">
+            </header>
+            <section>
+                <h1>John Deo</h1>
+                <h2>Front End Developer</h2>
+                <p>Skills: HTML, CSS, JavaScript, TypeScript, React</p>
+            </section>
+            <footer>
+                <button>Resume</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

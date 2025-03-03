@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Item Hover Animation - Play CSS Daily Target Solution - March 3, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#23a, #f16, #dd2);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .child {
+            position: absolute;
+            transition: all 0.6s;
+            width: 100%;
+            height: 100%;
+            color: white;
+        }
+
+        .card-1 {
+            background-color: #23a;
+            clip-path: polygon(0% 0%, 75% 0%, 0% 75%);
+        }
+
+        .child span {
+            position: absolute;
+            translate: 50px 50px;
+            transition: all 0.5s;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card-2 {
+            background-color: #f16;
+            clip-path: polygon(-25% 100%,
+                    75% 0%,
+                    100% 0%,
+                    100% 25%,
+                    25% 100%,
+                    0% 100%);
+        }
+
+        .card-3 {
+            background-color: #dd2;
+            clip-path: polygon(100% 25%, 25% 100%, 100% 100%);
+        }
+
+        .card-1:hover {
+            clip-path: polygon(0% 0%, 175% 0%, 0% 175%);
+            z-index: 2;
+        }
+
+        .card-2:hover {
+            clip-path: polygon(-95% 100%,
+                    25% 0%,
+                    100% 0%,
+                    100% 75%,
+                    75% 100%,
+                    0% 100%);
+            z-index: 2;
+        }
+
+        .card-3:hover {
+            clip-path: polygon(100% -75%, -75% 100%, 100% 100%);
+            z-index: 2;
+        }
+
+        .card-1:hover~.card-2 {
+            clip-path: polygon(75% 100%,
+                    100% 0%,
+                    100% 0%,
+                    100% 100%,
+                    100% 100%,
+                    0% 100%);
+        }
+
+        .card-1:hover~.card-3 {
+            clip-path: polygon(100% 90%, 90% 100%, 100% 100%);
+        }
+
+        .card:has(.card-2:hover) .card-1 {
+            clip-path: polygon(0% 0%, 25% 0%, 0% 25%);
+        }
+
+        .card:has(.card-2:hover) .card-3 {
+            clip-path: polygon(100% 75%, 75% 100%, 100% 100%);
+        }
+
+        .card:has(.card-3:hover) .card-1 {
+            clip-path: polygon(0% 0%, 10% 0%, 0% 10%);
+        }
+
+        .card:has(.card-3:hover) .card-2 {
+            clip-path: polygon(-90% 100%,
+                    100% -90%,
+                    100% 0%,
+                    100% 100%,
+                    100% 100%,
+                    0% 100%);
+        }
+
+        .card-1:hover span {
+            translate: 100px 100px;
+        }
+
+        .card-2 span {
+            translate: 100px 130px;
+        }
+
+        .card-3 span {
+            translate: 155px 215px;
+        }
+
+        .card-3:hover span {
+            translate: 100px 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="child card-1"><span>1</span></div>
+            <div class="child card-2"><span>2</span></div>
+            <div class="child card-3"><span>3</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

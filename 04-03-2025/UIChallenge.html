@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Custom Radio Buttons - Play CSS Daily Target Solution - March 4, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#2ecc71, #3498db, #f1c40f);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            --bgColor: #2ecc71;
+            background: var(--bgColor);
+            padding: 1rem;
+            border-radius: .85rem;
+            transition: all .5s
+        }
+
+        label {
+            position: relative;
+            margin: 0 .25rem
+        }
+
+        input {
+            height: 2rem;
+            width: 2rem;
+            opacity: 0;
+            border-radius: 1in;
+        }
+
+        label::before,
+        label::after {
+            height: 2rem;
+            width: 2rem;
+            position: absolute;
+            content: '';
+            color: #FFF;
+            border-radius: 1in;
+        }
+
+        label::before {
+            border: 1px solid;
+            background: var(--bgColor);
+        }
+
+        label::after {
+            content: "\2713";
+            font-size: 1.5rem;
+            left: 8px;
+            opacity: 0;
+            transition: all .5s
+        }
+
+        label:has(#green)::before,
+        .container:has(#green:checked) {
+            --bgColor: #2ecc71
+        }
+
+        label:has(#blue)::before,
+        .container:has(#blue:checked) {
+            --bgColor: #3498db
+        }
+
+        label:has(#yellow)::before,
+        .container:has(#yellow:checked) {
+            --bgColor: #f1c40f
+        }
+
+        label:has(input:checked):after {
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <label>
+                <input type="radio" id="green" checked name="color" value="#2ecc71">
+            </label>
+            <label>
+                <input type="radio" id="blue" name="color" value="#3498db">
+            </label>
+            <label>
+                <input type="radio" id="yellow" name="color" value="#f1c40f">
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>

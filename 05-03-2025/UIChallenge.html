@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Password Error Notification - Play CSS Daily Target Solution - March 3, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#B91C1C, #fef2f2);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        header,
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            flex-direction: column;
+        }
+
+        .container {
+            padding: 1rem;
+            background: #fef2f2;
+            border-radius: .5rem
+        }
+
+        header {
+            gap: 1.5rem
+        }
+
+        .icon {
+            height: 20px;
+            width: 20px;
+            background: radial-gradient(1q, #991B1B 10px, #0000);
+            position: relative;
+        }
+
+        .icon::after {
+            position: absolute;
+            content: "\00d7";
+            color: #fef2f2
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #991B1B
+        }
+
+        section {
+            margin: 1rem 0 0 3.5rem;
+            color: #B91C1C;
+            font-weight: 500;
+        }
+
+        section li {
+            max-width: 230px;
+            line-height: 1.5;
+            font-size: .9rem
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <div class="icon"></div>
+                <h1>Your password isn't strong enough</h1>
+            </header>
+            <section>
+                <ul>
+                    <li>Password must be at least 8 characters!</li>
+                    <li>Password must include Elon's baby name</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

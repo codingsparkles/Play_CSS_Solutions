@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Price Card - Play CSS Daily Target Solution - March 6, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#c58102, #fdbd4a);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .price-card,
+        section,
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .price-card {
+            flex-direction: column;
+            background: #fff;
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+            box-shadow: 0 5px#fdbd4a;
+            gap: 1rem;
+        }
+
+        header {
+            margin-left: -2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        section {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .price {
+            background: #fdbd4a;
+            height: 50px;
+            width: 180px;
+            box-shadow: 48px 0 #fdbd4a;
+            border-radius: 4px 0 0 4px;
+            position: relative;
+            margin-left: -1rem;
+        }
+
+        .price::before {
+            position: absolute;
+            content: '';
+            background: linear-gradient(-225deg, #c58102 50%, #0000 0);
+            height: 15px;
+            width: 15px;
+            translate: 213px 51px;
+        }
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0.5rem 0.5rem 0.5rem -0.5rem;
+            position: relative;
+        }
+
+        p::before,
+        p::after {
+            position: absolute;
+            font-size: 1rem;
+        }
+
+        p::before {
+            content: '$';
+            margin-left: -1rem;
+        }
+
+        p::after {
+            content: '/handle';
+            margin-left: 0.25rem;
+        }
+
+        li {
+            list-style-type: none;
+            position: relative;
+            line-height: 1.5rem;
+            justify-content: flex-start;
+        }
+
+        li span {
+            font-size: 0.85rem;
+            margin-left: -4rem;
+        }
+
+        li::before,
+        li::after {
+            position: absolute;
+            content: '';
+            height: 15px;
+            width: 15px;
+            border: 2px solid #000;
+        }
+
+        li::before {
+            border-radius: 50%;
+            margin-left: -5.5rem;
+        }
+
+        li::after {
+            border-width: 0 0 2px 2px;
+            height: 10px;
+            rotate: -45deg;
+            margin-left: -5.2rem;
+            height: 3px;
+            width: 7px;
+        }
+
+        button {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            border: none;
+            background: #fdbd4a;
+            transition: all 0.5s;
+        }
+
+        button:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="price-card">
+            <header>
+                <h1>Business</h1>
+                <h2>For business services</h2>
+            </header>
+            <section>
+                <div class="price">
+                    <p>254.99</p>
+                </div>
+                <ul>
+                    <li><span>Analysis</span></li>
+                    <li><span>Consulting</span></li>
+                    <li><span>Facilitate</span></li>
+                </ul>
+            </section>
+            <footer>
+                <button>START PROJECT</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

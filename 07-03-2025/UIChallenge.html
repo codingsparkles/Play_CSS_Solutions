@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Card Stack - Play CSS Daily Target Solution - March 7, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#bebebe, #fff, #1f1f1f);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+            position: relative;
+        }
+
+        .card {
+            height: 120px;
+            width: 340px;
+            border: 1px solid #bebebe;
+            border-radius: .85rem;
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            color: #fff;
+            padding: .85rem;
+            font-size: 1.25rem;
+            background: #1f1f1f;
+        }
+
+        .card2 {
+            transform: translate(10px, -10px);
+            width: 320px;
+            z-index: 2
+        }
+
+        .card3 {
+            transform: translate(20px, -20px);
+            width: 300px;
+            z-index: 1
+        }
+
+        .card1 {
+            z-index: 3
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="card card1">
+                * Card stacks are awesome and inspired by real card stack at your table.
+            </div>
+            <div class="card card2">
+                * Card stacks are awesome and inspired by real card stack at your table.
+            </div>
+            <div class="card card3">
+                * Card stacks are awesome and inspired by real card stack at your table.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -46,6 +46,7 @@
             padding: .85rem;
             font-size: 1.25rem;
             background: #1f1f1f;
+            transition: all .5s;
         }
 
         .card2 {
@@ -63,6 +64,12 @@
         .card1 {
             z-index: 3
         }
+
+        .card:hover:not(.card1) {
+            z-index: 4;
+            width: 340px;
+            transform: translate(0, -120px);
+        }
     </style>
 </head>
 
@@ -70,13 +77,13 @@
     <div class="wrapper">
         <div class="container">
             <div class="card card1">
-                * Card stacks are awesome and inspired by real card stack at your table.
+                * Card (1) stacks are awesome and inspired by real card stack at your table.
             </div>
             <div class="card card2">
-                * Card stacks are awesome and inspired by real card stack at your table.
+                * Card (2) stacks are awesome and inspired by real card stack at your table.
             </div>
             <div class="card card3">
-                * Card stacks are awesome and inspired by real card stack at your table.
+                * Card (3) stacks are awesome and inspired by real card stack at your table.
             </div>
         </div>
     </div>

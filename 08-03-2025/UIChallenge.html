@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Switch Button - Play CSS Daily Target Solution - March 8, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#21cc4c, #b6b6b6);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+            gap: .25rem
+        }
+
+        .switch {
+            position: relative;
+            width: 3em;
+            height: 7rem;
+            border-radius: 1in;
+        }
+
+        .switch input {
+            opacity: 0;
+        }
+
+        .switch input:checked+.slider {
+            background: #21cc4c;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #ccc;
+            transition: .4s;
+            border-radius: 2in;
+        }
+
+        .switch input:checked+.slider:before {
+            transform: translateY(-4em);
+        }
+
+        .slider::before {
+            position: absolute;
+            content: "";
+            height: 2.4em;
+            width: 2.4em;
+            border-radius: 2in;
+            background: #FFFFFF;
+            transition: .4s;
+            bottom: .3em;
+            left: .3em
+        }
+
+        section {
+            color: #4d4d4d;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <section>
+            <div>N</div>
+            <div>F</div>
+        </section>
+    </div>
+</body>
+
+</html>

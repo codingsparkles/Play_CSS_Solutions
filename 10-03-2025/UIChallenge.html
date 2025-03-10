@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Phone Confirmation - PlayCSS Daily Target Solution, March 10, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #727272);
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .digit-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            gap: 1rem;
+            border-radius: 1.5rem;
+            max-width: 316px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            line-height: 1;
+            font-weight: 500;
+        }
+
+        p {
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .digit-group {
+            gap: 1rem;
+            background: #cececea9;
+            padding: 1rem 2rem;
+            height: 4rem;
+            border-radius: 0.5rem;
+        }
+
+        .digit-group input {
+            outline: 0;
+            border-color: #727272;
+            border-width: 0 0 2px 0;
+            background: transparent;
+            font-size: 2rem;
+            font-weight: 600;
+            width: 2rem;
+            text-align: center;
+        }
+
+        .call-again {
+            color: #1a1a1a;
+            text-decoration: underline;
+            font-size: 0.9rem;
+        }
+
+        .timer {
+            color: #4a4a4a;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>We're calling your number to confirm it</h1>
+            <p>Enter last 4 digits of the number we are calling you from</p>
+            <div class="digit-group">
+                <input type="text" maxlength="1" pattern="[0-9]*" autocomplete="off" />
+                <input type="text" maxlength="1" pattern="[0-9]*" autocomplete="off" />
+                <input type="text" maxlength="1" pattern="[0-9]*" autocomplete="off" />
+                <input type="text" maxlength="1" pattern="[0-9]*" autocomplete="off" />
+            </div>
+            <div>
+                <a href="#" class="call-again">call again</a>
+                <span class="timer"> in 0:30 seconds</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

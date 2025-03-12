@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Button Hover Animation - PlayCSS Daily Target Solution, March 12, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto',
+                sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#00BFA6, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            --b: #00BFA6;
+            --c: #fff;
+            padding: .85rem 3rem;
+            border-radius: .6rem;
+            background: var(--b);
+            color: var(--c);
+            letter-spacing: 2px;
+            border: 2px #00BFA6;
+            border-style: solid;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        button:hover {
+            border-style: dashed;
+            --b: #fff;
+            --c: #00BFA6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>HOVER ME</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Simple Card - Play CSS Daily Target Solution - March 11, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3f79e6, #ececec);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            flex-direction: column;
+            gap: 0.5rem;
+            background: #fff;
+            max-width: 200px;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .card :not(.skeleton, b) {
+            padding: 0 0.5rem;
+            align-self: flex-start;
+        }
+
+        .skeleton {
+            background: #ececec;
+            height: 140px;
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .skeleton:hover {
+            scale: 0.95;
+        }
+
+        h1 {
+            color: #3f79e6;
+            font-size: 0.75rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: #585757;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #808080;
+            font-size: 0.8rem;
+            padding: 0 0.5rem 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="skeleton"></div>
+            <h1>ILLUSTRATION</h1>
+            <h2>A heading that must span over two lines</h2>
+            <p>By <b>Vetri</b> 4 days ago</p>
+        </div>
+    </div>
+</body>
+
+</html>

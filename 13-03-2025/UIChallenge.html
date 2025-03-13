@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Product Card - PlayCSS Daily Target Solution, March 13, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ffcaa6, #fff);
+        }
+
+        body,
+        .wrapper,
+        main,
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        main {
+            padding: 1rem;
+            background: #fff;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 200px
+        }
+
+        header {
+            border-radius: 10px;
+            background: #ffcaa6;
+            height: 100px;
+            width: 100%;
+            transition: all .5s;
+        }
+
+        header:hover {
+            translate: 0 -30px
+        }
+
+        section {
+            flex-direction: column;
+            gap: .5rem;
+
+            * {
+                align-self: start
+            }
+        }
+
+        h1,
+        .price {
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: .85rem
+        }
+
+        hr {
+            width: 100%;
+            border-color: #ddd;
+            border-width: 0 0 .5px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <header></header>
+            <section>
+                <h1>Product Title</h1>
+                <p>Product description and details</p>
+                <hr />
+                <span class="price">$499.49</span>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Bar Loader - PlayCSS Daily Target Solution, March 15, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ffcaa6, #fff);
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            gap: .85rem;
+            height: 100px
+        }
+
+        p {
+            background: #3498db;
+            height: 15px;
+            width: 20px;
+            border-radius: .25rem;
+            animation: anime 1s ease-in-out infinite;
+            animation-delay: var(--i);
+            align-self: end;
+        }
+
+        @keyframes anime {
+
+            0%,
+            100% {
+                height: 10px
+            }
+
+            50% {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p style="--i:0s"></p>
+            <p style="--i:0.1s"></p>
+            <p style="--i:0.2s"></p>
+            <p style="--i:0.3s"></p>
+        </div>
+    </div>
+</body>
+
+</html>

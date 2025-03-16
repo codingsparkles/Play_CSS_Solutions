@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Bar Loader - PlayCSS Daily Target Solution, March 16, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ab66fb, #fff);
+        }
+
+        body,
+        .wrapper,
+        .battery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .battery {
+            border: 1px solid #fff;
+            padding: .4rem;
+            height: 50px;
+            width: 110px;
+            position: relative;
+        }
+
+        .battery::before {
+            position: absolute;
+            content: '';
+            height: 10px;
+            width: 10px;
+            border: 1px solid #fff;
+            border-left-color: #212121;
+            margin-left: 120px
+        }
+
+        .charge-point {
+            background: #fff;
+            color: #fff;
+            height: 100%;
+            width: 15px;
+            animation: anime1 2s infinite;
+            margin-left: -80px;
+            opacity: 0;
+        }
+
+        @keyframes anime1 {
+
+            20%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0, 0 0, 0 0, 0 0;
+            }
+
+            30%,
+            100% {
+                box-shadow: 20px 0, 20px 0, 20px 0, 20px 0;
+            }
+
+            45%,
+            100% {
+                box-shadow: 20px 0, 40px 0, 40px 0, 40px 0;
+            }
+
+            60%,
+            100% {
+                box-shadow: 20px 0, 40px 0, 60px 0, 60px 0;
+            }
+
+            80%,
+            100% {
+                box-shadow: 20px 0, 40px 0, 60px 0, 80px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="battery">
+            <div class="charge-point"></div>
+        </div>
+    </div>
+</body>
+
+</html>

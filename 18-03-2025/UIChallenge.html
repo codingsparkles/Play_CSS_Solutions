@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Progress Bar - PlayCSS Daily Target Solution, March 18, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#DF3C3C, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .progress-bar {
+            background: #FFF;
+            height: 32px;
+            width: 200px;
+            position: relative;
+            border: 2px solid#fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .progress-bar::before,
+        .progress-bar::after {
+            position: absolute;
+            content: '';
+        }
+
+        .progress-bar::before {
+            height: 100%;
+            width: 0;
+            background: #DF3C3C;
+            animation: anime1 10s linear infinite
+        }
+
+        .progress-bar::after {
+            color: #DF3C3C;
+            width: 100%;
+            text-align: center;
+            animation: anime2 10s linear infinite
+        }
+
+        @keyframes anime1 {
+            100% {
+                width: 100%
+            }
+        }
+
+        @keyframes anime2 {
+            5% {
+                content: '5%'
+            }
+
+            10% {
+                content: '10%'
+            }
+
+            20% {
+                content: '20%'
+            }
+
+            30% {
+                content: '30%'
+            }
+
+            40% {
+                content: '40%';
+                color: #DF3C3C;
+            }
+
+            50% {
+                content: '50%';
+                color: #fff;
+            }
+
+            60% {
+                content: '60%';
+                color: #fff;
+            }
+
+            70% {
+                content: '70%';
+                color: #fff;
+            }
+
+            80% {
+                content: '80%';
+                color: #fff;
+            }
+
+            90% {
+                content: '90%';
+                color: #fff;
+            }
+
+            100% {
+                content: '100%';
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="progress-bar"></div>
+    </div>
+</body>
+
+</html>

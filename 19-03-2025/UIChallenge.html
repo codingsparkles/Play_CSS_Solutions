@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Card - PlayCSS Daily Target Solution, March 19, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#ff66a3, #fff);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        main {
+            width: 300px;
+            height: 250px;
+            border: 3px solid#000;
+            box-shadow: 10px 10px;
+            translate: 0 -10px;
+            transition: all .3s
+        }
+
+        main:hover {
+            translate: 0 0
+        }
+
+        header {
+            background: #fff;
+            font-size: .65rem;
+            font-weight: bold;
+            padding: .5rem;
+            border: solid#000;
+            border-width: 0 0 3px
+        }
+
+        section {
+            background: #ff66a3;
+            padding: .51rem;
+            height: 82%
+        }
+
+        p {
+            font-weight: bold;
+            font-size: .9rem;
+            margin-bottom: 1rem
+        }
+
+        button {
+            border: 3px solid#000;
+            padding: .4rem .6rem;
+            background: #4ade80;
+            font-weight: bold;
+            font-size: .85rem;
+            box-shadow: 3px 3px;
+            transition: all .3s
+        }
+
+        button:hover {
+            background: #fff;
+            color: #000;
+            translate: 1px 1px;
+            box-shadow: 1px 1px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <header>
+                <h1>Window</h1>
+            </header>
+            <section>
+                <p>This is a neobrutalist-style window with a button and space for any content you want!</p>
+                <button>Button</button>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

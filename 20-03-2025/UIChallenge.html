@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Tooltip - PlayCSS Daily Target Solution, March 20, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#7579e7, #fff);
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .container span,
+        p,
+        p::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container,
+        .container span,
+        p,
+        p:after {
+            height: 45px;
+            width: 140px;
+            background: #7579e7;
+            border-radius: 10px;
+        }
+
+        span,
+        .tooltip::before,
+        p::after {
+            position: absolute;
+        }
+
+        span.tooltip {
+            opacity: 0;
+            scale: .85;
+            transition: all .5s
+        }
+
+        .tooltip b {
+            font-weight: 400;
+        }
+
+        .tooltip::before,
+        p::after {
+            content: '';
+        }
+
+        .tooltip::before {
+            height: 15px;
+            width: 15px;
+            translate: 0 18px;
+            rotate: 45deg
+        }
+
+        p {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        p::after {
+            content: '(^_^)/';
+            top: 40px;
+            transition: all .5s
+        }
+
+        .container:hover .tooltip {
+            translate: 0 -50px;
+            opacity: 1;
+            animation: anime .5s ease-in-out
+        }
+
+        .container:hover p::after {
+            top: 0
+        }
+
+        @keyframes anime {
+            20% {
+                transform: rotate(2deg);
+            }
+
+            60% {
+                transform: rotate(-3deg);
+            }
+
+            80% {
+                transform: rotate(3deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p><span>Tooltip</span></p>
+            <span class="tooltip"><b>Hey There!</b></span>
+        </div>
+    </div>
+</body>
+
+</html>

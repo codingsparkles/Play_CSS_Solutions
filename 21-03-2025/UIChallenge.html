@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Brutalist Style Input - PlayCSS Daily Target Solution, March 21, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'monospace', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #4a90e2);
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        input {
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+            border: 4px solid#000;
+            box-shadow: 5px 5px #000,
+                10px 10px 0 #4a90e2;
+            outline: none;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        label {
+            position: absolute;
+            translate: -300px -30px;
+            background: #000;
+            color: #fff;
+            width: 200px;
+            padding: .25rem .5rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        input:focus~label {
+            background: #4a90e2;
+            scale: 1.05
+        }
+
+        input:focus {
+            animation: focusing 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+        }
+
+        @keyframes focusing {
+            50% {
+                border-color: #4a90e2
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="input-container">
+            <input type="text" placeholder="TYPE HERE" />
+            <label>SMOOTH BRUTALIST</label>
+        </div>
+    </div>
+</body>
+
+</html>

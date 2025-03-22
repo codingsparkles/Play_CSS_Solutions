@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Button Hover Animation - PlayCSS Daily Target Solution, March 22, 2025
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'monospace', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #a370f0);
+        }
+
+        body,
+        .wrapper,
+        button:before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            background: #a370f0;
+            padding: .5rem;
+            border-radius: 1rem;
+            height: 50px;
+            width: 160px;
+            color: #fff;
+            font-size: 1rem;
+            position: relative;
+            border: none
+        }
+
+        button span {
+            margin-left: -40px
+        }
+
+        button::before {
+            position: absolute;
+            content: '\2192';
+            height: 40px;
+            width: 40px;
+            background: #fff;
+            border-radius: 12px;
+            top: 5px;
+            right: 5px;
+            color: #a370f0;
+            font-size: 1.5rem;
+            transition: all .3s
+        }
+
+        button:hover::before {
+            width: 150px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button><span>Get Started</span></button>
+    </div>
+</body>
+
+</html>

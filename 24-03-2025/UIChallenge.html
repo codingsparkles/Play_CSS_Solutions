@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        3D Hover Button - Play CSS Daily Target Solution - March 24, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222229, #f5deb3);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            transform-style: preserve-3d;
+            transform-origin: 100% 50%;
+            transition: all 1s;
+        }
+
+        .side {
+            height: 4rem;
+            width: 10rem;
+            border: 5px solid #fff;
+            position: absolute;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .top {
+            background: #f5deb3;
+            color: #222229;
+            transform: rotateX(90deg) translate3d(0, 0, 1.35em);
+        }
+
+        .front {
+            background: #222229;
+            color: #fff;
+            transform: translate3d(0, 0, 1.35em);
+        }
+
+        .container:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <span class="top side">Easter</span>
+            <span class="front side">Happy</span>
+        </div>
+    </div>
+</body>
+
+</html>

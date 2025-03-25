@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Square Moving Loader - Play CSS Daily Target Solution - March 25, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222229, #f5f5f5);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .loader {
+            height: 7rem;
+            width: 7rem;
+            position: relative;
+        }
+
+        .loader .box {
+            height: 3rem;
+            width: 3rem;
+            border: 1rem solid#f5f5f5;
+            box-sizing: border-box;
+            position: absolute;
+            animation: var(--i) 4s 1s forwards ease-in-out infinite;
+        }
+
+        .box1 {
+            margin-top: 4rem;
+            margin-left: 0;
+        }
+
+        .box2 {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .box3 {
+            margin-top: 0;
+            margin-left: 4rem;
+        }
+
+        @keyframes anime1 {
+            0% {
+                width: 7rem;
+                height: 3rem;
+                margin-top: 4rem;
+                margin-left: 0;
+            }
+
+            12.5%,
+            62.5% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 4rem;
+                margin-left: 0;
+            }
+
+            75% {
+                width: 3rem;
+                height: 7rem;
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            87.5%,
+            100% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+
+        @keyframes anime2 {
+
+            0%,
+            37.5% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            50% {
+                width: 7rem;
+                height: 3rem;
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            62.5%,
+            100% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0;
+                margin-left: 4rem;
+            }
+        }
+
+        @keyframes anime3 {
+
+            0%,
+            12.5% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0;
+                margin-left: 4rem;
+            }
+
+            25% {
+                width: 3rem;
+                height: 7rem;
+                margin-top: 0;
+                margin-left: 4rem;
+            }
+
+            37.5%,
+            87.5% {
+                width: 3rem;
+                height: 3rem;
+                margin-top: 4rem;
+                margin-left: 4rem;
+            }
+
+            100% {
+                width: 7rem;
+                height: 3rem;
+                margin-top: 4rem;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="loader">
+            <div class="box box1" style="--i:anime1"></div>
+            <div class="box box2" style="--i:anime2"></div>
+            <div class="box box3" style="--i:anime3"></div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Input with Focus Style - Play CSS Daily Target Solution - March 28, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#002733, #fff, #f08080);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        input {
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            background: #EEE;
+            border: none;
+            box-shadow: 0 .4rem #dfd9d9
+        }
+
+        input:focus {
+            outline: 4px solid #f08080
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input placeholder="Type here..." />
+    </div>
+</body>
+
+</html>

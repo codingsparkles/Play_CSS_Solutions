@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simple Card - Play CSS Daily Target Solution - March 30, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#2563EB, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            background: #fff;
+            max-width: 70%;
+            border-radius: .5rem;
+            flex-direction: column
+        }
+
+        header div {
+            background: #2563EB;
+            height: 150px;
+            border-radius: .5rem;
+            margin: 2px;
+            box-sizing: border-box;
+        }
+
+        section {
+            padding: 1rem;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        h1 {
+            color: #111827;
+            line-height: 1.5rem;
+            font-size: 1rem
+        }
+
+        p {
+            color: #6B7280;
+            font-size: .85rem;
+            line-height: 1.25rem
+        }
+
+        button {
+            background: #2563EB;
+            color: #fff;
+            padding: .5rem 2rem .5rem .5rem;
+            border: none;
+            border-radius: .25rem;
+            align-self: start;
+            position: relative;
+            font-weight: bold;
+        }
+
+        button::before {
+            position: absolute;
+            content: '→';
+            color: #fff;
+            font-size: 1rem;
+            left: 98px;
+            margin-top: -4px;
+            transition: left .5s
+        }
+
+        button:hover::before {
+            left: 105px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="card">
+            <header>
+                <div></div>
+            </header>
+            <section>
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur
+                    animi temporibus nesciunt praesentium
+                </p>
+                <button>Find out more</button>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

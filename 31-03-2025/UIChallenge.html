@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Product Card with Hover Animation - Play CSS Daily Target Solution - March 31, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#6d28d9, #fff);
+            background: #212121;
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .product-card,
+        section,
+        footer,
+        header,
+        .size-container,
+        .size-container label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+            background: radial-gradient(#6d28d9, #fff);
+        }
+
+        .product-card {
+            padding: 1rem;
+            background: #27272a;
+            flex-direction: column;
+            border-radius: 1rem;
+            gap: 1rem;
+        }
+
+        header {
+            background: #6d28d9;
+            height: 8rem;
+            width: 100%;
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+
+        header img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: .5rem;
+            transition: all 1s
+        }
+
+        header img:hover {
+            scale: 1.25
+        }
+
+        section {
+            flex-direction: column;
+            gap: .5rem;
+
+            * {
+                align-self: start;
+                color: #fff;
+            }
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 600
+        }
+
+        h2,
+        input[type="radio"] {
+            font-size: .75rem
+        }
+
+        .size-container {
+            gap: .5rem;
+        }
+
+        .size-container input[type="radio"] {
+            height: 2rem;
+            width: 2rem;
+            display: none;
+        }
+
+        .size-container label {
+            content: var(--i);
+            background: #18181b;
+            height: 2rem;
+            width: 2rem;
+            border: 2px solid #18181b;
+            transition: all .5s;
+            border-radius: .25rem
+        }
+
+        .size-container label:hover {
+            border-color: #fff
+        }
+
+        .size-container input[type="radio"]:checked+label {
+            background: #6d28d9;
+        }
+
+        footer {
+            justify-content: space-between;
+            width: 100%
+        }
+
+        P {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        button {
+            color: #fff;
+            background: #6d28d9;
+            border: none;
+            padding: .5rem 1.5rem;
+            border-radius: .5rem;
+            font-size: .75rem;
+            transition: all .5s
+        }
+
+        button:hover {
+            scale: 1.25
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="product-card">
+            <header>
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="trendy shirt">
+            </header>
+            <section>
+                <h1>CS Trendy Shirt</h1>
+                <h2>Size</h2>
+                <div class="size-container">
+                    <input type="radio" name="size" value="37" id="size37" />
+                    <label for="size37">37</label>
+                    <input type="radio" name="size" value="38" id="size38" />
+                    <label for="size38">38</label>
+                    <input type="radio" name="size" value="39" id="size39" />
+                    <label for="size39">39</label>
+                    <input type="radio" name="size" value="40" id="size40" />
+                    <label for="size40">40</label>
+                    <input type="radio" name="size" value="41" id="size41" />
+                    <label for="size41">41</label>
+                </div>
+            </section>
+            <footer>
+                <p>$299</p>
+                <button>Add to cart</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Circular Text with Arrow Hover Animation - Play CSS Daily Target Solution - April 1, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            --primaryColor: #6d28d9;
+            --secondaryColor: #000;
+            --textColor: #fff;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#6d28d9, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .icon-container,
+        button,
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: var(--primaryColor);
+            color: var(--textColor);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;
+            transition: all .5s;
+            font-weight: 600;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        .icon-container {
+            background: var(--textColor);
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .icon-container i {
+            font-size: 3rem;
+            transition: all .5s;
+        }
+
+        .icon-container i.primary {
+            color: var(--primaryColor);
+            translate: -5px -5px;
+        }
+
+        .icon-container i.secondary {
+            color: var(--secondaryColor);
+            translate: -50px 50px;
+        }
+
+        button:hover {
+            background: var(--secondaryColor);
+            scale: 1.125
+        }
+
+        button:hover i.primary {
+            translate: 50px -50px;
+        }
+
+        button:hover i.secondary {
+            translate: -5px -5px;
+        }
+
+        p {
+            inset: 0;
+            animation: rotation 8s linear infinite;
+        }
+
+        button p span {
+            rotate: calc(19deg* var(--i));
+            inset: 8px;
+        }
+
+        @keyframes rotation {
+            to {
+                rotate: 360deg
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>
+            <p>
+                <span style="--i:0">A</span>
+                <span style="--i:1">W</span>
+                <span style="--i:2">E</span>
+                <span style="--i:3">S</span>
+                <span style="--i:4">O</span>
+                <span style="--i:5">M</span>
+                <span style="--i:6">E</span>
+                <span style="--i:7"> </span>
+                <span style="--i:8">C</span>
+                <span style="--i:9">S</span>
+                <span style="--i:10">S</span>
+                <span style="--i:11"> </span>
+                <span style="--i:12">B</span>
+                <span style="--i:13">U</span>
+                <span style="--i:14">T</span>
+                <span style="--i:15">T</span>
+                <span style="--i:16">O</span>
+                <span style="--i:17">N</span>
+            </p>
+            <div class="icon-container">
+                <i class="primary">&#8599;</i>
+                <i class="secondary">&#8599;</i>
+            </div>
+        </button>
+    </div>
+</body>
+
+</html>

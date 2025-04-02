@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Button Hover Animation - Play CSS Daily Target Solution - April 2, 2025</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #675C9C);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            position: relative;
+            padding: 1rem 2rem;
+            border-radius: .75rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background: #675C9C;
+            overflow: hidden
+        }
+
+        button::before,
+        button::after {
+            position: absolute;
+            content: '';
+            background: #fff;
+            height: 40%;
+            width: 10px;
+            border-radius: 1rem;
+            transition: all .2s
+        }
+
+        button:hover::before,
+        button:hover::after {
+            height: 60%;
+        }
+
+        button::before {
+            margin-left: -140px
+        }
+
+        button::after {
+            margin-left: 140px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>Download</button>
+    </div>
+</body>
+
+</html>

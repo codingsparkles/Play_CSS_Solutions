@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Market Bill UI - Play CSS Daily Target Solution - April 3, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#222229, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card,
+        tr,
+        .total-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            background: #fff;
+            flex-direction: column;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 2px dashed #ccc;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        thead tr {
+            font-weight: bold;
+        }
+
+        tr {
+            border: solid #ccc;
+            border-width: 0 0 1px;
+        }
+
+        .total-container {
+            font-weight: bold;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        tr,
+        .total-container {
+            justify-content: space-between;
+        }
+
+        tbody td {
+            font-size: 0.85rem;
+        }
+
+        tr td:nth-child(3) {
+            flex: 0.6;
+        }
+
+        tbody tr td:nth-child(3) {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h1>UI Market</h1>
+            <section>
+                <p>1234 Market Street, Suite 101</p>
+                <p>City, State ZIP</p>
+                <p>Date: 03/04/2025</p>
+                <p>Time: 01:00 AM</p>
+            </section>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Item</td>
+                        <td>Qty</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item1</td>
+                        <td>2</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Item2</td>
+                        <td>1</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Item3</td>
+                        <td>3</td>
+                        <td>$15.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="total-container">
+                <span>Total:</span>
+                <span>$45.00</span>
+            </p>
+            <p>Thank you for shopping with us!</p>
+        </div>
+    </div>
+</body>
+
+</html>

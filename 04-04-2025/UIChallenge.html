@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Grid Item Hover Animation - Play CSS Daily Target Solution - April 4, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#67aaf7, #bc8acf, #dda36c);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .box {
+            color: #fff;
+            background: var(--b);
+            height: 60px;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: all .4s
+        }
+
+        .box.box2 {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-row-end: 3;
+            grid-column-end: 2;
+        }
+
+        .box.box3 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            height: 180px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        span {
+            font-size: .75rem
+        }
+
+        .box:hover {
+            scale: 1.1;
+            box-shadow: 0 10px 20px #4444;
+        }
+
+        .container:has(.box1:hover) :is(.box2, .box3) {
+            scale: .9;
+            filter: blur(4px);
+        }
+
+        .container:has(.box2:hover) :is(.box1, .box3) {
+            scale: .9;
+            filter: blur(4px);
+        }
+
+        .container:has(.box3:hover) :is(.box1, .box2) {
+            scale: .9;
+            filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box box1" style="--b:#67aaf7">
+                <p>Hover Me</p>
+                <span>Lorem Ipsum</span>
+            </div>
+            <div class="box box2" style="--b:#bc8acf">
+                <p>Hover Me</p>
+                <span>Lorem Ipsum</span>
+            </div>
+            <div class="box box3" style="--b:#dda36c">
+                <p>Hover Me</p>
+                <span>Lorem Ipsum</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Simple Command Prompt UI - Play CSS Daily Target Solution - April 5, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#67aaf7, #bc8acf, #dda36c);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .popup {
+            background: #fff;
+            height: 225px;
+            width: 300px;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all .5s
+        }
+
+        .popup:hover {
+            scale: 1.1
+        }
+
+        header {
+            background: #4e4e4e;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: .25rem
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="popup">
+            <header>User - zsh</header>
+            <section>
+                <p>User@device ~ $</p>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

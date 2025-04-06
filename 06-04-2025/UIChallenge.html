@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Simple Tab- Play CSS Daily Target Solution - April 6, 2025</title>
+    <title>Simple Accordion - Play CSS Daily Target Solution - April 6, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
     <style>
@@ -16,7 +16,7 @@
 
         body {
             min-height: 100vh;
-            background: radial-gradient(#67aaf7, #bc8acf, #dda36c);
+            background: radial-gradient(#fff, #bc8acf);
             user-select: none;
         }
 
@@ -37,7 +37,7 @@
             background: #fff;
             padding: 1rem;
             border-radius: .75rem;
-            width: 298px
+            width: 320px
         }
 
         summary {
@@ -46,7 +46,7 @@
 
         ul {
             height: 200px;
-            overflow-x: scroll;
+            overflow-x: hidden;
         }
 
         li {
@@ -60,8 +60,18 @@
             list-style-type: '🡺';
         }
 
+        details>summary::before {
+            content: attr(data-close);
+            margin-left: .5rem
+        }
+
         details[open]>summary {
             list-style-type: '🢃';
+        }
+
+        details[open]>summary::before {
+            content: attr(data-open);
+            margin-left: .5rem
         }
     </style>
 </head>
@@ -69,7 +79,7 @@
 <body>
     <div class="wrapper">
         <details>
-            <summary>Open Dropdown</summary>
+            <summary data-open="Close Dropdown" data-close="Open-dropdown"></summary>
             <ul>
                 <li>
                     Hover to view scrollbar.

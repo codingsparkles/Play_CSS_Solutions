@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Feedback popup with rating - Play CSS Daily Target Solution - April 7,
+        2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#252d37, #fff, #fb7413);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .rating-card,
+        .rating-num-group,
+        .rating-num-group label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .rating-card {
+            flex-direction: column;
+            padding: 1.25rem;
+            border-radius: 1.25rem;
+            background: #252d37;
+            max-width: 75%;
+            gap: 2rem;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.4rem;
+            align-self: start;
+        }
+
+        p {
+            color: #808896;
+            line-height: 1.3;
+        }
+
+        .rating-num-group {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        input {
+            display: none;
+        }
+
+        .rating-num-group label {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            color: #fff;
+            background: #959eac;
+        }
+
+        .rating-num-group input[type='radio']:checked+label {
+            background: #fb7413;
+            color: #fff;
+        }
+
+        .rating-num-group label:hover {
+            background: #fff;
+            color: #252d37;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.65rem;
+            border-radius: 2rem;
+            background: #fb7413;
+            color: #252d37;
+            font-weight: bold;
+            border: none;
+        }
+
+        button:hover {
+            background: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rating-card">
+            <h1>How did we do?</h1>
+            <p>
+                Please let us know how we did with your support request. All feedback
+                is appreciated to help us improve our offering!
+            </p>
+            <div class="rating-num-group">
+                <input type="radio" id="1" name="rating" value="1" />
+                <label for="1">1</label>
+                <input type="radio" id="2" name="rating" value="2" />
+                <label for="2">2</label>
+                <input type="radio" id="3" name="rating" value="3" />
+                <label for="3">3</label>
+                <input type="radio" id="4" name="rating" value="4" />
+                <label for="4">4</label>
+                <input type="radio" id="5" name="rating" value="5" />
+                <label for="5">5</label>
+            </div>
+            <button>SUBMIT</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Background Animation on Hover - Play CSS Daily Target Solution - April 8, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#252d37, #fff, #fb7413);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card {
+            background: radial-gradient(1q, #fb8500 200px, #023047)no-repeat#023047;
+            border-radius: .65rem;
+            height: 65%;
+            width: 50%;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+            background-position: -450px;
+            background-size: 400px;
+            transition: .3s linear
+        }
+
+        .card:hover {
+            color: #023047;
+            background-position: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            Card
+        </div>
+    </div>
+</body>
+
+</html>

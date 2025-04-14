@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Button Hover Animation - Play CSS Daily Target Solution - April 14, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#e62222, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        button span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+            position: relative;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 0.4rem;
+        }
+
+        button span {
+            position: absolute;
+            content: '';
+            height: 100%;
+            background: #e62222;
+            font-weight: bold;
+            color: #fff;
+            top: 0;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        button span.text {
+            width: 80%;
+        }
+
+        button span.icon {
+            left: 120px;
+            width: 20%;
+            font-size: 1.25rem;
+            box-shadow: -6px 0 0 -5px#c41b1b;
+        }
+
+        button:hover span.icon {
+            width: 100%;
+            left: 0;
+            box-shadow: none;
+            background: #ff3636;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>
+            <span class="text">Delete</span>
+            <span class="icon">&#x2715;</span>
+        </button>
+    </div>
+</body>
+
+</html>

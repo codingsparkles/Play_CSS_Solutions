@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Item Hover Animation - Play CSS Daily Target Solution - April 9, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#e1e1e1, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        h1 {
+            color: #e1e1e1;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: 0.25rem;
+            transition-delay: all 0.4s;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        h1:hover {
+            color: #fff;
+        }
+
+        h1::before {
+            position: absolute;
+            content: '';
+            width: 0;
+            background: #e1e1e1;
+            height: 2px;
+            bottom: 0;
+            transition: all 0.4s;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        h1:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Hover Over</h1>
+    </div>
+</body>
+
+</html>

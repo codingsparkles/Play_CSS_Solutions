@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Card Hover Animation - Play CSS Daily Target Solution - April 18, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f2f2f2, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .card,
+        .card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .card,
+        .card-content,
+        i {
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .card:hover i {
+            scale: 0
+        }
+
+        .card-content {
+            position: absolute;
+            flex-direction: column;
+            padding: 1.25rem;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+            margin-top: 2rem
+        }
+
+        .card-content h1 {
+            font-size: 1.5rem;
+            align-self: start;
+            margin-bottom: .65rem;
+        }
+
+        .card-content p {
+            font-size: .875rem;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        .card:hover .card-content {
+            transform: rotateX(0deg);
+            margin-top: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <i class="fa-regular fa-image"></i>
+            <div class="card-content">
+                <h1>Card Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

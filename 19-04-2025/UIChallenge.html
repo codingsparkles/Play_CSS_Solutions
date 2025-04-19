@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Button Hover Text Animation - Play CSS Daily Target Solution - April 19, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#f2f2f2, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .btn-container,
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .btn-container {
+            overflow: hidden;
+            border-radius: 2in;
+            height: 72px;
+            width: 170px;
+            position: relative
+        }
+
+        button {
+            height: 100%;
+            width: 100%;
+            font-weight: 900;
+            background: #fff;
+            font-size: 1rem;
+            position: absolute;
+        }
+
+        button.letters {
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 2in
+        }
+
+        button.primary {
+            z-index: 2;
+            width: 110%;
+            height: 110%;
+            transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+        }
+
+        .btn-container:hover button.primary {
+            transform: translateY(100%);
+        }
+
+        .letters span {
+            transition: margin-top 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+            transition-delay: var(--i);
+        }
+
+        .letters span:nth-child(odd) {
+            margin-top: -50%;
+        }
+
+        .letters span:nth-child(even) {
+            margin-top: 50%;
+        }
+
+        .btn-container:hover .letters span {
+            margin-top: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="btn-container">
+            <button class="primary">BUTTON</button>
+            <button class="letters">
+                <span style="--i:0.0s">B</span>
+                <span style="--i:0.1s">U</span>
+                <span style="--i:0.2s">T</span>
+                <span style="--i:0.3s">T</span>
+                <span style="--i:0.4s">O</span>
+                <span style="--i:0.5s">N</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

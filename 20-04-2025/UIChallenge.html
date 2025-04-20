@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Input Focus Animation - Play CSS Daily Target Solution - April 20, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#4a90e2, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .input-container,
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .input-container {
+            position: relative;
+            height: 2.5rem;
+            width: 18rem;
+
+            * {
+                position: absolute;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: .25rem;
+            border: none;
+            outline: none;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        label {
+            color: #808080;
+            height: 2rem;
+            width: max-content;
+            margin-left: -160px;
+            transition: all .3s ease;
+            pointer-events: none;
+            color: #AAA
+        }
+
+        input:focus+label {
+            margin-top: -80px;
+            padding: .5rem;
+            color: #4a90e2
+        }
+
+        .input-container::before,
+        .input-container::after {
+            position: absolute;
+            content: '';
+            top: 36px;
+            box-sizing: border-box;
+            z-index: 2;
+            width: 0%;
+            opacity: 0;
+            transition: all .3s ease
+        }
+
+        .input-container::before {
+            border-inline: 20px dotted #4a90e2;
+            height: 20px;
+        }
+
+        .input-container::after {
+            border-top: 5px solid #4a90e2;
+            height: 10px;
+        }
+
+        .input-container:has(input:focus)::before {
+            width: 104%;
+            opacity: 1
+        }
+
+        .input-container:has(input:focus)::after {
+            width: 100%;
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="input-container">
+            <input type="text" class="text-input" />
+            <label for="text-input">Email Address</label>
+        </div>
+    </div>
+</body>
+
+</html>

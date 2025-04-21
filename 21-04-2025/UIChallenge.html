@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Button Width Animation - Play CSS Daily Target Solution - April 21, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#6220fb, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6220fb 90%, #212121 10%);
+            height: 2.5rem;
+            width: 9rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: .7rem;
+            letter-spacing: .1rem;
+            border: none;
+            border-radius: .25rem;
+            transition: all .5s
+        }
+
+        button:hover {
+            width: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>Get Started</button>
+    </div>
+</body>
+
+</html>

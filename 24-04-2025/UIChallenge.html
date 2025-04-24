@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Simple Question Option Selection - Play CSS Daily Target Solution - April 24, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#fff, #008080);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .question,
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.25rem
+        }
+
+        .question {
+            flex-direction: column;
+            gap: 1rem
+        }
+
+        .container {
+            border-radius: .4rem;
+            overflow: hidden;
+            width: 10.25rem;
+            justify-content: space-between;
+        }
+
+        input {
+            opacity: 0;
+            position: absolute;
+            height: 2.5rem;
+            width: 5rem;
+        }
+
+        label {
+            height: 2.5rem;
+            width: 5rem;
+            color: #494b4f;
+            background: #fff;
+            transition: 0.2s ease-in-out
+        }
+
+        .container #no {
+            margin-left: 5.25rem;
+        }
+
+        .container input[type='radio']:hover+label {
+            background: #494b4f;
+            color: #fff;
+        }
+
+        .container input[type='radio']:checked+label {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="question">
+            <h1>Do you like PlayCSS?</h1>
+            <div class="container">
+                <input type="radio" id="yes" name="option" value="Yes">
+                <label for="Yes">Yes</label>
+                <input type="radio" id="no" name="option" value="No">
+                <label for="No">No</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

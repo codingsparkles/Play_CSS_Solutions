@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Hamburger Menu - Play CSS Daily Target Solution - April 26, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#DC143C, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        .hamburger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .hamburger {
+            position: relative;
+        }
+
+        .hamburger input {
+            opacity: 0;
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .hamburger span {
+            position: absolute;
+            height: 6px;
+            width: 1.5rem;
+            background: #fff;
+            border-radius: .5rem;
+            transition: all .5s
+        }
+
+        .top {
+            margin-top: -2rem;
+            margin-left: -1.5rem;
+            box-shadow: 1.5rem 2rem #fff
+        }
+
+        span.middle {
+            width: 3rem;
+        }
+
+        span.bottom {
+            margin-top: 2rem;
+            margin-left: -1.5rem;
+            background: #0000
+        }
+
+        .hamburger:has(input:checked) span {
+            background: #DC143C
+        }
+
+        .hamburger:has(input:checked) span:not(.middle) {
+            box-shadow: 0 0;
+            width: 4rem;
+            rotate: calc(var(--i) * 45deg);
+            margin-top: 0;
+            margin-left: 0
+        }
+
+        .hamburger:has(input:checked) span.middle {
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label class="hamburger">
+            <input type="checkbox">
+            <span class="top" style="--i:1"></span>
+            <span class="middle"></span>
+            <span class="bottom" style="--i:-1"></span>
+        </label>
+    </div>
+</body>
+
+</html>

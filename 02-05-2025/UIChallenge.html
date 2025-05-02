@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Social Menu - Play CSS Daily Target Solution - May 2, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3377ff, #fff, #ff3355);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .social-menu-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+            flex-direction: column;
+            gap: .5rem
+        }
+
+        .social-menu-item {
+            color: #fff;
+            background: var(--c);
+            padding: .5rem 1rem;
+            border-radius: .4rem;
+            width: 15rem;
+            justify-content: space-between;
+            gap: .5rem;
+            transition: all .5s
+        }
+
+        .social-menu-item i {
+            font-size: 1.875rem
+        }
+
+        .name {
+            flex: 1;
+            font-size: .9rem
+        }
+
+        .followers {
+            font-weight: bold;
+        }
+
+        .social-menu-item:hover {
+            scale: 1.1
+        }
+
+        .wrapper:has(.social-menu-item:hover) .social-menu-item:not(:hover) {
+            filter: blur(5px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="social-menu-item" style="--c:#000">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span class="name">Twitter</span>
+            <span class="followers">750k</span>
+        </div>
+        <div class="social-menu-item" style="--c:#3377ff">
+            <i class="fa-brands fa-square-facebook"></i>
+            <span class="name">Facebook</span>
+            <span class="followers">710k</span>
+        </div>
+        <div class="social-menu-item" style="--c:#ff3355">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="name">Instagram</span>
+            <span class="followers">80k</span>
+        </div>
+    </div>
+</body>
+
+</html>

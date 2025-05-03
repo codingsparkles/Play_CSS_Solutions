@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Loading Text - Play CSS Daily Target Solution - May 3, 2025
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#212121, #fff);
+            user-select: none;
+        }
+
+        body,
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+            gap: .5rem;
+            color: #fff
+        }
+
+        span {
+            font-size: 2.5rem;
+            animation: anime 2s linear infinite;
+            animation-delay: var(--i);
+        }
+
+        @keyframes anime {
+            0% {
+                transform: rotateX(0);
+            }
+
+            12.5% {
+                transform: rotateX(90deg);
+            }
+
+            25% {
+                transform: rotateX(180deg);
+            }
+
+            37.5% {
+                transform: rotateX(270deg);
+            }
+
+            50%,
+            100% {
+                transform: rotateX(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <span style="--i:.0s">L</span>
+        <span style="--i:.1s">O</span>
+        <span style="--i:.2s">A</span>
+        <span style="--i:.3s">D</span>
+        <span style="--i:.4s">I</span>
+        <span style="--i:.5s">N</span>
+        <span style="--i:.6s">G</span>
+    </div>
+</body>
+
+</html>

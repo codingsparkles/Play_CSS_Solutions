@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hover Button Dancing - Play CSS Daily Target Solution - May 13, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3b82f6,
+                    #8b5cf6, #10b981);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            gap: 20px;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 1rem;
+        }
+
+        button {
+            padding: 1rem;
+            border-radius: 2in;
+            gap: .75rem;
+            font-size: 1.35rem;
+            font-weight: bold;
+            background: #e8e8e8;
+            overflow: hidden;
+            position: relative;
+            border: none;
+        }
+
+        button::before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: #F53844;
+            top: 100%;
+            transition: all .5s;
+            left: 0;
+            z-index: 1;
+        }
+
+        button .close-icon {
+            --c: #F53844;
+            font-size: .85rem;
+            border-radius: 50%;
+            border: 2px solid var(--c);
+            color: var(--c);
+            padding: .2rem;
+            height: 1.25rem;
+            width: 1.25rem;
+        }
+
+        button span {
+            z-index: 2;
+            position: relative;
+        }
+
+        button:hover {
+            animation: shake 0.2s linear 1;
+            cursor: no-drop;
+        }
+
+        button:hover::before {
+            top: 0
+        }
+
+        button:hover .close-icon {
+            --c: #fff;
+        }
+
+        @keyframes shake {
+            0% {
+                rotate: 0deg;
+            }
+
+            33% {
+                rotate: 10deg;
+            }
+
+            66% {
+                rotate: -10deg;
+            }
+
+            100% {
+                rotate: 10deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>
+            <span>Not allowed!</span>
+            <span class="close-icon">&#x2715;</span>
+        </button>
+    </div>
+</body>
+
+</html>

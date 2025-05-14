@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hover Button - Play CSS Daily Target Solution - May 11, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#313131, #FF6E6E);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            width: 10rem;
+            padding: 1rem;
+            border-radius: 2rem;
+            gap: .5rem;
+            font-size: 2rem;
+            box-shadow: 0 0 0 10px#FF6E6E,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: 0;
+            color: #867C7C;
+            transition: scale 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5);
+        }
+
+        button span:first-child {
+            filter: drop-shadow(0 0 6px #FF6E6E);
+        }
+
+        button:hover {
+            scale: 1.05
+        }
+
+        button:hover span:first-child {
+            filter: none;
+            color: #FF6E6E;
+            animation: anime 1.2s infinite
+        }
+
+        @keyframes anime {
+            0% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.15);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.15);
+            }
+
+            60% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>
+            <span>&#10084;</span>
+            <span>Like</span>
+        </button>
+    </div>
+</body>
+
+</html>

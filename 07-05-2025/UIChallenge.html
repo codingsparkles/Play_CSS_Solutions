@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Switch Button - Play CSS Daily Target Solution - May 7, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#313131, #f9a825);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .switch,
+        .option,
+        .option::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .switch {
+            position: relative;
+            width: 7.5rem;
+            height: 3.125rem;
+            background: #DDDDDD;
+            border-radius: 1in;
+            overflow: hidden
+        }
+
+        .switch input {
+            opacity: 0;
+        }
+
+        .option {
+            position: absolute;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 2rem;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin-left: -4.4rem;
+            transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+            color: #fff;
+        }
+
+        .option::before {
+            position: absolute;
+            content: '';
+            height: .76rem;
+            width: .75rem;
+            border: solid;
+            color: #000;
+            rotate: -45deg;
+            border-width: 0 2px 2px 0;
+            margin-left: -.5rem;
+            opacity: 0.5;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+
+        .switch:has(input:checked) {
+            background: #f9a825
+        }
+
+        .switch:has(input:checked) .option {
+            margin-left: 64px;
+            background: #ddd;
+            rotate: 180deg;
+        }
+
+        .switch:has(input:checked) .option::before {
+            color: #000;
+            opacity: .7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="option"></span>
+        </label>
+    </div>
+</body>
+
+</html>

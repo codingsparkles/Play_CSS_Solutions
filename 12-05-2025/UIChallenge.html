@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Custom Checkbox - Play CSS Daily Target Solution - May 12, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#3b82f6,
+                    #8b5cf6, #10b981);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        .container,
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        .container {
+            gap: 20px;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 1rem;
+        }
+
+        label input {
+            opacity: 0;
+            position: absolute;
+        }
+
+        label {
+            height: 1.75rem;
+            width: 1.75rem;
+            border: 2px solid var(--b);
+            border-radius: .5rem;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        label:hover {
+            transform: scale(1.05);
+        }
+
+        label:has(input:checked) {
+            background: var(--b);
+            animation: bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        label svg {
+            position: absolute;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        label:has(input:checked) svg {
+            transform: scale(1);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <label style="--b:#3b82f6">
+                <input type="checkbox">
+                <svg fill="none" viewBox="0 0 24 24" class="checkbox-icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                        d="M4 12L10 18L20 6" class="check-path"></path>
+                </svg>
+            </label>
+            <label style="--b:#10b981">
+                <input type="checkbox">
+                <svg fill="none" viewBox="0 0 24 24" class="checkbox-icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                        d="M4 12L10 18L20 6" class="check-path"></path>
+                </svg>
+            </label>
+            <label style="--b:#8b5cf6">
+                <input type="checkbox">
+                <svg fill="none" viewBox="0 0 24 24" class="checkbox-icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                        d="M4 12L10 18L20 6" class="check-path"></path>
+                </svg>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>

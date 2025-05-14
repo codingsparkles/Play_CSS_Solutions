@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hover Button - Play CSS Daily Target Solution - May 8, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(#313131, #f9a825);
+            user-select: none;
+        }
+
+        body,
+        .wrapper,
+        button,
+        button::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            height: 400px;
+            width: 400px;
+            background: #212121;
+        }
+
+        button {
+            background: #000;
+            border-radius: 1in;
+            height: 3.25rem;
+            width: 11rem;
+            border: 2px solid #fff;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            color: #000
+        }
+
+        button::before {
+            position: absolute;
+            content: 'BUTTON';
+            color: #fff;
+            opacity: 0;
+            text-shadow: #fff 5em 0, #fff -5em 0, #fff -10em 0;
+        }
+
+        button:hover::before {
+            opacity: 1;
+            animation: anime 1s linear infinite;
+        }
+
+        @keyframes anime {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(5em);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>
+            BUTTON
+        </button>
+    </div>
+</body>
+
+</html>
